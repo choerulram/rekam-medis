@@ -12,9 +12,10 @@ namespace siredis.antarmuka
 {
     public partial class HomeDokter : Form
     {
-        public HomeDokter()
+        public HomeDokter(string user)
         {
             InitializeComponent();
+            user_lbl.Text = user;
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

@@ -12,9 +12,10 @@ namespace siredis.antarmuka
 {
     public partial class HomeAdmin : Form
     {
-        public HomeAdmin()
+        public HomeAdmin(string user)
         {
             InitializeComponent();
+            user_lbl.Text = user;
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -70,6 +71,11 @@ namespace siredis.antarmuka
         {
             FormSelesai transaksi = new FormSelesai();
             transaksi.Show();
+        }
+
+        private void HomeAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

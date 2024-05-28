@@ -42,7 +42,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DarkGray;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(260, 353);
+            this.btnCancel.Location = new System.Drawing.Point(238, 350);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(81, 36);
@@ -55,7 +55,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DarkGray;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(148, 353);
+            this.btnLogin.Location = new System.Drawing.Point(126, 350);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(80, 36);
@@ -67,7 +67,7 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(210, 288);
+            this.Label4.Location = new System.Drawing.Point(188, 285);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(67, 16);
@@ -77,7 +77,7 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(207, 225);
+            this.Label3.Location = new System.Drawing.Point(185, 222);
             this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(70, 16);
@@ -86,7 +86,7 @@
             // 
             // password_txt
             // 
-            this.password_txt.Location = new System.Drawing.Point(148, 308);
+            this.password_txt.Location = new System.Drawing.Point(126, 305);
             this.password_txt.Margin = new System.Windows.Forms.Padding(4);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '*';
@@ -95,7 +95,7 @@
             // 
             // username_txt
             // 
-            this.username_txt.Location = new System.Drawing.Point(148, 245);
+            this.username_txt.Location = new System.Drawing.Point(126, 242);
             this.username_txt.Margin = new System.Windows.Forms.Padding(4);
             this.username_txt.Name = "username_txt";
             this.username_txt.Size = new System.Drawing.Size(192, 22);
@@ -103,7 +103,7 @@
             // 
             // PictureBox1
             // 
-            this.PictureBox1.Location = new System.Drawing.Point(163, 58);
+            this.PictureBox1.Location = new System.Drawing.Point(141, 55);
             this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(161, 142);
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(495, 450);
+            this.ClientSize = new System.Drawing.Size(452, 425);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.btnLogin);

@@ -12,9 +12,10 @@ namespace siredis.antarmuka
 {
     public partial class HomePasien : Form
     {
-        public HomePasien()
+        public HomePasien(string user)
         {
             InitializeComponent();
+            user_lbl.Text = user;
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

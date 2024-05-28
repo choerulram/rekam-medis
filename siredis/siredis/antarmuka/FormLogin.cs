@@ -32,15 +32,15 @@ namespace siredis.antarmuka
                 switch (user.UserType)
                 {
                     case "Admin":
-                        HomeAdmin dashboardAdmin = new HomeAdmin();
+                        HomeAdmin dashboardAdmin = new HomeAdmin(username_txt.Text);
                         dashboardAdmin.Show();
                         break;
                     case "Dokter":
-                        HomeDokter dashboardDokter = new HomeDokter();
+                        HomeDokter dashboardDokter = new HomeDokter(username_txt.Text);
                         dashboardDokter.Show();
                         break;
                     case "Pasien":
-                        HomePasien dashboardPasien = new HomePasien();
+                        HomePasien dashboardPasien = new HomePasien(username_txt.Text);
                         dashboardPasien.Show();
                         break;
                     default:

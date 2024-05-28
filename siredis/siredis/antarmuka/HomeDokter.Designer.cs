@@ -35,7 +35,8 @@
             this.PengambilanObatMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.SelesaiMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_logout = new System.Windows.Forms.Button();
-            this.lHello = new System.Windows.Forms.Label();
+            this.user_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,21 +71,21 @@
             // PemeriksaanMenu
             // 
             this.PemeriksaanMenu.Name = "PemeriksaanMenu";
-            this.PemeriksaanMenu.Size = new System.Drawing.Size(224, 26);
+            this.PemeriksaanMenu.Size = new System.Drawing.Size(215, 26);
             this.PemeriksaanMenu.Text = "Pemeriksaan";
             this.PemeriksaanMenu.Click += new System.EventHandler(this.PemeriksaanMenu_Click);
             // 
             // PengambilanObatMenu
             // 
             this.PengambilanObatMenu.Name = "PengambilanObatMenu";
-            this.PengambilanObatMenu.Size = new System.Drawing.Size(224, 26);
+            this.PengambilanObatMenu.Size = new System.Drawing.Size(215, 26);
             this.PengambilanObatMenu.Text = "Pengambilan Obat";
             this.PengambilanObatMenu.Click += new System.EventHandler(this.PengambilanObatMenu_Click);
             // 
             // SelesaiMenu
             // 
             this.SelesaiMenu.Name = "SelesaiMenu";
-            this.SelesaiMenu.Size = new System.Drawing.Size(224, 26);
+            this.SelesaiMenu.Size = new System.Drawing.Size(215, 26);
             this.SelesaiMenu.Text = "Selesai";
             this.SelesaiMenu.Click += new System.EventHandler(this.SelesaiMenu_Click);
             // 
@@ -101,26 +102,39 @@
             this.btn_logout.UseVisualStyleBackColor = false;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
-            // lHello
+            // user_lbl
             // 
-            this.lHello.AutoSize = true;
-            this.lHello.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHello.ForeColor = System.Drawing.Color.Yellow;
-            this.lHello.Location = new System.Drawing.Point(146, 239);
-            this.lHello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lHello.Name = "lHello";
-            this.lHello.Size = new System.Drawing.Size(440, 78);
-            this.lHello.TabIndex = 7;
-            this.lHello.Text = "Hello, User!";
+            this.user_lbl.AutoSize = true;
+            this.user_lbl.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_lbl.ForeColor = System.Drawing.Color.Olive;
+            this.user_lbl.Location = new System.Drawing.Point(448, 156);
+            this.user_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.user_lbl.Name = "user_lbl";
+            this.user_lbl.Size = new System.Drawing.Size(212, 78);
+            this.user_lbl.TabIndex = 11;
+            this.user_lbl.Text = "User!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Olive;
+            this.label1.Location = new System.Drawing.Point(215, 156);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 78);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Hello,";
             // 
             // HomeDokter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 450);
+            this.Controls.Add(this.user_lbl);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.MenuStrip1);
             this.Controls.Add(this.btn_logout);
-            this.Controls.Add(this.lHello);
             this.Name = "HomeDokter";
             this.Text = "HomeDokter";
             this.MenuStrip1.ResumeLayout(false);
@@ -138,7 +152,8 @@
         internal System.Windows.Forms.ToolStripMenuItem PemeriksaanMenu;
         internal System.Windows.Forms.ToolStripMenuItem PengambilanObatMenu;
         internal System.Windows.Forms.Button btn_logout;
-        internal System.Windows.Forms.Label lHello;
         private System.Windows.Forms.ToolStripMenuItem SelesaiMenu;
+        internal System.Windows.Forms.Label user_lbl;
+        internal System.Windows.Forms.Label label1;
     }
 }

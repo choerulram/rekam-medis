@@ -34,6 +34,7 @@
             this.PendaftaranMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.PengambilanObatMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_logout = new System.Windows.Forms.Button();
+            this.user_lbl = new System.Windows.Forms.Label();
             this.lHello = new System.Windows.Forms.Label();
             this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,14 +69,14 @@
             // PendaftaranMenu
             // 
             this.PendaftaranMenu.Name = "PendaftaranMenu";
-            this.PendaftaranMenu.Size = new System.Drawing.Size(224, 26);
+            this.PendaftaranMenu.Size = new System.Drawing.Size(215, 26);
             this.PendaftaranMenu.Text = "Pendaftaran";
             this.PendaftaranMenu.Click += new System.EventHandler(this.PendaftaranMenu_Click);
             // 
             // PengambilanObatMenu
             // 
             this.PengambilanObatMenu.Name = "PengambilanObatMenu";
-            this.PengambilanObatMenu.Size = new System.Drawing.Size(224, 26);
+            this.PengambilanObatMenu.Size = new System.Drawing.Size(215, 26);
             this.PengambilanObatMenu.Text = "Pengambilan Obat";
             this.PengambilanObatMenu.Click += new System.EventHandler(this.PengambilanObatMenu_Click);
             // 
@@ -92,26 +93,39 @@
             this.btn_logout.UseVisualStyleBackColor = false;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
+            // user_lbl
+            // 
+            this.user_lbl.AutoSize = true;
+            this.user_lbl.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_lbl.ForeColor = System.Drawing.Color.Olive;
+            this.user_lbl.Location = new System.Drawing.Point(458, 146);
+            this.user_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.user_lbl.Name = "user_lbl";
+            this.user_lbl.Size = new System.Drawing.Size(212, 78);
+            this.user_lbl.TabIndex = 11;
+            this.user_lbl.Text = "User!";
+            // 
             // lHello
             // 
             this.lHello.AutoSize = true;
             this.lHello.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHello.ForeColor = System.Drawing.Color.Yellow;
-            this.lHello.Location = new System.Drawing.Point(146, 239);
+            this.lHello.ForeColor = System.Drawing.Color.Olive;
+            this.lHello.Location = new System.Drawing.Point(212, 146);
             this.lHello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lHello.Name = "lHello";
-            this.lHello.Size = new System.Drawing.Size(440, 78);
-            this.lHello.TabIndex = 7;
-            this.lHello.Text = "Hello, User!";
+            this.lHello.Size = new System.Drawing.Size(238, 78);
+            this.lHello.TabIndex = 10;
+            this.lHello.Text = "Hello,";
             // 
             // HomePasien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 450);
+            this.Controls.Add(this.user_lbl);
+            this.Controls.Add(this.lHello);
             this.Controls.Add(this.MenuStrip1);
             this.Controls.Add(this.btn_logout);
-            this.Controls.Add(this.lHello);
             this.Name = "HomePasien";
             this.Text = "HomePasien";
             this.MenuStrip1.ResumeLayout(false);
@@ -129,6 +143,7 @@
         internal System.Windows.Forms.ToolStripMenuItem PendaftaranMenu;
         internal System.Windows.Forms.ToolStripMenuItem PengambilanObatMenu;
         internal System.Windows.Forms.Button btn_logout;
+        internal System.Windows.Forms.Label user_lbl;
         internal System.Windows.Forms.Label lHello;
     }
 }
