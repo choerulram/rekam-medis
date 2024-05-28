@@ -45,10 +45,10 @@ C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Pro
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FromDokter.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.HomeAdmin.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.HomeDokter.resources
-C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.HomePasien.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.Properties.Resources.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.csproj.GenerateResource.cache
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.csproj.CoreCompileInputs.cache
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.csproj.Up2Date
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.exe
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.pdb
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FormPemeriksaanDokter.resources

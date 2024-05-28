@@ -125,12 +125,6 @@
     <Compile Include="antarmuka\HomeDokter.Designer.cs">
       <DependentUpon>HomeDokter.cs</DependentUpon>
     </Compile>
-    <Compile Include="antarmuka\HomePasien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="antarmuka\HomePasien.Designer.cs">
-      <DependentUpon>HomePasien.cs</DependentUpon>
-    </Compile>
     <Compile Include="antarmuka\ListResep.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +139,9 @@
     <EmbeddedResource Include="antarmuka\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\FormPemeriksaanDokter.resx">
+      <DependentUpon>FormPemeriksaanDokter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\FromDokter.resx">
       <DependentUpon>FromDokter.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\HomeDokter.resx">
       <DependentUpon>HomeDokter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="antarmuka\HomePasien.resx">
-      <DependentUpon>HomePasien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

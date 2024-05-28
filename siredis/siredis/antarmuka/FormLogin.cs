@@ -39,10 +39,6 @@ namespace siredis.antarmuka
                         HomeDokter dashboardDokter = new HomeDokter(username_txt.Text);
                         dashboardDokter.Show();
                         break;
-                    case "Pasien":
-                        HomePasien dashboardPasien = new HomePasien(username_txt.Text);
-                        dashboardPasien.Show();
-                        break;
                     default:
                         MessageBox.Show("Tipe pengguna tidak dikenal.", "KESALAHAN",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);

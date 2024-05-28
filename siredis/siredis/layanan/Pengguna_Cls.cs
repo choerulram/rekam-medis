@@ -51,17 +51,6 @@ namespace siredis.layanan
                 return cek;
             }
 
-            // Periksa di tabel tb_pasien
-            Query = "SELECT 'Pasien' as UserType FROM tb_pasien WHERE username=@uid AND password=@pwd";
-            result = server.eksekusiQuery(Query, new MySqlParameter("@uid", uid), new MySqlParameter("@pwd", pwd));
-
-            if (result.Rows.Count > 0)
-            {
-                cek = true;
-                UserType = result.Rows[0]["UserType"].ToString();
-                return cek;
-            }
-
             return cek;
         }
     }
