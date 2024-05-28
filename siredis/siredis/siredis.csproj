@@ -95,12 +95,6 @@
     <Compile Include="antarmuka\FormPendaftaran.Designer.cs">
       <DependentUpon>FormPendaftaran.cs</DependentUpon>
     </Compile>
-    <Compile Include="antarmuka\FormResep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="antarmuka\FormResep.Designer.cs">
-      <DependentUpon>FormResep.cs</DependentUpon>
-    </Compile>
     <Compile Include="antarmuka\FormSelesai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,8 +133,17 @@
     <EmbeddedResource Include="antarmuka\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\FormPemeriksaan.resx">
+      <DependentUpon>FormPemeriksaan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\FormPemeriksaanDokter.resx">
       <DependentUpon>FormPemeriksaanDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\FormPendaftaran.resx">
+      <DependentUpon>FormPendaftaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\FormSelesai.resx">
+      <DependentUpon>FormSelesai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\FromDokter.resx">
       <DependentUpon>FromDokter.cs</DependentUpon>

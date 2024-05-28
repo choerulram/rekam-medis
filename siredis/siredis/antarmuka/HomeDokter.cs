@@ -31,12 +31,6 @@ namespace siredis.antarmuka
             transaksi.Show();
         }
 
-        private void PengambilanObatMenu_Click(object sender, EventArgs e)
-        {
-            FormResep transaksi = new FormResep();
-            transaksi.Show();
-        }
-
         private void SelesaiMenu_Click(object sender, EventArgs e)
         {
             FormSelesai transaksi = new FormSelesai();

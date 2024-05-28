@@ -52,3 +52,6 @@ C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Pro
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.exe
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.pdb
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FormPemeriksaanDokter.resources
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FormPemeriksaan.resources
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FormPendaftaran.resources
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FormSelesai.resources
