@@ -34,6 +34,7 @@
             this.tCari = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.ldokter = new System.Windows.Forms.Label();
             this.lpasien = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.Panel2.SuspendLayout();
@@ -123,6 +123,18 @@
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1240, 99);
             this.Panel2.TabIndex = 31;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(1012, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 67);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "LIHAT RESEP";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnRefresh
             // 
@@ -266,18 +278,6 @@
             this.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1";
             this.ToolStripStatusLabel1.Size = new System.Drawing.Size(90, 17);
             this.ToolStripStatusLabel1.Text = "Total row data : ";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1012, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 67);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "LIHAT RESEP";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FormPemeriksaan
             // 

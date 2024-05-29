@@ -12,6 +12,7 @@ namespace siredis.antarmuka
 {
     public partial class HomeAdmin : Form
     {
+        private string userId;
         public HomeAdmin(string user)
         {
             InitializeComponent();
@@ -51,8 +52,8 @@ namespace siredis.antarmuka
 
         private void PendaftaranMenu_Click(object sender, EventArgs e)
         {
-            FormPendaftaran transaksi = new FormPendaftaran();
-            transaksi.Show();
+            FormPendaftaran formPendaftaran = new FormPendaftaran(userId);
+            formPendaftaran.Show();
         }
 
         private void PemeriksaanMenu_Click(object sender, EventArgs e)

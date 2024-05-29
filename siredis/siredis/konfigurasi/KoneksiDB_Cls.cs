@@ -12,7 +12,7 @@ namespace siredis.konfigurasi
 {
     internal class KoneksiDB_Cls : Konfigurasi_Cls
     {
-        MySqlConnection conn;
+        public MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
         string link = "server=localhost; port=3306; database=rekam_medis; uid=root; pwd=";
@@ -26,7 +26,7 @@ namespace siredis.konfigurasi
         }
 
         // method untuk membuka koneksi ke database
-        void bukaKoneksi()
+        public void bukaKoneksi()
         {
             try
             {
@@ -37,15 +37,24 @@ namespace siredis.konfigurasi
             }
             catch (Exception ex)
             {
-                // Handle exception (for example, log it)
                 Console.WriteLine("Error opening connection: " + ex.Message);
             }
         }
 
         // method untuk menutup koneksi ke database
-        void tutupKoneksi()
+        public void tutupKoneksi()
         {
-            conn.Close();
+            try
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error closing connection: " + ex.Message);
+            }
         }
 
         // method untuk menjalankan perintah SQL yang bukan query (INSERT, UPDATE, DELETE)
@@ -90,7 +99,6 @@ namespace siredis.konfigurasi
             }
             catch (Exception ex)
             {
-                // Handle exception (for example, log it)
                 Console.WriteLine("Error executing query: " + ex.Message);
             }
             finally

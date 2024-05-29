@@ -108,12 +108,14 @@
             this.PendaftaranMenu.Name = "PendaftaranMenu";
             this.PendaftaranMenu.Size = new System.Drawing.Size(180, 22);
             this.PendaftaranMenu.Text = "Pendaftaran";
+            this.PendaftaranMenu.Click += new System.EventHandler(this.PendaftaranMenu_Click);
             // 
             // PemeriksaanMenu
             // 
             this.PemeriksaanMenu.Name = "PemeriksaanMenu";
             this.PemeriksaanMenu.Size = new System.Drawing.Size(180, 22);
             this.PemeriksaanMenu.Text = "Pemeriksaan";
+            this.PemeriksaanMenu.Click += new System.EventHandler(this.PemeriksaanMenu_Click_1);
             // 
             // SelesaiMenu
             // 
@@ -130,7 +132,7 @@
             this.Controls.Add(this.user_lbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_logout);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeDokter";
             this.Text = "HomeDokter";
             this.MenuStrip1.ResumeLayout(false);
