@@ -51,13 +51,6 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.pendaftaran_dgv = new System.Windows.Forms.DataGridView();
-            this.no_kartu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.keluhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.spesialis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCari = new System.Windows.Forms.Button();
             this.cari_txt = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -290,66 +283,12 @@
             this.pendaftaran_dgv.AllowUserToAddRows = false;
             this.pendaftaran_dgv.AllowUserToDeleteRows = false;
             this.pendaftaran_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pendaftaran_dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.no_kartu,
-            this.pasien,
-            this.keluhan,
-            this.tanggal,
-            this.status,
-            this.spesialis,
-            this.dokter});
             this.pendaftaran_dgv.Location = new System.Drawing.Point(26, 41);
             this.pendaftaran_dgv.Name = "pendaftaran_dgv";
             this.pendaftaran_dgv.ReadOnly = true;
             this.pendaftaran_dgv.Size = new System.Drawing.Size(1209, 336);
             this.pendaftaran_dgv.TabIndex = 9;
-            // 
-            // no_kartu
-            // 
-            this.no_kartu.HeaderText = "No. Kartu";
-            this.no_kartu.Name = "no_kartu";
-            this.no_kartu.ReadOnly = true;
-            // 
-            // pasien
-            // 
-            this.pasien.HeaderText = "Pasien";
-            this.pasien.Name = "pasien";
-            this.pasien.ReadOnly = true;
-            this.pasien.Width = 200;
-            // 
-            // keluhan
-            // 
-            this.keluhan.HeaderText = "Keluhan";
-            this.keluhan.Name = "keluhan";
-            this.keluhan.ReadOnly = true;
-            this.keluhan.Width = 200;
-            // 
-            // tanggal
-            // 
-            this.tanggal.HeaderText = "Tanggal";
-            this.tanggal.Name = "tanggal";
-            this.tanggal.ReadOnly = true;
-            this.tanggal.Width = 85;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // spesialis
-            // 
-            this.spesialis.HeaderText = "Spesialis";
-            this.spesialis.Name = "spesialis";
-            this.spesialis.ReadOnly = true;
-            this.spesialis.Width = 85;
-            // 
-            // dokter
-            // 
-            this.dokter.HeaderText = "Dokter";
-            this.dokter.Name = "dokter";
-            this.dokter.ReadOnly = true;
-            this.dokter.Width = 200;
+            this.pendaftaran_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pendaftaran_dgv_CellClick);
             // 
             // btnCari
             // 
@@ -362,6 +301,7 @@
             this.btnCari.TabIndex = 8;
             this.btnCari.Text = "CARI";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // cari_txt
             // 
@@ -369,6 +309,7 @@
             this.cari_txt.Name = "cari_txt";
             this.cari_txt.Size = new System.Drawing.Size(176, 20);
             this.cari_txt.TabIndex = 3;
+            this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -389,6 +330,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FormPendaftaran";
             this.Text = "FormPendaftaran";
+            this.Load += new System.EventHandler(this.FormPendaftaran_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             this.StatusStrip1.ResumeLayout(false);
@@ -430,12 +372,5 @@
         internal System.Windows.Forms.Button btnCari;
         internal System.Windows.Forms.TextBox cari_txt;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn no_kartu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pasien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn keluhan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn spesialis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dokter;
     }
 }

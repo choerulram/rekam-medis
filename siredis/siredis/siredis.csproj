@@ -128,6 +128,7 @@
     <Compile Include="konfigurasi\KoneksiDB_Cls.cs" />
     <Compile Include="konfigurasi\Konfigurasi_Cls.cs" />
     <Compile Include="layanan\Pengguna_Cls.cs" />
+    <Compile Include="layanan\RekamMedis_Cls.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="antarmuka\FormLogin.resx">

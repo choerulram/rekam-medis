@@ -108,5 +108,28 @@ namespace siredis.konfigurasi
 
             return result;
         }
+
+        // method untuk menjalankan perintah SQL query (SELECT) dengan MySqlCommand
+        public DataTable eksekusiQuery(MySqlCommand cmd)
+        {
+            DataTable result = new DataTable();
+            try
+            {
+                bukaKoneksi();
+                cmd.Connection = conn;
+                adapter.SelectCommand = cmd;
+                adapter.Fill(result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error executing query: " + ex.Message);
+            }
+            finally
+            {
+                tutupKoneksi();
+            }
+
+            return result;
+        }
     }
 }

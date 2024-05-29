@@ -78,21 +78,21 @@
             // PendaftaranMenu
             // 
             this.PendaftaranMenu.Name = "PendaftaranMenu";
-            this.PendaftaranMenu.Size = new System.Drawing.Size(180, 22);
+            this.PendaftaranMenu.Size = new System.Drawing.Size(141, 22);
             this.PendaftaranMenu.Text = "Pendaftaran";
             this.PendaftaranMenu.Click += new System.EventHandler(this.PendaftaranMenu_Click);
             // 
             // PemeriksaanMenu
             // 
             this.PemeriksaanMenu.Name = "PemeriksaanMenu";
-            this.PemeriksaanMenu.Size = new System.Drawing.Size(180, 22);
+            this.PemeriksaanMenu.Size = new System.Drawing.Size(141, 22);
             this.PemeriksaanMenu.Text = "Pemeriksaan";
             this.PemeriksaanMenu.Click += new System.EventHandler(this.PemeriksaanMenu_Click);
             // 
             // SelesaiMenu
             // 
             this.SelesaiMenu.Name = "SelesaiMenu";
-            this.SelesaiMenu.Size = new System.Drawing.Size(180, 22);
+            this.SelesaiMenu.Size = new System.Drawing.Size(141, 22);
             this.SelesaiMenu.Text = "Selesai";
             this.SelesaiMenu.Click += new System.EventHandler(this.SelesaiMenu_Click);
             // 
@@ -178,9 +178,9 @@
             this.Controls.Add(this.MenuStrip1);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.lHello);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeAdmin";
-            this.Text = "HomeAdmin";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.HomeAdmin_Load);
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
