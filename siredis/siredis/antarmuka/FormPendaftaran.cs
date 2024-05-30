@@ -16,6 +16,7 @@ namespace siredis.antarmuka
     public partial class FormPendaftaran : Form
     {
         RekamMedis_Cls rekam_medis = new RekamMedis_Cls();
+
         public FormPendaftaran(string adminId)
         {
             InitializeComponent();
@@ -90,6 +91,54 @@ namespace siredis.antarmuka
         private void btnCari_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(rekam_medis.ambilKodeDgNama(nama_txt.Text));
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            //if (!rekam_medis.apakahAda(id_txt.Text))
+            //{
+            //    rekam_medis.Id_Prodi = id_txt.Text;
+            //    rekam_medis.Nama_Prodi = nama_txt.Text;
+
+            //    string idJurusan = jurusan_cmb.SelectedValue.ToString();
+            //    rekam_medis.Id_Jurusan = idJurusan;
+
+            //    if (rekam_medis.simpanData() > 0)
+            //    {
+            //        MessageBox.Show("Data berhasil disimpan.", "INFORMASI",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        id_txt.Focus();
+            //        id_txt.Clear();
+            //        nama_txt.Clear();
+            //        tampilGrid();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Maaf data input tidak valid.", "INFORMASI",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        id_txt.Focus();
+            //    }
+
+            //}
+            //else
+            //{
+            //    if (MessageBox.Show("Yakin data akan diubah?", "KONFIRMASI",
+            //        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    {
+            //        rekam_medis.Nama_Prodi = nama_txt.Text;
+            //        string idJurusan = jurusan_cmb.SelectedValue.ToString();
+            //        rekam_medis.Id_Jurusan = idJurusan;
+            //        if (rekam_medis.ubahData(id_txt.Text) > 0)
+            //        {
+            //            MessageBox.Show("Data berhasil diubah.", "INFORMASI",
+            //            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            id_txt.Focus();
+            //            id_txt.Clear();
+            //            nama_txt.Clear();
+            //            tampilGrid();
+            //        }
+            //    }
+            //}
         }
     }
 }

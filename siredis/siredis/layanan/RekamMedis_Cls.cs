@@ -14,15 +14,90 @@ namespace siredis.layanan
 
     internal class RekamMedis_Cls
     {
+        private string _id_pasien;
+        private string _id_dokter;
+        private string _keluhan;
+        private string _tanggal;
+        private string _status;
+
         KoneksiDB_Cls server;
         DataTable data;
         string Query;
 
         public RekamMedis_Cls()
         {
+            _id_pasien = "";
+            _id_dokter = "";
+            _keluhan = "";
+            _tanggal = "";
+            _status = "";
+
             server = new KoneksiDB_Cls();
             data = new DataTable();
             Query = "";
+        }
+
+        // property untuk mengatur id pasien
+        public string Id_Pasien
+        {
+            set { _id_pasien = value; } //mutator method
+            //get { return _id; } //asesor method
+        }
+
+        // property untuk mengatur id dokter
+        public string Id_Dokter
+        {
+            set { _id_dokter = value; }
+        }
+
+        // property untuk mengatur keluhan rekam_medis
+        public string Keluhan_RekamMedis
+        {
+            set { _keluhan = value; }
+        }
+
+        // property untuk mengatur tanggal rekam_medis
+        public string Tanggal_RekamMedis
+        {
+            set { _tanggal = value; }
+        }
+
+        // property untuk mengatur status rekam_medis
+        public string Status_RekamMedis
+        {
+            set { _status = value; }
+        }
+
+        // metode untuk memeriksa apakah id jurusan sudah ada dalam database
+        public bool apakahAda(string id)
+        {
+            bool cek = false;
+            Query = $"select * from tb_rekam_medis where id_prodi = '{id}'";
+            data = server.eksekusiQuery(Query);
+            if (data.Rows.Count > 0)
+            {
+                cek = true;
+            }
+            return cek;
+        }
+
+        // metode untuk menyimpan data baru ke database
+        public int simpanData()
+        {
+            int result = -1;
+            Query = $"insert into tb_rekam_medis (id_pasien, id_dokter, keluhan, tanggal, status) " +
+                $"values ('{_id_pasien}', '{_id_dokter}', {_keluhan}, '{_tanggal}', '{_status}')";
+            try
+            {
+                result = server.eksekusiBukanQuery(Query);
+                if (result < 0)
+                {
+                    throw new Exception("Gagal disimpan.");
+                }
+            }
+            catch (Exception ex) { }
+
+            return result;
         }
 
         // metode untuk menampilkan data dari database

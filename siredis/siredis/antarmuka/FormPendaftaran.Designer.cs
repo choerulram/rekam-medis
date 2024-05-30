@@ -64,9 +64,10 @@
             // LinkLabel1
             // 
             this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Location = new System.Drawing.Point(12, 112);
+            this.LinkLabel1.Location = new System.Drawing.Point(16, 138);
+            this.LinkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(35, 13);
+            this.LinkLabel1.Size = new System.Drawing.Size(44, 16);
             this.LinkLabel1.TabIndex = 28;
             this.LinkLabel1.TabStop = true;
             this.LinkLabel1.Text = "Home";
@@ -76,8 +77,9 @@
             this.Panel1.BackColor = System.Drawing.Color.ForestGreen;
             this.Panel1.Controls.Add(this.Label1);
             this.Panel1.Location = new System.Drawing.Point(-1, -1);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1266, 95);
+            this.Panel1.Size = new System.Drawing.Size(1688, 117);
             this.Panel1.TabIndex = 24;
             // 
             // Label1
@@ -85,26 +87,29 @@
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.Yellow;
-            this.Label1.Location = new System.Drawing.Point(267, 0);
+            this.Label1.Location = new System.Drawing.Point(356, 0);
+            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(721, 63);
+            this.Label1.Size = new System.Drawing.Size(913, 78);
             this.Label1.TabIndex = 0;
             this.Label1.Text = "APLIKASI REKAM MEDIS";
             // 
             // StatusStrip1
             // 
+            this.StatusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.StatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripStatusLabel1});
-            this.StatusStrip1.Location = new System.Drawing.Point(0, 659);
+            this.StatusStrip1.Location = new System.Drawing.Point(0, 812);
             this.StatusStrip1.Name = "StatusStrip1";
-            this.StatusStrip1.Size = new System.Drawing.Size(1264, 22);
+            this.StatusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.StatusStrip1.Size = new System.Drawing.Size(1685, 26);
             this.StatusStrip1.TabIndex = 27;
             this.StatusStrip1.Text = "StatusStrip1";
             // 
             // ToolStripStatusLabel1
             // 
             this.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1";
-            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(90, 17);
+            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(116, 20);
             this.ToolStripStatusLabel1.Text = "Total row data : ";
             // 
             // Panel2
@@ -123,25 +128,28 @@
             this.Panel2.Controls.Add(this.btnTambah);
             this.Panel2.Controls.Add(this.Label5);
             this.Panel2.Controls.Add(this.Label3);
-            this.Panel2.Location = new System.Drawing.Point(12, 142);
+            this.Panel2.Location = new System.Drawing.Point(16, 175);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(1240, 99);
+            this.Panel2.Size = new System.Drawing.Size(1653, 121);
             this.Panel2.TabIndex = 25;
             // 
             // cbDokter
             // 
             this.cbDokter.FormattingEnabled = true;
-            this.cbDokter.Location = new System.Drawing.Point(14, 70);
+            this.cbDokter.Location = new System.Drawing.Point(19, 86);
+            this.cbDokter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbDokter.Name = "cbDokter";
-            this.cbDokter.Size = new System.Drawing.Size(392, 21);
+            this.cbDokter.Size = new System.Drawing.Size(521, 24);
             this.cbDokter.TabIndex = 20;
             // 
             // cbPasien
             // 
             this.cbPasien.FormattingEnabled = true;
-            this.cbPasien.Location = new System.Drawing.Point(14, 27);
+            this.cbPasien.Location = new System.Drawing.Point(19, 33);
+            this.cbPasien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbPasien.Name = "cbPasien";
-            this.cbPasien.Size = new System.Drawing.Size(392, 21);
+            this.cbPasien.Size = new System.Drawing.Size(521, 24);
             this.cbPasien.TabIndex = 19;
             // 
             // cbStatus
@@ -152,33 +160,37 @@
             "pemeriksaan",
             "tebus_obat",
             "selesai"});
-            this.cbStatus.Location = new System.Drawing.Point(775, 66);
+            this.cbStatus.Location = new System.Drawing.Point(1033, 81);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(200, 21);
+            this.cbStatus.Size = new System.Drawing.Size(265, 24);
             this.cbStatus.TabIndex = 18;
             // 
             // dtTanggal
             // 
-            this.dtTanggal.Location = new System.Drawing.Point(775, 24);
+            this.dtTanggal.Location = new System.Drawing.Point(1033, 30);
+            this.dtTanggal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtTanggal.Name = "dtTanggal";
-            this.dtTanggal.Size = new System.Drawing.Size(200, 20);
+            this.dtTanggal.Size = new System.Drawing.Size(265, 22);
             this.dtTanggal.TabIndex = 17;
             // 
             // tKeluhan
             // 
-            this.tKeluhan.Location = new System.Drawing.Point(449, 24);
+            this.tKeluhan.Location = new System.Drawing.Point(599, 30);
+            this.tKeluhan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tKeluhan.Multiline = true;
             this.tKeluhan.Name = "tKeluhan";
-            this.tKeluhan.Size = new System.Drawing.Size(305, 67);
+            this.tKeluhan.Size = new System.Drawing.Size(405, 82);
             this.tKeluhan.TabIndex = 16;
             // 
             // Label8
             // 
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(446, 4);
+            this.Label8.Location = new System.Drawing.Point(595, 5);
+            this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(77, 17);
+            this.Label8.Size = new System.Drawing.Size(88, 20);
             this.Label8.TabIndex = 15;
             this.Label8.Text = "Keluhan :";
             // 
@@ -186,9 +198,10 @@
             // 
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(11, 7);
+            this.Label4.Location = new System.Drawing.Point(15, 9);
+            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(67, 17);
+            this.Label4.Size = new System.Drawing.Size(78, 20);
             this.Label4.TabIndex = 14;
             this.Label4.Text = "Pasien :";
             // 
@@ -196,9 +209,10 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(772, 4);
+            this.Label7.Location = new System.Drawing.Point(1029, 5);
+            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(77, 17);
+            this.Label7.Size = new System.Drawing.Size(87, 20);
             this.Label7.TabIndex = 9;
             this.Label7.Text = "Tanggal :";
             // 
@@ -207,9 +221,10 @@
             this.btnHapus.BackColor = System.Drawing.Color.Crimson;
             this.btnHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(1139, 57);
+            this.btnHapus.Location = new System.Drawing.Point(1519, 70);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(88, 31);
+            this.btnHapus.Size = new System.Drawing.Size(117, 38);
             this.btnHapus.TabIndex = 7;
             this.btnHapus.Text = "HAPUS";
             this.btnHapus.UseVisualStyleBackColor = false;
@@ -219,9 +234,10 @@
             this.btnPerbarui.BackColor = System.Drawing.Color.SteelBlue;
             this.btnPerbarui.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPerbarui.Location = new System.Drawing.Point(1139, 12);
+            this.btnPerbarui.Location = new System.Drawing.Point(1519, 15);
+            this.btnPerbarui.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPerbarui.Name = "btnPerbarui";
-            this.btnPerbarui.Size = new System.Drawing.Size(88, 34);
+            this.btnPerbarui.Size = new System.Drawing.Size(117, 42);
             this.btnPerbarui.TabIndex = 6;
             this.btnPerbarui.Text = "PERBARUI";
             this.btnPerbarui.UseVisualStyleBackColor = false;
@@ -231,20 +247,23 @@
             this.btnTambah.BackColor = System.Drawing.Color.ForestGreen;
             this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(1016, 12);
+            this.btnTambah.Location = new System.Drawing.Point(1355, 15);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(117, 76);
+            this.btnTambah.Size = new System.Drawing.Size(156, 94);
             this.btnTambah.TabIndex = 5;
             this.btnTambah.Text = "TAMBAH";
             this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(772, 47);
+            this.Label5.Location = new System.Drawing.Point(1029, 58);
+            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(64, 17);
+            this.Label5.Size = new System.Drawing.Size(75, 20);
             this.Label5.TabIndex = 4;
             this.Label5.Text = "Status :";
             // 
@@ -252,18 +271,20 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(11, 50);
+            this.Label3.Location = new System.Drawing.Point(15, 62);
+            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(66, 17);
+            this.Label3.Size = new System.Drawing.Size(77, 20);
             this.Label3.TabIndex = 3;
             this.Label3.Text = "Dokter :";
             // 
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(53, 112);
+            this.Label6.Location = new System.Drawing.Point(71, 138);
+            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(100, 13);
+            this.Label6.Size = new System.Drawing.Size(124, 16);
             this.Label6.TabIndex = 29;
             this.Label6.Text = "> Form Pendaftaran";
             // 
@@ -273,9 +294,10 @@
             this.Panel3.Controls.Add(this.pendaftaran_dgv);
             this.Panel3.Controls.Add(this.btnCari);
             this.Panel3.Controls.Add(this.cari_txt);
-            this.Panel3.Location = new System.Drawing.Point(12, 247);
+            this.Panel3.Location = new System.Drawing.Point(16, 304);
+            this.Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(1240, 403);
+            this.Panel3.Size = new System.Drawing.Size(1653, 496);
             this.Panel3.TabIndex = 26;
             // 
             // pendaftaran_dgv
@@ -283,10 +305,12 @@
             this.pendaftaran_dgv.AllowUserToAddRows = false;
             this.pendaftaran_dgv.AllowUserToDeleteRows = false;
             this.pendaftaran_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pendaftaran_dgv.Location = new System.Drawing.Point(26, 41);
+            this.pendaftaran_dgv.Location = new System.Drawing.Point(35, 50);
+            this.pendaftaran_dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pendaftaran_dgv.Name = "pendaftaran_dgv";
             this.pendaftaran_dgv.ReadOnly = true;
-            this.pendaftaran_dgv.Size = new System.Drawing.Size(1209, 336);
+            this.pendaftaran_dgv.RowHeadersWidth = 51;
+            this.pendaftaran_dgv.Size = new System.Drawing.Size(1612, 414);
             this.pendaftaran_dgv.TabIndex = 9;
             this.pendaftaran_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pendaftaran_dgv_CellClick);
             // 
@@ -295,9 +319,10 @@
             this.btnCari.BackColor = System.Drawing.Color.Goldenrod;
             this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(1110, 6);
+            this.btnCari.Location = new System.Drawing.Point(1480, 7);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(117, 29);
+            this.btnCari.Size = new System.Drawing.Size(156, 36);
             this.btnCari.TabIndex = 8;
             this.btnCari.Text = "CARI";
             this.btnCari.UseVisualStyleBackColor = false;
@@ -305,22 +330,24 @@
             // 
             // cari_txt
             // 
-            this.cari_txt.Location = new System.Drawing.Point(928, 11);
+            this.cari_txt.Location = new System.Drawing.Point(1237, 14);
+            this.cari_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cari_txt.Name = "cari_txt";
-            this.cari_txt.Size = new System.Drawing.Size(176, 20);
+            this.cari_txt.Size = new System.Drawing.Size(233, 22);
             this.cari_txt.TabIndex = 3;
             this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // FormPendaftaran
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.LinkLabel1);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.StatusStrip1);
@@ -328,6 +355,7 @@
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.Panel3);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPendaftaran";
             this.Text = "FormPendaftaran";
             this.Load += new System.EventHandler(this.FormPendaftaran_Load);
