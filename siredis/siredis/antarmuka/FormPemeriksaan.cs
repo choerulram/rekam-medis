@@ -16,5 +16,15 @@ namespace siredis.antarmuka
         {
             InitializeComponent();
         }
+
+        private void tCari_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

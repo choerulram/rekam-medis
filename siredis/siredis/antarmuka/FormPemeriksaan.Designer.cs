@@ -60,11 +60,9 @@
             // 
             this.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel3.Controls.Add(this.DataGridView1);
-            this.Panel3.Controls.Add(this.btnCari);
-            this.Panel3.Controls.Add(this.tCari);
-            this.Panel3.Location = new System.Drawing.Point(12, 247);
+            this.Panel3.Location = new System.Drawing.Point(12, 318);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(1240, 403);
+            this.Panel3.Size = new System.Drawing.Size(1240, 332);
             this.Panel3.TabIndex = 32;
             // 
             // DataGridView1
@@ -72,10 +70,10 @@
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(14, 50);
+            this.DataGridView1.Location = new System.Drawing.Point(14, -1);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
-            this.DataGridView1.Size = new System.Drawing.Size(1209, 336);
+            this.DataGridView1.Size = new System.Drawing.Size(1209, 387);
             this.DataGridView1.TabIndex = 9;
             // 
             // btnCari
@@ -83,19 +81,20 @@
             this.btnCari.BackColor = System.Drawing.Color.Goldenrod;
             this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(1110, 6);
+            this.btnCari.Location = new System.Drawing.Point(219, 73);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(117, 29);
+            this.btnCari.Size = new System.Drawing.Size(74, 32);
             this.btnCari.TabIndex = 8;
             this.btnCari.Text = "CARI";
             this.btnCari.UseVisualStyleBackColor = false;
             // 
             // tCari
             // 
-            this.tCari.Location = new System.Drawing.Point(928, 11);
+            this.tCari.Location = new System.Drawing.Point(325, 80);
             this.tCari.Name = "tCari";
-            this.tCari.Size = new System.Drawing.Size(176, 20);
+            this.tCari.Size = new System.Drawing.Size(134, 20);
             this.tCari.TabIndex = 3;
+            this.tCari.TextChanged += new System.EventHandler(this.tCari_TextChanged);
             // 
             // Label6
             // 
@@ -110,7 +109,9 @@
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel2.Controls.Add(this.button1);
+            this.Panel2.Controls.Add(this.btnCari);
             this.Panel2.Controls.Add(this.btnRefresh);
+            this.Panel2.Controls.Add(this.tCari);
             this.Panel2.Controls.Add(this.ldokter);
             this.Panel2.Controls.Add(this.lpasien);
             this.Panel2.Controls.Add(this.cbStatus);
@@ -121,7 +122,7 @@
             this.Panel2.Controls.Add(this.Label3);
             this.Panel2.Location = new System.Drawing.Point(12, 142);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(1240, 99);
+            this.Panel2.Size = new System.Drawing.Size(1240, 132);
             this.Panel2.TabIndex = 31;
             // 
             // button1
@@ -129,21 +130,22 @@
             this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1012, 12);
+            this.button1.Location = new System.Drawing.Point(669, 75);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 67);
+            this.button1.Size = new System.Drawing.Size(83, 39);
             this.button1.TabIndex = 36;
             this.button1.Text = "LIHAT RESEP";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.Green;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefresh.Location = new System.Drawing.Point(861, 12);
+            this.btnRefresh.Location = new System.Drawing.Point(544, 75);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(103, 67);
+            this.btnRefresh.Size = new System.Drawing.Size(82, 39);
             this.btnRefresh.TabIndex = 21;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -151,7 +153,7 @@
             // ldokter
             // 
             this.ldokter.AutoSize = true;
-            this.ldokter.Location = new System.Drawing.Point(11, 75);
+            this.ldokter.Location = new System.Drawing.Point(12, 92);
             this.ldokter.Name = "ldokter";
             this.ldokter.Size = new System.Drawing.Size(66, 13);
             this.ldokter.TabIndex = 20;
@@ -174,9 +176,9 @@
             "pemeriksaan",
             "tebus_obat",
             "selesai"});
-            this.cbStatus.Location = new System.Drawing.Point(305, 31);
+            this.cbStatus.Location = new System.Drawing.Point(325, 12);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(200, 21);
+            this.cbStatus.Size = new System.Drawing.Size(134, 21);
             this.cbStatus.TabIndex = 18;
             // 
             // Label4
@@ -194,9 +196,9 @@
             this.btnPeriksa.BackColor = System.Drawing.Color.Crimson;
             this.btnPeriksa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeriksa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPeriksa.Location = new System.Drawing.Point(711, 12);
+            this.btnPeriksa.Location = new System.Drawing.Point(669, 12);
             this.btnPeriksa.Name = "btnPeriksa";
-            this.btnPeriksa.Size = new System.Drawing.Size(103, 67);
+            this.btnPeriksa.Size = new System.Drawing.Size(83, 38);
             this.btnPeriksa.TabIndex = 7;
             this.btnPeriksa.Text = "PERIKSA";
             this.btnPeriksa.UseVisualStyleBackColor = false;
@@ -206,9 +208,9 @@
             this.btnPerbarui.BackColor = System.Drawing.Color.SteelBlue;
             this.btnPerbarui.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPerbarui.Location = new System.Drawing.Point(565, 12);
+            this.btnPerbarui.Location = new System.Drawing.Point(544, 12);
             this.btnPerbarui.Name = "btnPerbarui";
-            this.btnPerbarui.Size = new System.Drawing.Size(109, 67);
+            this.btnPerbarui.Size = new System.Drawing.Size(82, 38);
             this.btnPerbarui.TabIndex = 6;
             this.btnPerbarui.Text = "PERBARUI";
             this.btnPerbarui.UseVisualStyleBackColor = false;
@@ -217,7 +219,7 @@
             // 
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(302, 12);
+            this.Label5.Location = new System.Drawing.Point(216, 16);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(64, 17);
             this.Label5.TabIndex = 4;
@@ -227,7 +229,7 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(11, 50);
+            this.Label3.Location = new System.Drawing.Point(12, 66);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(66, 17);
             this.Label3.TabIndex = 3;
@@ -293,7 +295,6 @@
             this.Name = "FormPemeriksaan";
             this.Text = "FormPemeriksaan";
             this.Panel3.ResumeLayout(false);
-            this.Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();

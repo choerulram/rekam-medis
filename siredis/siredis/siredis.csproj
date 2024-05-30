@@ -131,6 +131,15 @@
     <Compile Include="layanan\RekamMedis_Cls.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="antarmuka\DataAdmin.resx">
+      <DependentUpon>DataAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\DataDokter.resx">
+      <DependentUpon>DataDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\DataObat.resx">
+      <DependentUpon>DataObat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +187,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\RS-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sodapdf-converted %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rs-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-png-hospital-icon-vector-file-png-image_5201029-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1218689594-170667a-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

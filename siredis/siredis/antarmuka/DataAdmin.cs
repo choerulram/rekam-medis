@@ -16,5 +16,10 @@ namespace siredis.antarmuka
         {
             InitializeComponent();
         }
+
+        private void DataAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
