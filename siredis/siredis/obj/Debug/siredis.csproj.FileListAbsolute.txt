@@ -153,3 +153,8 @@ C:\Users\ACER\Downloads\rekam-medis-main\rekam-medis-main\rekam-medis-main\sired
 C:\Users\ACER\Downloads\rekam-medis-main\rekam-medis-main\rekam-medis-main\siredis\siredis\obj\Debug\siredis.csproj.Up2Date
 C:\Users\ACER\Downloads\rekam-medis-main\rekam-medis-main\rekam-medis-main\siredis\siredis\obj\Debug\siredis.exe
 C:\Users\ACER\Downloads\rekam-medis-main\rekam-medis-main\rekam-medis-main\siredis\siredis\obj\Debug\siredis.pdb
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\bin\Debug\System.Memory.dll
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataAdmin.resources
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataDokter.resources
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataObat.resources

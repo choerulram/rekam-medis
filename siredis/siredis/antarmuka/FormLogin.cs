@@ -32,10 +32,12 @@ namespace siredis.antarmuka
                 switch (user.UserType)
                 {
                     case "Admin":
+                        MessageBox.Show($"Selamat datang, Admin {username_txt.Text}!", "LOGIN BERHASIL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         HomeAdmin dashboardAdmin = new HomeAdmin(username_txt.Text);
                         dashboardAdmin.Show();
                         break;
                     case "Dokter":
+                        MessageBox.Show($"Selamat datang, Dokter {username_txt.Text}!", "LOGIN BERHASIL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         HomeDokter dashboardDokter = new HomeDokter(username_txt.Text);
                         dashboardDokter.Show();
                         break;
