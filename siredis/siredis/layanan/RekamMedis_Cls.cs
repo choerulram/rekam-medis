@@ -125,5 +125,19 @@ namespace siredis.layanan
 
             return kode;
         }
+
+        // Mengambil data pasien dari database
+        public DataTable getComboPasien()
+        {
+            Query = "select id_pasien as id_pasien, nama as nama from tb_pasien";
+            return server.eksekusiQuery(Query);
+        }
+
+        // Mengambil data jurusan dari database
+        public DataTable getComboDokter()
+        {
+            Query = "select id_dokter as id_dokter, nama as nama from tb_dokter";
+            return server.eksekusiQuery(Query);
+        }
     }
 }

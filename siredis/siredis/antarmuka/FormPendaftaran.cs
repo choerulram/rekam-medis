@@ -59,11 +59,16 @@ namespace siredis.antarmuka
 
         private void FormPendaftaran_Load(object sender, EventArgs e)
         {
+            // Menampilkan data terkait di DataGridView
             tampilGrid();
-            //pendaftaran_dgv.DataSource = rekam_medis.getAllWithJurusan();
-            //jurusan_cmb.DataSource = rekam_medis.getComboJurusan();
-            //cbPasien.DisplayMember = "nama";
-            //cbDokter.ValueMember = "nama";
+
+            // Mengatur sumber data combo box pasien
+            cbPasien.DataSource = rekam_medis.getComboPasien();
+            cbPasien.DisplayMember = "nama";
+
+            // Mengatur sumber data combo box dokter
+            cbDokter.DataSource = rekam_medis.getComboDokter();
+            cbDokter.ValueMember = "nama";
         }
 
         private void pendaftaran_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
