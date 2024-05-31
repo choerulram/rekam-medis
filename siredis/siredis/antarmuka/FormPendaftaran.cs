@@ -10,10 +10,12 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using siredis.konfigurasi;
 
+
 namespace siredis.antarmuka
 {
     using layanan;
     using System.Globalization;
+    using siredis.antarmuka;
     using System.Windows.Forms.VisualStyles;
 
     public partial class FormPendaftaran : Form
@@ -212,6 +214,11 @@ namespace siredis.antarmuka
             {
                 MessageBox.Show("Pilih baris data yang ingin dihapus.");
             }
+        }
+
+        private void Homelb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

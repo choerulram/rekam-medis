@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Homelb = new System.Windows.Forms.LinkLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label1 = new System.Windows.Forms.Label();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -61,15 +61,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pendaftaran_dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // LinkLabel1
+            // Homelb
             // 
-            this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Location = new System.Drawing.Point(12, 112);
-            this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(35, 13);
-            this.LinkLabel1.TabIndex = 28;
-            this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "Home";
+            this.Homelb.AutoSize = true;
+            this.Homelb.Location = new System.Drawing.Point(12, 112);
+            this.Homelb.Name = "Homelb";
+            this.Homelb.Size = new System.Drawing.Size(35, 13);
+            this.Homelb.TabIndex = 28;
+            this.Homelb.TabStop = true;
+            this.Homelb.Text = "Home";
+            this.Homelb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Homelb_LinkClicked);
             // 
             // Panel1
             // 
@@ -327,7 +328,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.LinkLabel1);
+            this.Controls.Add(this.Homelb);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.StatusStrip1);
             this.Controls.Add(this.Panel2);
@@ -353,7 +354,7 @@
 
         #endregion
 
-        internal System.Windows.Forms.LinkLabel LinkLabel1;
+        internal System.Windows.Forms.LinkLabel Homelb;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.StatusStrip StatusStrip1;
