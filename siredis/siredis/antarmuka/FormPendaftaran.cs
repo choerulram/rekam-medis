@@ -13,6 +13,8 @@ using siredis.konfigurasi;
 namespace siredis.antarmuka
 {
     using layanan;
+    using System.Windows.Forms.VisualStyles;
+
     public partial class FormPendaftaran : Form
     {
         RekamMedis_Cls rekam_medis = new RekamMedis_Cls();
@@ -63,13 +65,26 @@ namespace siredis.antarmuka
             // Menampilkan data terkait di DataGridView
             tampilGrid();
 
-            // Mengatur sumber data combo box pasien
-            cbPasien.DataSource = rekam_medis.getComboPasien();
-            cbPasien.DisplayMember = "nama";
+            tampilkanComboPasien();
+            tampilkanComboDokter();
+        }
 
-            // Mengatur sumber data combo box dokter
-            cbDokter.DataSource = rekam_medis.getComboDokter();
-            cbDokter.ValueMember = "nama";
+        private void tampilkanComboPasien()
+        {
+            DataTable pasien = rekam_medis.getComboPasien();
+            cbPasien1.DataSource = pasien;
+            cbPasien1.DisplayMember = "nama";
+            cbPasien1.ValueMember = "id_pasien";
+            cbPasien1.SelectedIndex = -1;
+        }
+
+        private void tampilkanComboDokter()
+        {
+            DataTable dokter = rekam_medis.getComboDokter();
+            cbDokter.DataSource = dokter;
+            cbDokter.DisplayMember = "nama";
+            cbDokter.ValueMember = "id_dokter";
+            cbDokter.SelectedIndex = -1;
         }
 
         private void pendaftaran_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -95,50 +110,38 @@ namespace siredis.antarmuka
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            //if (!rekam_medis.apakahAda(id_txt.Text))
-            //{
-            //    rekam_medis.Id_Prodi = id_txt.Text;
-            //    rekam_medis.Nama_Prodi = nama_txt.Text;
+            rekam_medis.Id_Pasien = cbPasien1.SelectedValue.ToString();
+            rekam_medis.Id_Dokter = cbDokter.SelectedValue.ToString();
+            rekam_medis.Keluhan_RekamMedis = tKeluhan.Text;
+            rekam_medis.Tanggal_RekamMedis = dtTanggal.Value.ToString("yyyy-MM-dd");
+            rekam_medis.Status_RekamMedis = cbStatus.Text;
 
-            //    string idJurusan = jurusan_cmb.SelectedValue.ToString();
-            //    rekam_medis.Id_Jurusan = idJurusan;
+            if (rekam_medis.apakahAda())
+            {
+                int result = rekam_medis.ubahData();
+                if (result >= 0)
+                {
+                    MessageBox.Show("Data berhasil diubah.");
+                }
+                else
+                {
+                    MessageBox.Show("Gagal mengubah data.");
+                }
+            }
+            else
+            {
+                int result = rekam_medis.simpanData();
+                if (result >= 0)
+                {
+                    MessageBox.Show("Data berhasil disimpan.");
+                }
+                else
+                {
+                    MessageBox.Show("Gagal menyimpan data.");
+                }
+            }
 
-            //    if (rekam_medis.simpanData() > 0)
-            //    {
-            //        MessageBox.Show("Data berhasil disimpan.", "INFORMASI",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        id_txt.Focus();
-            //        id_txt.Clear();
-            //        nama_txt.Clear();
-            //        tampilGrid();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Maaf data input tidak valid.", "INFORMASI",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        id_txt.Focus();
-            //    }
-
-            //}
-            //else
-            //{
-            //    if (MessageBox.Show("Yakin data akan diubah?", "KONFIRMASI",
-            //        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //    {
-            //        rekam_medis.Nama_Prodi = nama_txt.Text;
-            //        string idJurusan = jurusan_cmb.SelectedValue.ToString();
-            //        rekam_medis.Id_Jurusan = idJurusan;
-            //        if (rekam_medis.ubahData(id_txt.Text) > 0)
-            //        {
-            //            MessageBox.Show("Data berhasil diubah.", "INFORMASI",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            id_txt.Focus();
-            //            id_txt.Clear();
-            //            nama_txt.Clear();
-            //            tampilGrid();
-            //        }
-            //    }
-            //}
+            tampilGrid();
         }
     }
 }

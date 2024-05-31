@@ -158,3 +158,4 @@ C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Pro
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataAdmin.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataDokter.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataObat.resources
+C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\bin\Debug\Guna.UI2.dll

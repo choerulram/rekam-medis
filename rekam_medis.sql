@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 30, 2024 at 06:44 AM
+-- Generation Time: May 31, 2024 at 02:55 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -123,10 +123,9 @@ CREATE TABLE `tb_rekam_medis` (
   `id_rekam` int NOT NULL,
   `id_pasien` int NOT NULL,
   `keluhan` text NOT NULL,
-  `diagnosa` text NOT NULL,
+  `diagnosa` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `tanggal` date NOT NULL,
   `id_dokter` int NOT NULL,
-  `id_admin` int NOT NULL,
   `status` enum('pendaftaran','pemeriksaan','tebus_obat','selesai') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -134,22 +133,24 @@ CREATE TABLE `tb_rekam_medis` (
 -- Dumping data for table `tb_rekam_medis`
 --
 
-INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `tanggal`, `id_dokter`, `id_admin`, `status`) VALUES
-(12, 11, 'sakit gigi', '', '2021-03-28', 1, 1, 'pendaftaran'),
-(13, 11, 'sakit mata', 'kurang vitamin c', '2021-03-28', 1, 1, 'selesai'),
-(14, 11, 'sakit gigi', 'kebayakan makan coklat', '2021-03-28', 1, 1, 'selesai'),
-(15, 12, 'sakit perut', '', '2021-03-28', 1, 1, 'pendaftaran'),
-(16, 12, 'sakit perut', 'salah makan', '2021-03-28', 1, 1, 'selesai'),
-(17, 12, 'sakit perut', '', '2021-03-28', 1, 1, 'pendaftaran'),
-(18, 12, 'sakit perut', 'adasfsdfsd', '2021-03-28', 1, 1, 'selesai'),
-(19, 13, 'sakit gigi', '', '2021-03-28', 5, 1, 'pendaftaran'),
-(20, 13, 'sakit gigi', 'kebayakan makam permen', '2021-03-28', 5, 1, 'tebus_obat'),
-(21, 13, 'sakit gigi', 'kebanyakan banyak permen', '2021-03-28', 5, 1, 'tebus_obat'),
-(23, 11, 'SAKIT MATA', 'KURANG VITAMIN A', '2021-03-28', 1, 1, 'selesai'),
-(24, 12, 'SAKIt GIGI', '', '2024-05-28', 1, 1, 'pendaftaran'),
-(25, 12, 'MUNTABER', 'SALAH MAKAN', '2021-03-28', 1, 1, 'selesai'),
-(26, 13, 'SAKIT PERUT', '', '2021-03-28', 1, 1, 'pendaftaran'),
-(27, 13, 'SAKIT PERUT', 'SALAH MAKAN', '2021-03-28', 1, 1, 'selesai');
+INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `tanggal`, `id_dokter`, `status`) VALUES
+(12, 11, 'sakit gigi', '', '2021-03-28', 1, 'pendaftaran'),
+(13, 11, 'sakit mata', 'kurang vitamin c', '2021-03-28', 1, 'selesai'),
+(14, 11, 'sakit gigi', 'kebayakan makan coklat', '2021-03-28', 1, 'selesai'),
+(15, 12, 'sakit perut', '', '2021-03-28', 1, 'pendaftaran'),
+(16, 12, 'sakit perut', 'salah makan', '2021-03-28', 1, 'selesai'),
+(17, 12, 'sakit perut', '', '2021-03-28', 1, 'pendaftaran'),
+(18, 12, 'sakit perut', 'adasfsdfsd', '2021-03-28', 1, 'selesai'),
+(19, 13, 'sakit gigi', '', '2021-03-28', 5, 'pendaftaran'),
+(20, 13, 'sakit gigi', 'kebayakan makam permen', '2021-03-28', 5, 'tebus_obat'),
+(21, 13, 'sakit gigi', 'kebanyakan banyak permen', '2021-03-28', 5, 'tebus_obat'),
+(23, 11, 'SAKIT MATA', 'KURANG VITAMIN A', '2021-03-28', 1, 'selesai'),
+(24, 12, 'SAKIt GIGI', '', '2024-05-28', 1, 'pendaftaran'),
+(25, 12, 'MUNTABER', 'SALAH MAKAN', '2021-03-28', 1, 'selesai'),
+(26, 13, 'SAKIT PERUT', '', '2021-03-28', 1, 'pendaftaran'),
+(27, 13, 'SAKIT PERUT', 'SALAH MAKAN', '2021-03-28', 1, 'selesai'),
+(29, 11, 'Sakit kepala', NULL, '2024-05-30', 2, 'pendaftaran'),
+(30, 12, 'Sakit Hati', NULL, '2024-05-31', 3, 'pendaftaran');
 
 -- --------------------------------------------------------
 
@@ -214,8 +215,7 @@ ALTER TABLE `tb_pasien`
 ALTER TABLE `tb_rekam_medis`
   ADD PRIMARY KEY (`id_rekam`),
   ADD KEY `fk_id_pasien` (`id_pasien`),
-  ADD KEY `fk_id_dokter` (`id_dokter`),
-  ADD KEY `fk_id_admin` (`id_admin`);
+  ADD KEY `fk_id_dokter` (`id_dokter`);
 
 --
 -- Indexes for table `tb_resep`
@@ -257,7 +257,7 @@ ALTER TABLE `tb_pasien`
 -- AUTO_INCREMENT for table `tb_rekam_medis`
 --
 ALTER TABLE `tb_rekam_medis`
-  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `tb_resep`
@@ -273,7 +273,6 @@ ALTER TABLE `tb_resep`
 -- Constraints for table `tb_rekam_medis`
 --
 ALTER TABLE `tb_rekam_medis`
-  ADD CONSTRAINT `fk_id_admin` FOREIGN KEY (`id_admin`) REFERENCES `tb_admin` (`id_admin`),
   ADD CONSTRAINT `fk_id_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `tb_dokter` (`id_dokter`),
   ADD CONSTRAINT `fk_id_pasien` FOREIGN KEY (`id_pasien`) REFERENCES `tb_pasien` (`id_pasien`);
 

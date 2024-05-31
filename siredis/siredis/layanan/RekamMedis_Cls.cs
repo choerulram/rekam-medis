@@ -69,10 +69,10 @@ namespace siredis.layanan
         }
 
         // metode untuk memeriksa apakah id jurusan sudah ada dalam database
-        public bool apakahAda(string id)
+        public bool apakahAda()
         {
             bool cek = false;
-            Query = $"select * from tb_rekam_medis where id_prodi = '{id}'";
+            Query = $"SELECT * FROM tb_rekam_medis WHERE id_pasien = '{_id_pasien}' AND id_dokter = '{_id_dokter}' AND tanggal = '{_tanggal}'";
             data = server.eksekusiQuery(Query);
             if (data.Rows.Count > 0)
             {
@@ -86,13 +86,37 @@ namespace siredis.layanan
         {
             int result = -1;
             Query = $"insert into tb_rekam_medis (id_pasien, id_dokter, keluhan, tanggal, status) " +
-                $"values ('{_id_pasien}', '{_id_dokter}', {_keluhan}, '{_tanggal}', '{_status}')";
+                    $"values ('{_id_pasien}', '{_id_dokter}', '{_keluhan}', '{_tanggal}', '{_status}')";
             try
             {
                 result = server.eksekusiBukanQuery(Query);
                 if (result < 0)
                 {
                     throw new Exception("Gagal disimpan.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Tambahkan logging untuk kesalahan
+                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"Query: {Query}");
+            }
+
+            return result;
+        }
+
+        public int ubahData()
+        {
+            int result = -1;
+            Query = $"UPDATE tb_rekam_medis SET keluhan = '{_keluhan}', status = '{_status}' " +
+                $"WHERE id_pasien = '{_id_pasien}' AND id_dokter = '{_id_dokter}' " +
+                $"AND tanggal = '{_tanggal}'";
+            try
+            {
+                result = server.eksekusiBukanQuery(Query);
+                if (result < 0)
+                {
+                    throw new Exception("Gagal diubah.");
                 }
             }
             catch (Exception ex) { }
@@ -194,7 +218,7 @@ namespace siredis.layanan
                 foreach (DataRow data in dt.Rows)
                 {
                     kode = data["No. Kartu"].ToString();
-                    break; // Ambil hanya satu kode pertama yang sesuai
+                    break;
                 }
             }
 
