@@ -13,6 +13,7 @@ using siredis.konfigurasi;
 namespace siredis.antarmuka
 {
     using layanan;
+    using System.Globalization;
     using System.Windows.Forms.VisualStyles;
 
     public partial class FormPendaftaran : Form
@@ -92,9 +93,26 @@ namespace siredis.antarmuka
             if (e.RowIndex > -1)
             {
                 DataGridViewRow baris = this.pendaftaran_dgv.Rows[e.RowIndex];
-                //id_txt.Text = baris.Cells[0].Value.ToString();
-                //nama_txt.Text = baris.Cells[1].Value.ToString();
-                //jurusan_cmb.Text = baris.Cells[2].Value.ToString();
+                rekam_medis.Id_Rekam = baris.Cells[0].Value.ToString();
+                cbPasien1.Text = baris.Cells[2].Value.ToString();
+                cbDokter.Text = baris.Cells[7].Value.ToString();
+                tKeluhan.Text = baris.Cells[3].Value.ToString();
+                string dateValue = baris.Cells[4].Value.ToString().Trim();
+
+                // Format yang digunakan di tabel termasuk waktu
+                string dateFormat = "dd/MM/yyyy HH.mm.ss"; // Contoh: "28/03/2021 00.00.00"
+
+                // Parsing dateValue menggunakan format dari tabel
+                if (DateTime.TryParseExact(dateValue, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime tanggal))
+                {
+                    // Set nilai ke DateTimePicker dalam format yang diinginkan
+                    dtTanggal.Value = tanggal;
+                }
+                else
+                {
+                    MessageBox.Show("Tanggal tidak valid. Format yang diharapkan: dd/MM/yyyy HH.mm.ss", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                cbStatus.Text = baris.Cells[5].Value.ToString();
             }
         }
 
@@ -118,15 +136,7 @@ namespace siredis.antarmuka
 
             if (rekam_medis.apakahAda())
             {
-                int result = rekam_medis.ubahData();
-                if (result >= 0)
-                {
-                    MessageBox.Show("Data berhasil diubah.");
-                }
-                else
-                {
-                    MessageBox.Show("Gagal mengubah data.");
-                }
+                MessageBox.Show("Data sudah ada, silakan gunakan tombol Perbarui.");
             }
             else
             {
@@ -142,6 +152,66 @@ namespace siredis.antarmuka
             }
 
             tampilGrid();
+        }
+
+        private void btnPerbarui_Click(object sender, EventArgs e)
+        {
+            rekam_medis.Id_Pasien = cbPasien1.SelectedValue.ToString();
+            rekam_medis.Id_Dokter = cbDokter.SelectedValue.ToString();
+            rekam_medis.Keluhan_RekamMedis = tKeluhan.Text;
+            rekam_medis.Tanggal_RekamMedis = dtTanggal.Value.ToString("yyyy-MM-dd");
+            rekam_medis.Status_RekamMedis = cbStatus.Text;
+
+            if (rekam_medis.apakahAda())
+            {
+                int result = rekam_medis.ubahData();
+                if (result >= 0)
+                {
+                    MessageBox.Show("Data berhasil diubah.");
+                }
+                else
+                {
+                    MessageBox.Show("Gagal mengubah data.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Data tidak ditemukan, silakan gunakan tombol Tambah.");
+            }
+
+            tampilGrid();
+        }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine($"Jumlah baris terpilih: {pendaftaran_dgv.SelectedRows.Count}"); // Debug
+
+            if (pendaftaran_dgv.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = pendaftaran_dgv.SelectedRows[0];
+                int idRekam = Convert.ToInt32(selectedRow.Cells["ID Rekam"].Value);
+
+                Console.WriteLine($"ID Rekam yang dipilih: {idRekam}"); // Debug
+
+                if (MessageBox.Show("Yakin data akan dihapus?", "KONFIRMASI",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (rekam_medis.hapusData(idRekam) > 0)
+                    {
+                        MessageBox.Show("Data berhasil dihapus.", "INFORMASI",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tampilGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal menghapus data.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus.");
+            }
         }
     }
 }

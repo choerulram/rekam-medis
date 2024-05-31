@@ -213,6 +213,7 @@
             this.btnHapus.TabIndex = 7;
             this.btnHapus.Text = "HAPUS";
             this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnPerbarui
             // 
@@ -225,6 +226,7 @@
             this.btnPerbarui.TabIndex = 6;
             this.btnPerbarui.Text = "PERBARUI";
             this.btnPerbarui.UseVisualStyleBackColor = false;
+            this.btnPerbarui.Click += new System.EventHandler(this.btnPerbarui_Click);
             // 
             // btnTambah
             // 
@@ -288,6 +290,7 @@
             this.pendaftaran_dgv.Name = "pendaftaran_dgv";
             this.pendaftaran_dgv.ReadOnly = true;
             this.pendaftaran_dgv.RowHeadersWidth = 51;
+            this.pendaftaran_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.pendaftaran_dgv.Size = new System.Drawing.Size(1209, 336);
             this.pendaftaran_dgv.TabIndex = 9;
             this.pendaftaran_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pendaftaran_dgv_CellClick);

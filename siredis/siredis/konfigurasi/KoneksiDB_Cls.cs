@@ -15,7 +15,7 @@ namespace siredis.konfigurasi
         public MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
-        string link = "server=localhost; port=3306; database=rekam_medis; uid=root; pwd=";
+        public string link = "server=localhost; port=3306; database=rekam_medis; uid=root; pwd=";
 
         // inisiasi objek koneksi, perintah sql, dan adapter
         public KoneksiDB_Cls()

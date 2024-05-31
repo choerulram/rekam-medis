@@ -14,6 +14,7 @@ namespace siredis.layanan
 
     internal class RekamMedis_Cls
     {
+        private string _id_rekam;
         private string _id_pasien;
         private string _id_dokter;
         private string _keluhan;
@@ -26,6 +27,7 @@ namespace siredis.layanan
 
         public RekamMedis_Cls()
         {
+            _id_rekam = "";
             _id_pasien = "";
             _id_dokter = "";
             _keluhan = "";
@@ -35,6 +37,13 @@ namespace siredis.layanan
             server = new KoneksiDB_Cls();
             data = new DataTable();
             Query = "";
+        }
+
+        // property untuk mengatur id dokter
+        public string Id_Rekam
+        {
+            get { return _id_rekam; }
+            set { _id_rekam = value; }
         }
 
         // property untuk mengatur id pasien
@@ -124,11 +133,39 @@ namespace siredis.layanan
             return result;
         }
 
+        // metode untuk menghapus data di database
+        public int hapusData(int idRekam)
+        {
+            int result = -1;
+            Query = $"DELETE FROM tb_rekam_medis WHERE id_rekam = {idRekam}";
+            try
+            {
+                Console.WriteLine($"Executing delete query: {Query}"); // Logging query penghapusan
+                result = server.eksekusiBukanQuery(Query);
+                if (result < 0)
+                {
+                    throw new Exception("Gagal dihapus.");
+                }
+                else
+                {
+                    Console.WriteLine("Data berhasil dihapus."); // Pesan berhasil dihapus
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}"); // Logging pesan kesalahan
+                Console.WriteLine($"Query: {Query}"); // Logging query saat terjadi kesalahan
+            }
+
+            return result;
+        }
+
         // metode untuk menampilkan data dari database
         public DataTable tampikanData()
         {
             Query = @"
                 SELECT 
+                    tb_rekam_medis.id_rekam AS 'ID Rekam',
                     tb_pasien.no_kartu AS 'No. Kartu',
                     tb_pasien.nama AS 'Pasien',
                     tb_rekam_medis.keluhan AS 'Keluhan',
