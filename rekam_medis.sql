@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 31, 2024 at 02:55 AM
+-- Generation Time: May 31, 2024 at 10:30 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -126,7 +126,7 @@ CREATE TABLE `tb_rekam_medis` (
   `diagnosa` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `tanggal` date NOT NULL,
   `id_dokter` int NOT NULL,
-  `status` enum('pendaftaran','pemeriksaan','tebus_obat','selesai') NOT NULL
+  `status` enum('pendaftaran','pemeriksaan','selesai') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -137,20 +137,17 @@ INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `t
 (12, 11, 'sakit gigi', '', '2021-03-28', 1, 'pendaftaran'),
 (13, 11, 'sakit mata', 'kurang vitamin c', '2021-03-28', 1, 'selesai'),
 (14, 11, 'sakit gigi', 'kebayakan makan coklat', '2021-03-28', 1, 'selesai'),
-(15, 12, 'sakit perut', '', '2021-03-28', 1, 'pendaftaran'),
-(16, 12, 'sakit perut', 'salah makan', '2021-03-28', 1, 'selesai'),
-(17, 12, 'sakit perut', '', '2021-03-28', 1, 'pendaftaran'),
-(18, 12, 'sakit perut', 'adasfsdfsd', '2021-03-28', 1, 'selesai'),
+(15, 12, 'Sakit Jantung', '', '2021-03-28', 1, 'pendaftaran'),
 (19, 13, 'sakit gigi', '', '2021-03-28', 5, 'pendaftaran'),
-(20, 13, 'sakit gigi', 'kebayakan makam permen', '2021-03-28', 5, 'tebus_obat'),
-(21, 13, 'sakit gigi', 'kebanyakan banyak permen', '2021-03-28', 5, 'tebus_obat'),
 (23, 11, 'SAKIT MATA', 'KURANG VITAMIN A', '2021-03-28', 1, 'selesai'),
 (24, 12, 'SAKIt GIGI', '', '2024-05-28', 1, 'pendaftaran'),
-(25, 12, 'MUNTABER', 'SALAH MAKAN', '2021-03-28', 1, 'selesai'),
+(25, 12, 'Sakit Jantung', 'SALAH MAKAN', '2021-03-28', 1, 'pendaftaran'),
 (26, 13, 'SAKIT PERUT', '', '2021-03-28', 1, 'pendaftaran'),
 (27, 13, 'SAKIT PERUT', 'SALAH MAKAN', '2021-03-28', 1, 'selesai'),
-(29, 11, 'Sakit kepala', NULL, '2024-05-30', 2, 'pendaftaran'),
-(30, 12, 'Sakit Hati', NULL, '2024-05-31', 3, 'pendaftaran');
+(29, 11, 'Sakit Mata', NULL, '2024-05-30', 2, 'pendaftaran'),
+(34, 11, 'demam tinggi', 'gejala flu', '2024-06-01', 3, 'pemeriksaan'),
+(35, 12, 'sakit kepala', 'migren', '2024-06-01', 4, 'pemeriksaan'),
+(36, 13, 'nyeri punggung', 'cedera otot', '2024-06-01', 5, 'pemeriksaan');
 
 -- --------------------------------------------------------
 
@@ -171,15 +168,9 @@ CREATE TABLE `tb_resep` (
 --
 
 INSERT INTO `tb_resep` (`id_resep`, `id_rekam`, `id_obat`, `keterangan`, `nama`) VALUES
-(1, 13, 1, 'Minum 3x sehari setelah makan', 'PARACETAMOL 500MG'),
-(2, 14, 2, 'Minum 2x sehari sebelum makan', 'PARACETAMOL 250MG'),
-(3, 16, 4, 'Minum 2x sehari setelah makan', 'PANADOL'),
-(4, 18, 4, 'Minum 2x sehari setelah makan', 'PANADOL'),
-(5, 20, 2, 'Minum 2x sehari sebelum makan', 'PARACETAMOL 250MG'),
-(6, 21, 4, 'Minum 2x sehari setelah makan', 'PANADOL'),
-(7, 23, 4, 'Minum 2x sehari setelah makan', 'PANADOL'),
-(8, 25, 2, 'Minum 2x sehari sebelum makan', 'PARACETAMOL 250MG'),
-(9, 27, 2, 'Minum 2x sehari sebelum makan', 'PARACETAMOL 250MG');
+(10, 34, 1, 'Minum 2 kali sehari setelah makan', 'Paracetamol'),
+(11, 35, 2, 'Minum 1 kali sehari sebelum tidur', 'Ibuprofen'),
+(12, 36, 4, 'Minum 3 kali sehari setelah makan', 'Aspirin');
 
 --
 -- Indexes for dumped tables
@@ -222,8 +213,8 @@ ALTER TABLE `tb_rekam_medis`
 --
 ALTER TABLE `tb_resep`
   ADD PRIMARY KEY (`id_resep`),
-  ADD KEY `fk_id_rekam` (`id_rekam`),
-  ADD KEY `fk_id_obat` (`id_obat`);
+  ADD KEY `fk_id_obat` (`id_obat`),
+  ADD KEY `fk_tb_rekam_medis_id_rekam` (`id_rekam`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -257,13 +248,13 @@ ALTER TABLE `tb_pasien`
 -- AUTO_INCREMENT for table `tb_rekam_medis`
 --
 ALTER TABLE `tb_rekam_medis`
-  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `tb_resep`
 --
 ALTER TABLE `tb_resep`
-  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -281,7 +272,7 @@ ALTER TABLE `tb_rekam_medis`
 --
 ALTER TABLE `tb_resep`
   ADD CONSTRAINT `fk_id_obat` FOREIGN KEY (`id_obat`) REFERENCES `tb_obat` (`id_obat`),
-  ADD CONSTRAINT `fk_id_rekam` FOREIGN KEY (`id_rekam`) REFERENCES `tb_rekam_medis` (`id_rekam`);
+  ADD CONSTRAINT `fk_tb_rekam_medis_id_rekam` FOREIGN KEY (`id_rekam`) REFERENCES `tb_rekam_medis` (`id_rekam`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
