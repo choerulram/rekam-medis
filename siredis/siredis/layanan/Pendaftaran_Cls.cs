@@ -12,7 +12,7 @@ namespace siredis.layanan
     using siredis.antarmuka;
     using System.Data;
 
-    internal class RekamMedis_Cls
+    internal class Pendaftaran_Cls
     {
         private string _id_rekam;
         private string _id_pasien;
@@ -25,7 +25,7 @@ namespace siredis.layanan
         DataTable data;
         string Query;
 
-        public RekamMedis_Cls()
+        public Pendaftaran_Cls()
         {
             _id_rekam = "";
             _id_pasien = "";
@@ -77,7 +77,7 @@ namespace siredis.layanan
             set { _status = value; }
         }
 
-        // metode untuk memeriksa apakah id jurusan sudah ada dalam database
+        // metode untuk memeriksa apakah id rekam sudah ada dalam database
         public bool apakahAda()
         {
             bool cek = false;
@@ -192,6 +192,7 @@ namespace siredis.layanan
         {
             Query = @"
                 SELECT 
+                    tb_rekam_medis.id_rekam AS 'ID Rekam',
                     tb_pasien.no_kartu AS 'No. Kartu',
                     tb_pasien.nama AS 'Pasien',
                     tb_rekam_medis.keluhan AS 'Keluhan',

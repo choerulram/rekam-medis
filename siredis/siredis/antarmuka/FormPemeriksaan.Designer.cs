@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.Panel3 = new System.Windows.Forms.Panel();
-            this.DataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pemeriksaan_dgv = new System.Windows.Forms.DataGridView();
             this.btnCari = new System.Windows.Forms.Button();
-            this.tCari = new System.Windows.Forms.TextBox();
+            this.cari_txt = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnResep = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.ldokter = new System.Windows.Forms.Label();
             this.lpasien = new System.Windows.Forms.Label();
@@ -44,13 +44,13 @@
             this.btnPerbarui = new System.Windows.Forms.Button();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
-            this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Homelb = new System.Windows.Forms.LinkLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label1 = new System.Windows.Forms.Label();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemeriksaan_dgv)).BeginInit();
             this.Panel2.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
@@ -59,22 +59,26 @@
             // Panel3
             // 
             this.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel3.Controls.Add(this.DataGridView1);
+            this.Panel3.Controls.Add(this.pemeriksaan_dgv);
             this.Panel3.Location = new System.Drawing.Point(12, 318);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(1240, 332);
             this.Panel3.TabIndex = 32;
             // 
-            // DataGridView1
+            // pemeriksaan_dgv
             // 
-            this.DataGridView1.AllowUserToAddRows = false;
-            this.DataGridView1.AllowUserToDeleteRows = false;
-            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(14, -1);
-            this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.ReadOnly = true;
-            this.DataGridView1.Size = new System.Drawing.Size(1209, 387);
-            this.DataGridView1.TabIndex = 9;
+            this.pemeriksaan_dgv.AllowUserToAddRows = false;
+            this.pemeriksaan_dgv.AllowUserToDeleteRows = false;
+            this.pemeriksaan_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pemeriksaan_dgv.Location = new System.Drawing.Point(14, -1);
+            this.pemeriksaan_dgv.MultiSelect = false;
+            this.pemeriksaan_dgv.Name = "pemeriksaan_dgv";
+            this.pemeriksaan_dgv.ReadOnly = true;
+            this.pemeriksaan_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.pemeriksaan_dgv.Size = new System.Drawing.Size(1209, 387);
+            this.pemeriksaan_dgv.TabIndex = 9;
+            this.pemeriksaan_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pemeriksaan_dgv_CellClick);
+            this.pemeriksaan_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pemeriksaan_dgv_CellContentClick);
             // 
             // btnCari
             // 
@@ -87,14 +91,15 @@
             this.btnCari.TabIndex = 8;
             this.btnCari.Text = "CARI";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
-            // tCari
+            // cari_txt
             // 
-            this.tCari.Location = new System.Drawing.Point(325, 80);
-            this.tCari.Name = "tCari";
-            this.tCari.Size = new System.Drawing.Size(134, 20);
-            this.tCari.TabIndex = 3;
-            this.tCari.TextChanged += new System.EventHandler(this.tCari_TextChanged);
+            this.cari_txt.Location = new System.Drawing.Point(325, 80);
+            this.cari_txt.Name = "cari_txt";
+            this.cari_txt.Size = new System.Drawing.Size(134, 20);
+            this.cari_txt.TabIndex = 3;
+            this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 
             // Label6
             // 
@@ -108,10 +113,10 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel2.Controls.Add(this.button1);
+            this.Panel2.Controls.Add(this.btnResep);
             this.Panel2.Controls.Add(this.btnCari);
             this.Panel2.Controls.Add(this.btnRefresh);
-            this.Panel2.Controls.Add(this.tCari);
+            this.Panel2.Controls.Add(this.cari_txt);
             this.Panel2.Controls.Add(this.ldokter);
             this.Panel2.Controls.Add(this.lpasien);
             this.Panel2.Controls.Add(this.cbStatus);
@@ -125,18 +130,17 @@
             this.Panel2.Size = new System.Drawing.Size(1240, 132);
             this.Panel2.TabIndex = 31;
             // 
-            // button1
+            // btnResep
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(669, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 39);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "LIHAT RESEP";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnResep.BackColor = System.Drawing.Color.Gold;
+            this.btnResep.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnResep.Location = new System.Drawing.Point(669, 75);
+            this.btnResep.Name = "btnResep";
+            this.btnResep.Size = new System.Drawing.Size(83, 39);
+            this.btnResep.TabIndex = 36;
+            this.btnResep.Text = "LIHAT RESEP";
+            this.btnResep.UseVisualStyleBackColor = false;
             // 
             // btnRefresh
             // 
@@ -172,9 +176,7 @@
             // 
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
-            "pendaftaran",
             "pemeriksaan",
-            "tebus_obat",
             "selesai"});
             this.cbStatus.Location = new System.Drawing.Point(325, 12);
             this.cbStatus.Name = "cbStatus";
@@ -202,6 +204,7 @@
             this.btnPeriksa.TabIndex = 7;
             this.btnPeriksa.Text = "PERIKSA";
             this.btnPeriksa.UseVisualStyleBackColor = false;
+            this.btnPeriksa.Click += new System.EventHandler(this.btnPeriksa_Click);
             // 
             // btnPerbarui
             // 
@@ -214,6 +217,7 @@
             this.btnPerbarui.TabIndex = 6;
             this.btnPerbarui.Text = "PERBARUI";
             this.btnPerbarui.UseVisualStyleBackColor = false;
+            this.btnPerbarui.Click += new System.EventHandler(this.btnPerbarui_Click);
             // 
             // Label5
             // 
@@ -235,15 +239,16 @@
             this.Label3.TabIndex = 3;
             this.Label3.Text = "Dokter :";
             // 
-            // LinkLabel1
+            // Homelb
             // 
-            this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Location = new System.Drawing.Point(12, 112);
-            this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(35, 13);
-            this.LinkLabel1.TabIndex = 34;
-            this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "Home";
+            this.Homelb.AutoSize = true;
+            this.Homelb.Location = new System.Drawing.Point(12, 112);
+            this.Homelb.Name = "Homelb";
+            this.Homelb.Size = new System.Drawing.Size(35, 13);
+            this.Homelb.TabIndex = 34;
+            this.Homelb.TabStop = true;
+            this.Homelb.Text = "Home";
+            this.Homelb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Homelb_LinkClicked);
             // 
             // Panel1
             // 
@@ -289,13 +294,14 @@
             this.Controls.Add(this.Panel3);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.Panel2);
-            this.Controls.Add(this.LinkLabel1);
+            this.Controls.Add(this.Homelb);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.StatusStrip1);
             this.Name = "FormPemeriksaan";
             this.Text = "FormPemeriksaan";
+            this.Load += new System.EventHandler(this.FormPemeriksaan_Load);
             this.Panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemeriksaan_dgv)).EndInit();
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
             this.Panel1.ResumeLayout(false);
@@ -310,9 +316,9 @@
         #endregion
 
         internal System.Windows.Forms.Panel Panel3;
-        internal System.Windows.Forms.DataGridView DataGridView1;
+        internal System.Windows.Forms.DataGridView pemeriksaan_dgv;
         internal System.Windows.Forms.Button btnCari;
-        internal System.Windows.Forms.TextBox tCari;
+        internal System.Windows.Forms.TextBox cari_txt;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Button btnRefresh;
@@ -324,11 +330,11 @@
         internal System.Windows.Forms.Button btnPerbarui;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.LinkLabel LinkLabel1;
+        internal System.Windows.Forms.LinkLabel Homelb;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.StatusStrip StatusStrip1;
         internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel1;
-        internal System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.Button btnResep;
     }
 }

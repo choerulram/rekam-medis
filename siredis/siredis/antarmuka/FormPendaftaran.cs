@@ -20,7 +20,7 @@ namespace siredis.antarmuka
 
     public partial class FormPendaftaran : Form
     {
-        RekamMedis_Cls rekam_medis = new RekamMedis_Cls();
+        Pendaftaran_Cls rekam_medis = new Pendaftaran_Cls();
 
         public FormPendaftaran(string adminId)
         {
