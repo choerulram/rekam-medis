@@ -32,7 +32,7 @@ namespace siredis.antarmuka
             if (dtRekam.Rows.Count > 0)
             {
                 DataRow row = dtRekam.Rows[0];
-                lpasien.Text = row["id_pasien"].ToString();
+                lpasien.Text = row["nama_pasien"].ToString();
                 tKeluhan.Text = row["keluhan"].ToString();
             }
 
@@ -43,9 +43,70 @@ namespace siredis.antarmuka
             ListBox1.ValueMember = "id_obat";
         }
 
+        public class Obat
+        {
+            public string Nama { get; set; }
+            public string ID { get; set; }
+
+            public override string ToString()
+            {
+                return Nama; // Ini yang akan ditampilkan di ListBox2
+            }
+        }
+
         private void btnTambahObat_Click(object sender, EventArgs e)
         {
+            if (ListBox1.SelectedItem != null)
+            {
+                DataRowView selectedItem = (DataRowView)ListBox1.SelectedItem;
+                string namaObat = selectedItem["nama"].ToString();
+                string idObat = selectedItem["id_obat"].ToString();
 
+                // Tambahkan nama obat ke ListBox2 (opsi sederhana)
+                // ListBox2.Items.Add(namaObat);
+
+                // Atau, tambahkan objek kelas Obat ke ListBox2 (opsi dengan informasi lebih)
+                Obat obat = new Obat { Nama = namaObat, ID = idObat };
+                ListBox2.Items.Add(obat);
+            }
+        }
+
+        private void btnSelesai_Click(object sender, EventArgs e)
+        {
+            // Validasi input
+            if (string.IsNullOrEmpty(tDiagnosa.Text))
+            {
+                MessageBox.Show("Diagnosa harus diisi.");
+                return;
+            }
+
+            if (ListBox2.Items.Count == 0)
+            {
+                MessageBox.Show("Harus ada minimal satu obat yang ditambahkan.");
+                return;
+            }
+
+            // Perbarui diagnosis
+            string diagnosis = tDiagnosa.Text;
+            bool isDiagnosisUpdated = rekam_medis.UpdateDiagnosis(ID, diagnosis);
+
+            // Simpan resep obat
+            List<string> obatList = new List<string>();
+            foreach (Obat item in ListBox2.Items)
+            {
+                obatList.Add(item.ID);
+            }
+            bool isPrescriptionSaved = rekam_medis.SavePrescription(ID, obatList, "Resep dokter");
+
+            if (isDiagnosisUpdated && isPrescriptionSaved)
+            {
+                MessageBox.Show("Data berhasil disimpan");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Terjadi kesalahan saat menyimpan data. Silakan coba lagi.");
+            }
         }
     }
 }

@@ -141,6 +141,7 @@
             this.btnResep.TabIndex = 36;
             this.btnResep.Text = "LIHAT RESEP";
             this.btnResep.UseVisualStyleBackColor = false;
+            this.btnResep.Click += new System.EventHandler(this.btnResep_Click);
             // 
             // btnRefresh
             // 

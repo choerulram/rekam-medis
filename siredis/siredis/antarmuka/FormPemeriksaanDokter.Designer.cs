@@ -51,6 +51,7 @@
             this.btnSelesai.TabIndex = 38;
             this.btnSelesai.Text = "PERIKSA SELSESAI";
             this.btnSelesai.UseVisualStyleBackColor = false;
+            this.btnSelesai.Click += new System.EventHandler(this.btnSelesai_Click);
             // 
             // btnTambahObat
             // 
@@ -161,7 +162,7 @@
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.tKeluhan);
             this.Controls.Add(this.Label8);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPemeriksaanDokter";
             this.Text = "FormPemeriksaanDokter";
             this.Load += new System.EventHandler(this.FormPemeriksaanDokter_Load);

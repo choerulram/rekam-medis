@@ -149,5 +149,10 @@ namespace siredis.antarmuka
         {
             pemeriksaan_dgv.ClearSelection();
         }
+
+        private void btnResep_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
