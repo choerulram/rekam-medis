@@ -93,12 +93,10 @@ namespace siredis.layanan
             return cek;
         }
 
-        public int ubahData()
+        public int ubahData(string idRekam, string status)
         {
             int result = -1;
-            Query = $"UPDATE tb_rekam_medis SET status = '{_status}' " +
-                $"WHERE id_pasien = '{_id_pasien}' AND id_dokter = '{_id_dokter}' " +
-                $"AND tanggal = '{_tanggal}'";
+            Query = $"UPDATE tb_rekam_medis SET status = '{status}' WHERE id_rekam = '{idRekam}'";
             try
             {
                 result = server.eksekusiBukanQuery(Query);
@@ -107,7 +105,7 @@ namespace siredis.layanan
                     throw new Exception("Gagal diubah.");
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex){}
 
             return result;
         }

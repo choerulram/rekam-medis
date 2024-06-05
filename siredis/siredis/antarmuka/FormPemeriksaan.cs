@@ -93,26 +93,48 @@ namespace siredis.antarmuka
 
         private void btnPerbarui_Click(object sender, EventArgs e)
         {
-            rekam_medis.Status_RekamMedis = cbStatus.Text;
-
-            if (rekam_medis.apakahAda())
+            // Pastikan ada baris yang dipilih
+            if (pemeriksaan_dgv.SelectedCells.Count > 0)
             {
-                int result = rekam_medis.ubahData();
-                if (result >= 0)
+                // Ambil sel yang dipilih
+                DataGridViewCell selectedCell = pemeriksaan_dgv.SelectedCells[0];
+                // Dapatkan baris yang terkait dengan sel yang dipilih
+                DataGridViewRow selectedRow = selectedCell.OwningRow;
+
+                // Ambil ID Rekam dari baris yang dipilih
+                if (selectedRow.Cells["ID Rekam"] != null && selectedRow.Cells["ID Rekam"].Value != null)
                 {
-                    MessageBox.Show("Data berhasil diubah.");
+                    string idRekam = selectedRow.Cells["ID Rekam"].Value.ToString();
+                    string status = cbStatus.SelectedItem?.ToString();
+
+                    if (!string.IsNullOrEmpty(status))
+                    {
+                        // Ubah status rekam medis
+                        int result = rekam_medis.ubahData(idRekam, status);
+                        if (result >= 0)
+                        {
+                            MessageBox.Show("Status rekam medis berhasil diubah.");
+                            tampilGrid();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Gagal mengubah status rekam medis.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Silakan pilih status untuk rekam medis yang akan diubah.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Gagal mengubah data.");
+                    MessageBox.Show("Kolom ID Rekam tidak ditemukan atau nilainya kosong.");
                 }
             }
             else
             {
-                MessageBox.Show("Data tidak ditemukan, silakan gunakan tombol Tambah.");
+                MessageBox.Show("Pilih sel dalam baris data rekam medis terlebih dahulu.");
             }
-
-            tampilGrid();
         }
 
         private void btnPeriksa_Click(object sender, EventArgs e)
@@ -152,12 +174,37 @@ namespace siredis.antarmuka
 
         private void btnResep_Click(object sender, EventArgs e)
         {
+            if (pemeriksaan_dgv.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = pemeriksaan_dgv.SelectedCells[0];
+                DataGridViewRow selectedRow = selectedCell.OwningRow;
 
+                if (selectedRow.Cells["ID Rekam"] != null && selectedRow.Cells["ID Rekam"].Value != null)
+                {
+                    string id_rekam = selectedRow.Cells["ID Rekam"].Value.ToString();
+
+                    ListResep listResepForm = new ListResep();
+                    listResepForm.Id_Rekam = id_rekam;
+                    listResepForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Kolom ID Rekam tidak ditemukan atau nilainya kosong.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih sel dalam baris data rekam medis terlebih dahulu.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            // Refresh data pada DataGridView
+            tampilGrid();
 
+            // Tampilkan pesan bahwa berhasil refresh
+            MessageBox.Show("Data berhasil diperbarui.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
