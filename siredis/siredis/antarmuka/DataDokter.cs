@@ -97,5 +97,33 @@ namespace siredis.antarmuka
         {
             //MessageBox.Show(rekam_medis.ambilKodeDgNama(nama_txt.Text));
         }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            data_dokter.Nama = tNama.Text;
+            data_dokter.Jenis_Kelamin = cbGender.Text;
+            data_dokter.Spesialis = tSpesialis.Text;
+            data_dokter.Username = tUsername.Text;
+            data_dokter.Password = tPassword.Text;
+
+            if (data_dokter.apakahAda())
+            {
+                MessageBox.Show("Data sudah ada, silakan gunakan tombol Perbarui.");
+            }
+            else
+            {
+                int result = data_dokter.simpanData();
+                if (result >= 0)
+                {
+                    MessageBox.Show("Data berhasil disimpan.");
+                }
+                else
+                {
+                    MessageBox.Show("Gagal menyimpan data.");
+                }
+            }
+
+            tampilGrid();
+        }
     }
 }

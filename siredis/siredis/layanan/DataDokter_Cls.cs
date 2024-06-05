@@ -16,12 +16,12 @@ namespace siredis.layanan
     using System.Data;
     internal class DataDokter_Cls
     {
-        private string _id_rekam;
-        private string _id_pasien;
         private string _id_dokter;
-        private string _keluhan;
-        private string _tanggal;
-        private string _status;
+        private string _nama;
+        private string _jenis_kelamin;
+        private string _spesialis;
+        private string _username;
+        private string _password;
 
         KoneksiDB_Cls server;
         DataTable data;
@@ -29,12 +29,12 @@ namespace siredis.layanan
 
         public DataDokter_Cls()
         {
-            _id_rekam = "";
-            _id_pasien = "";
             _id_dokter = "";
-            _keluhan = "";
-            _tanggal = "";
-            _status = "";
+            _nama = "";
+            _jenis_kelamin = "";
+            _spesialis = "";
+            _username = "";
+            _password = "";
 
             server = new KoneksiDB_Cls();
             data = new DataTable();
@@ -42,41 +42,99 @@ namespace siredis.layanan
         }
 
         // property untuk mengatur id dokter
-        public string Id_Rekam
-        {
-            get { return _id_rekam; }
-            set { _id_rekam = value; }
-        }
-
-        // property untuk mengatur id pasien
-        public string Id_Pasien
-        {
-            set { _id_pasien = value; } //mutator method
-            //get { return _id; } //asesor method
-        }
-
-        // property untuk mengatur id dokter
         public string Id_Dokter
         {
+            get { return _id_dokter; }
             set { _id_dokter = value; }
         }
 
-        // property untuk mengatur keluhan rekam_medis
-        public string Keluhan_RekamMedis
+        public string Nama
         {
-            set { _keluhan = value; }
+            set { _nama = value; }
+        }
+
+        // property untuk mengatur id pasien
+        public string Jenis_Kelamin
+        {
+            set { _jenis_kelamin = value; }
+        }
+
+        // property untuk mengatur id dokter
+        public string Spesialis
+        {
+            set { _spesialis = value; }
+        }
+
+        // property untuk mengatur keluhan rekam_medis
+        public string Username
+        {
+            set { _username = value; }
         }
 
         // property untuk mengatur tanggal rekam_medis
-        public string Tanggal_RekamMedis
+        public string Password
         {
-            set { _tanggal = value; }
+            set { _password = value; }
         }
 
-        // property untuk mengatur status rekam_medis
-        public string Status_RekamMedis
+        // metode untuk memeriksa apakah id dokter sudah ada dalam database
+        public bool apakahAda()
         {
-            set { _status = value; }
+            bool cek = false;
+            Query = "SELECT * FROM tb_dokter WHERE nama = @nama AND username = @username";
+            MySqlCommand cmd = new MySqlCommand(Query);
+            cmd.Parameters.AddWithValue("@nama", _nama);
+            cmd.Parameters.AddWithValue("@username", _username);
+            data = server.eksekusiQuery(cmd);
+            if (data.Rows.Count > 0)
+            {
+                cek = true;
+            }
+            return cek;
+        }
+
+        // metode untuk menyimpan data baru ke database
+        public int simpanData()
+        {
+            int result = -1;
+            Query = $"insert into tb_dokter (nama, jk, spesialis, username, password) " +
+                    $"values ('{_nama}', '{_jenis_kelamin}', '{_spesialis}', '{_username}', '{_password}')";
+            try
+            {
+                result = server.eksekusiBukanQuery(Query);
+                if (result < 0)
+                {
+                    throw new Exception("Gagal disimpan.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Tambahkan logging untuk kesalahan
+                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"Query: {Query}");
+            }
+
+            return result;
+        }
+
+        public int ubahData()
+        {
+            int result = -1;
+            Query = $"UPDATE tb_dokter " +
+                    $"SET nama = '{_nama}', jk = '{_jenis_kelamin}', spesialis = '{_spesialis}'," +
+                    $" username = '{_username}', password = '{_password}' " +
+                    $"WHERE id_dokter = @id_dokter";
+            try
+            {
+                result = server.eksekusiBukanQuery(Query);
+                if (result < 0)
+                {
+                    throw new Exception("Gagal diubah.");
+                }
+            }
+            catch (Exception ex) { }
+
+            return result;
         }
 
         // metode untuk menampilkan data dari database
@@ -109,9 +167,14 @@ namespace siredis.layanan
                     tb_dokter.password AS 'Password'
                 FROM 
                     tb_dokter
+                WHERE 
+                    tb_dokter.nama LIKE @nama
             ";
 
-            return server.eksekusiQuery(Query);
+            MySqlCommand cmd = new MySqlCommand(Query);
+            cmd.Parameters.AddWithValue("@nama", "%" + nama + "%");
+
+            return server.eksekusiQuery(cmd);
         }
     }
 }
