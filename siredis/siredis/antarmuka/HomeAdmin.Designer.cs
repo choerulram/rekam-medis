@@ -35,7 +35,6 @@
             this.PemeriksaanMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.SelesaiMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AdminMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DokterMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.PasienMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ObatMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,28 +80,27 @@
             // PendaftaranMenu
             // 
             this.PendaftaranMenu.Name = "PendaftaranMenu";
-            this.PendaftaranMenu.Size = new System.Drawing.Size(141, 22);
+            this.PendaftaranMenu.Size = new System.Drawing.Size(180, 22);
             this.PendaftaranMenu.Text = "Pendaftaran";
             this.PendaftaranMenu.Click += new System.EventHandler(this.PendaftaranMenu_Click);
             // 
             // PemeriksaanMenu
             // 
             this.PemeriksaanMenu.Name = "PemeriksaanMenu";
-            this.PemeriksaanMenu.Size = new System.Drawing.Size(141, 22);
+            this.PemeriksaanMenu.Size = new System.Drawing.Size(180, 22);
             this.PemeriksaanMenu.Text = "Pemeriksaan";
             this.PemeriksaanMenu.Click += new System.EventHandler(this.PemeriksaanMenu_Click);
             // 
             // SelesaiMenu
             // 
             this.SelesaiMenu.Name = "SelesaiMenu";
-            this.SelesaiMenu.Size = new System.Drawing.Size(141, 22);
+            this.SelesaiMenu.Size = new System.Drawing.Size(180, 22);
             this.SelesaiMenu.Text = "Selesai";
             this.SelesaiMenu.Click += new System.EventHandler(this.SelesaiMenu_Click);
             // 
             // DataToolStripMenuItem
             // 
             this.DataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AdminMenu,
             this.DokterMenu,
             this.PasienMenu,
             this.ObatMenu});
@@ -110,31 +108,24 @@
             this.DataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.DataToolStripMenuItem.Text = "Data";
             // 
-            // AdminMenu
-            // 
-            this.AdminMenu.Name = "AdminMenu";
-            this.AdminMenu.Size = new System.Drawing.Size(110, 22);
-            this.AdminMenu.Text = "Admin";
-            this.AdminMenu.Click += new System.EventHandler(this.AdminMenu_Click);
-            // 
             // DokterMenu
             // 
             this.DokterMenu.Name = "DokterMenu";
-            this.DokterMenu.Size = new System.Drawing.Size(110, 22);
+            this.DokterMenu.Size = new System.Drawing.Size(180, 22);
             this.DokterMenu.Text = "Dokter";
             this.DokterMenu.Click += new System.EventHandler(this.DokterMenu_Click);
             // 
             // PasienMenu
             // 
             this.PasienMenu.Name = "PasienMenu";
-            this.PasienMenu.Size = new System.Drawing.Size(110, 22);
+            this.PasienMenu.Size = new System.Drawing.Size(180, 22);
             this.PasienMenu.Text = "Pasien";
             this.PasienMenu.Click += new System.EventHandler(this.PasienMenu_Click);
             // 
             // ObatMenu
             // 
             this.ObatMenu.Name = "ObatMenu";
-            this.ObatMenu.Size = new System.Drawing.Size(110, 22);
+            this.ObatMenu.Size = new System.Drawing.Size(180, 22);
             this.ObatMenu.Text = "Obat";
             this.ObatMenu.Click += new System.EventHandler(this.ObatMenu_Click);
             // 
@@ -231,7 +222,6 @@
         internal System.Windows.Forms.ToolStripMenuItem PemeriksaanMenu;
         internal System.Windows.Forms.ToolStripMenuItem SelesaiMenu;
         internal System.Windows.Forms.ToolStripMenuItem DataToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem AdminMenu;
         internal System.Windows.Forms.ToolStripMenuItem DokterMenu;
         internal System.Windows.Forms.ToolStripMenuItem PasienMenu;
         internal System.Windows.Forms.ToolStripMenuItem ObatMenu;

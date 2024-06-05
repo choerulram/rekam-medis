@@ -16,7 +16,7 @@ namespace siredis.antarmuka
     using System.Windows.Forms.VisualStyles;
     public partial class FormPemeriksaan : Form
     {
-        Pemeriksaan_Cls rekam_medis = new Pemeriksaan_Cls();
+        Pemeriksaan_Cls pemeriksaan = new Pemeriksaan_Cls();
         public FormPemeriksaan()
         {
             InitializeComponent();
@@ -26,11 +26,11 @@ namespace siredis.antarmuka
         {
             if (cari_txt.Text.Length == 0)
             {
-                pemeriksaan_dgv.DataSource = rekam_medis.tampikanData();
+                pemeriksaan_dgv.DataSource = pemeriksaan.tampikanData();
             }
             else
             {
-                DataTable hasilPencarian = rekam_medis.tampilkanDgNama(cari_txt.Text);
+                DataTable hasilPencarian = pemeriksaan.tampilkanDgNama(cari_txt.Text);
                 if (hasilPencarian.Rows.Count == 0)
                 {
                     MessageBox.Show("Data tidak ditemukan atau kosong");
@@ -110,7 +110,7 @@ namespace siredis.antarmuka
                     if (!string.IsNullOrEmpty(status))
                     {
                         // Ubah status rekam medis
-                        int result = rekam_medis.ubahData(idRekam, status);
+                        int result = pemeriksaan.ubahData(idRekam, status);
                         if (result >= 0)
                         {
                             MessageBox.Show("Status rekam medis berhasil diubah.");

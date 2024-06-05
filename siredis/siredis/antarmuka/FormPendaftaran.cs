@@ -20,7 +20,7 @@ namespace siredis.antarmuka
 
     public partial class FormPendaftaran : Form
     {
-        Pendaftaran_Cls rekam_medis = new Pendaftaran_Cls();
+        Pendaftaran_Cls pendaftaran = new Pendaftaran_Cls();
 
         public FormPendaftaran(string adminId)
         {
@@ -31,11 +31,11 @@ namespace siredis.antarmuka
         {
             if (cari_txt.Text.Length == 0)
             {
-                pendaftaran_dgv.DataSource = rekam_medis.tampikanData();
+                pendaftaran_dgv.DataSource = pendaftaran.tampikanData();
             }
             else
             {
-                DataTable hasilPencarian = rekam_medis.tampilkanDgNama(cari_txt.Text);
+                DataTable hasilPencarian = pendaftaran.tampilkanDgNama(cari_txt.Text);
                 if (hasilPencarian.Rows.Count == 0)
                 {
                     MessageBox.Show("Data tidak ditemukan atau kosong");
@@ -74,7 +74,7 @@ namespace siredis.antarmuka
 
         private void tampilkanComboPasien()
         {
-            DataTable pasien = rekam_medis.getComboPasien();
+            DataTable pasien = pendaftaran.getComboPasien();
             cbPasien1.DataSource = pasien;
             cbPasien1.DisplayMember = "nama";
             cbPasien1.ValueMember = "id_pasien";
@@ -83,7 +83,7 @@ namespace siredis.antarmuka
 
         private void tampilkanComboDokter()
         {
-            DataTable dokter = rekam_medis.getComboDokter();
+            DataTable dokter = pendaftaran.getComboDokter();
             cbDokter.DataSource = dokter;
             cbDokter.DisplayMember = "nama";
             cbDokter.ValueMember = "id_dokter";
@@ -95,7 +95,7 @@ namespace siredis.antarmuka
             if (e.RowIndex > -1)
             {
                 DataGridViewRow baris = this.pendaftaran_dgv.Rows[e.RowIndex];
-                rekam_medis.Id_Rekam = baris.Cells[0].Value.ToString();
+                pendaftaran.Id_Rekam = baris.Cells[0].Value.ToString();
                 cbPasien1.Text = baris.Cells[2].Value.ToString();
                 cbDokter.Text = baris.Cells[7].Value.ToString();
                 tKeluhan.Text = baris.Cells[3].Value.ToString();
@@ -130,19 +130,19 @@ namespace siredis.antarmuka
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            rekam_medis.Id_Pasien = cbPasien1.SelectedValue.ToString();
-            rekam_medis.Id_Dokter = cbDokter.SelectedValue.ToString();
-            rekam_medis.Keluhan_RekamMedis = tKeluhan.Text;
-            rekam_medis.Tanggal_RekamMedis = dtTanggal.Value.ToString("yyyy-MM-dd");
-            rekam_medis.Status_RekamMedis = cbStatus.Text;
+            pendaftaran.Id_Pasien = cbPasien1.SelectedValue.ToString();
+            pendaftaran.Id_Dokter = cbDokter.SelectedValue.ToString();
+            pendaftaran.Keluhan_RekamMedis = tKeluhan.Text;
+            pendaftaran.Tanggal_RekamMedis = dtTanggal.Value.ToString("yyyy-MM-dd");
+            pendaftaran.Status_RekamMedis = cbStatus.Text;
 
-            if (rekam_medis.apakahAda())
+            if (pendaftaran.apakahAda())
             {
                 MessageBox.Show("Data sudah ada, silakan gunakan tombol Perbarui.");
             }
             else
             {
-                int result = rekam_medis.simpanData();
+                int result = pendaftaran.simpanData();
                 if (result >= 0)
                 {
                     MessageBox.Show("Data berhasil disimpan.");
@@ -158,15 +158,15 @@ namespace siredis.antarmuka
 
         private void btnPerbarui_Click(object sender, EventArgs e)
         {
-            rekam_medis.Id_Pasien = cbPasien1.SelectedValue.ToString();
-            rekam_medis.Id_Dokter = cbDokter.SelectedValue.ToString();
-            rekam_medis.Keluhan_RekamMedis = tKeluhan.Text;
-            rekam_medis.Tanggal_RekamMedis = dtTanggal.Value.ToString("yyyy-MM-dd");
-            rekam_medis.Status_RekamMedis = cbStatus.Text;
+            pendaftaran.Id_Pasien = cbPasien1.SelectedValue.ToString();
+            pendaftaran.Id_Dokter = cbDokter.SelectedValue.ToString();
+            pendaftaran.Keluhan_RekamMedis = tKeluhan.Text;
+            pendaftaran.Tanggal_RekamMedis = dtTanggal.Value.ToString("yyyy-MM-dd");
+            pendaftaran.Status_RekamMedis = cbStatus.Text;
 
-            if (rekam_medis.apakahAda())
+            if (pendaftaran.apakahAda())
             {
-                int result = rekam_medis.ubahData();
+                int result = pendaftaran.ubahData();
                 if (result >= 0)
                 {
                     MessageBox.Show("Data berhasil diubah.");
@@ -198,7 +198,7 @@ namespace siredis.antarmuka
                 if (MessageBox.Show("Yakin data akan dihapus?", "KONFIRMASI",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (rekam_medis.hapusData(idRekam) > 0)
+                    if (pendaftaran.hapusData(idRekam) > 0)
                     {
                         MessageBox.Show("Data berhasil dihapus.", "INFORMASI",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);

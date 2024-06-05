@@ -16,7 +16,7 @@ namespace siredis.antarmuka
     using System.Windows.Forms.VisualStyles;
     public partial class FormSelesai : Form
     {
-        Selesai_Cls rekam_medis = new Selesai_Cls();
+        Selesai_Cls selesai = new Selesai_Cls();
         public FormSelesai()
         {
             InitializeComponent();
@@ -26,19 +26,19 @@ namespace siredis.antarmuka
         {
             if (cari_txt.Text.Length == 0)
             {
-                pemeriksaan_dgv.DataSource = rekam_medis.tampikanData();
+                selesai_dgv.DataSource = selesai.tampikanData();
             }
             else
             {
-                DataTable hasilPencarian = rekam_medis.tampilkanDgNama(cari_txt.Text);
+                DataTable hasilPencarian = selesai.tampilkanDgNama(cari_txt.Text);
                 if (hasilPencarian.Rows.Count == 0)
                 {
                     MessageBox.Show("Data tidak ditemukan atau kosong");
                 }
-                pemeriksaan_dgv.DataSource = hasilPencarian;
+                selesai_dgv.DataSource = hasilPencarian;
             }
-            belangBelang(pemeriksaan_dgv);
-            pemeriksaan_dgv.ClearSelection();
+            belangBelang(selesai_dgv);
+            selesai_dgv.ClearSelection();
         }
 
         void belangBelang(DataGridView grid)
@@ -72,9 +72,9 @@ namespace siredis.antarmuka
 
         private void btnResep_Click(object sender, EventArgs e)
         {
-            if (pemeriksaan_dgv.SelectedCells.Count > 0)
+            if (selesai_dgv.SelectedCells.Count > 0)
             {
-                DataGridViewCell selectedCell = pemeriksaan_dgv.SelectedCells[0];
+                DataGridViewCell selectedCell = selesai_dgv.SelectedCells[0];
                 DataGridViewRow selectedRow = selectedCell.OwningRow;
 
                 if (selectedRow.Cells["ID Rekam"] != null && selectedRow.Cells["ID Rekam"].Value != null)
@@ -115,16 +115,16 @@ namespace siredis.antarmuka
             //MessageBox.Show(rekam_medis.ambilKodeDgNama(nama_txt.Text));
         }
 
-        private void pemeriksaan_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void selesai_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            pemeriksaan_dgv.ClearSelection();
+            selesai_dgv.ClearSelection();
         }
 
-        private void pemeriksaan_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void selesai_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
             {
-                DataGridViewRow baris = this.pemeriksaan_dgv.Rows[e.RowIndex];
+                DataGridViewRow baris = this.selesai_dgv.Rows[e.RowIndex];
                 lpasien.Text = baris.Cells[2].Value.ToString();
                 ldokter.Text = baris.Cells[7].Value.ToString();
                 cbStatus.Text = baris.Cells[5].Value.ToString();

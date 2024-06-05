@@ -14,7 +14,7 @@ namespace siredis.layanan
     using MySqlX.XDevAPI.Common;
     using siredis.antarmuka;
     using System.Data;
-    internal class Selesai_Cls
+    internal class DataDokter_Cls
     {
         private string _id_rekam;
         private string _id_pasien;
@@ -27,7 +27,7 @@ namespace siredis.layanan
         DataTable data;
         string Query;
 
-        public Selesai_Cls()
+        public DataDokter_Cls()
         {
             _id_rekam = "";
             _id_pasien = "";
@@ -84,24 +84,14 @@ namespace siredis.layanan
         {
             Query = @"
                 SELECT 
-                    tb_rekam_medis.id_rekam AS 'ID Rekam',
-                    tb_pasien.no_kartu AS 'No. Kartu',
-                    tb_pasien.nama AS 'Pasien',
-                    tb_rekam_medis.keluhan AS 'Keluhan',
-                    tb_rekam_medis.tanggal AS 'Tanggal',
-                    tb_rekam_medis.status AS 'Status',
+                    tb_dokter.id_dokter AS 'ID Dokter',
+                    tb_dokter.nama AS 'Nama',
+                    tb_dokter.jk AS 'Jenis Kelamin',
                     tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.nama AS 'Dokter'
+                    tb_dokter.username AS 'Username',
+                    tb_dokter.password AS 'Password'
                 FROM 
-                    tb_rekam_medis
-                INNER JOIN 
-                    tb_pasien ON tb_pasien.id_pasien = tb_rekam_medis.id_pasien
-                INNER JOIN 
-                    tb_dokter ON tb_dokter.id_dokter = tb_rekam_medis.id_dokter
-                WHERE 
-                    tb_rekam_medis.status = 'selesai'
-                ORDER BY 
-                    tb_rekam_medis.id_rekam ASC;
+                    tb_dokter
             ";
 
             return server.eksekusiQuery(Query);
@@ -111,32 +101,17 @@ namespace siredis.layanan
         {
             Query = @"
                 SELECT 
-                    tb_rekam_medis.id_rekam AS 'ID Rekam',
-                    tb_pasien.no_kartu AS 'No. Kartu',
-                    tb_pasien.nama AS 'Pasien',
-                    tb_rekam_medis.keluhan AS 'Keluhan',
-                    tb_rekam_medis.tanggal AS 'Tanggal',
-                    tb_rekam_medis.status AS 'Status',
+                    tb_dokter.id_dokter AS 'ID Dokter',
+                    tb_dokter.nama AS 'Nama',
+                    tb_dokter.jk AS 'Jenis Kelamin',
                     tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.nama AS 'Dokter'
+                    tb_dokter.username AS 'Username',
+                    tb_dokter.password AS 'Password'
                 FROM 
-                    tb_rekam_medis
-                INNER JOIN 
-                    tb_pasien ON tb_pasien.id_pasien = tb_rekam_medis.id_pasien
-                INNER JOIN 
-                    tb_dokter ON tb_dokter.id_dokter = tb_rekam_medis.id_dokter
-                WHERE 
-                    tb_rekam_medis.status = 'selesai'
-                AND
-                    tb_pasien.nama LIKE @namaPasien
-                ORDER BY 
-                    tb_rekam_medis.id_rekam ASC;
+                    tb_dokter
             ";
 
-            MySqlCommand cmd = new MySqlCommand(Query);
-            cmd.Parameters.AddWithValue("@namaPasien", "%" + nama + "%");
-
-            return server.eksekusiQuery(cmd);
+            return server.eksekusiQuery(Query);
         }
     }
 }

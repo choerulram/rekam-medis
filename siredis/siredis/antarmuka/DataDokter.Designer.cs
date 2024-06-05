@@ -36,32 +36,31 @@
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnCari = new System.Windows.Forms.Button();
             this.tSpesialis = new System.Windows.Forms.TextBox();
-            this.btnPerbarui = new System.Windows.Forms.Button();
-            this.tCari = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.tUsername = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
-            this.tUsername = new System.Windows.Forms.TextBox();
+            this.cari_txt = new System.Windows.Forms.TextBox();
             this.tNama = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.tPassword = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
-            this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.DataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Homelb = new System.Windows.Forms.LinkLabel();
+            this.dokter_dgv = new System.Windows.Forms.DataGridView();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dokter_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(89)))), ((int)(((byte)(224)))));
             this.Panel1.Controls.Add(this.Label1);
-            this.Panel1.Location = new System.Drawing.Point(-189, 2);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel1.Location = new System.Drawing.Point(-126, 1);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(2120, 146);
+            this.Panel1.Size = new System.Drawing.Size(1413, 95);
             this.Panel1.TabIndex = 25;
             // 
             // Label1
@@ -69,10 +68,9 @@
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.Snow;
-            this.Label1.Location = new System.Drawing.Point(606, 28);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Location = new System.Drawing.Point(404, 18);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(1090, 93);
+            this.Label1.Size = new System.Drawing.Size(721, 63);
             this.Label1.TabIndex = 0;
             this.Label1.Text = "APLIKASI REKAM MEDIS";
             // 
@@ -84,20 +82,19 @@
             this.Panel2.Controls.Add(this.btnHapus);
             this.Panel2.Controls.Add(this.btnCari);
             this.Panel2.Controls.Add(this.tSpesialis);
-            this.Panel2.Controls.Add(this.btnPerbarui);
-            this.Panel2.Controls.Add(this.tCari);
+            this.Panel2.Controls.Add(this.btnEdit);
+            this.Panel2.Controls.Add(this.tUsername);
             this.Panel2.Controls.Add(this.Label7);
             this.Panel2.Controls.Add(this.btnTambah);
             this.Panel2.Controls.Add(this.Label3);
             this.Panel2.Controls.Add(this.Label5);
-            this.Panel2.Controls.Add(this.tUsername);
+            this.Panel2.Controls.Add(this.cari_txt);
             this.Panel2.Controls.Add(this.tNama);
             this.Panel2.Controls.Add(this.Label4);
             this.Panel2.Controls.Add(this.tPassword);
-            this.Panel2.Location = new System.Drawing.Point(13, 223);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel2.Location = new System.Drawing.Point(9, 145);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(1898, 207);
+            this.Panel2.Size = new System.Drawing.Size(1266, 135);
             this.Panel2.TabIndex = 26;
             // 
             // cbGender
@@ -106,20 +103,18 @@
             this.cbGender.Items.AddRange(new object[] {
             "Laki - laki",
             "Perempuan"});
-            this.cbGender.Location = new System.Drawing.Point(24, 135);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbGender.Location = new System.Drawing.Point(16, 88);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(262, 28);
+            this.cbGender.Size = new System.Drawing.Size(176, 21);
             this.cbGender.TabIndex = 20;
             // 
             // Label8
             // 
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(342, 40);
-            this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label8.Location = new System.Drawing.Point(228, 26);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(113, 25);
+            this.Label8.Size = new System.Drawing.Size(83, 17);
             this.Label8.TabIndex = 19;
             this.Label8.Text = "Spesialis :";
             // 
@@ -128,10 +123,9 @@
             this.btnHapus.BackColor = System.Drawing.Color.Crimson;
             this.btnHapus.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(1477, 40);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHapus.Location = new System.Drawing.Point(985, 26);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(138, 51);
+            this.btnHapus.Size = new System.Drawing.Size(92, 33);
             this.btnHapus.TabIndex = 7;
             this.btnHapus.Text = "HAPUS";
             this.btnHapus.UseVisualStyleBackColor = false;
@@ -141,52 +135,48 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(1679, 143);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCari.Location = new System.Drawing.Point(1119, 93);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(176, 45);
+            this.btnCari.Size = new System.Drawing.Size(117, 29);
             this.btnCari.TabIndex = 8;
             this.btnCari.Text = "CARI";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // tSpesialis
             // 
-            this.tSpesialis.Location = new System.Drawing.Point(346, 71);
-            this.tSpesialis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tSpesialis.Location = new System.Drawing.Point(231, 46);
             this.tSpesialis.Multiline = true;
             this.tSpesialis.Name = "tSpesialis";
-            this.tSpesialis.Size = new System.Drawing.Size(262, 95);
+            this.tSpesialis.Size = new System.Drawing.Size(176, 63);
             this.tSpesialis.TabIndex = 18;
             // 
-            // btnPerbarui
+            // btnEdit
             // 
-            this.btnPerbarui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
-            this.btnPerbarui.Font = new System.Drawing.Font("Leelawadee UI", 10F);
-            this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPerbarui.Location = new System.Drawing.Point(1303, 40);
-            this.btnPerbarui.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnPerbarui.Name = "btnPerbarui";
-            this.btnPerbarui.Size = new System.Drawing.Size(136, 51);
-            this.btnPerbarui.TabIndex = 6;
-            this.btnPerbarui.Text = "EDIT";
-            this.btnPerbarui.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
+            this.btnEdit.Font = new System.Drawing.Font("Leelawadee UI", 10F);
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEdit.Location = new System.Drawing.Point(869, 26);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(91, 33);
+            this.btnEdit.TabIndex = 6;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // tCari
+            // tUsername
             // 
-            this.tCari.Location = new System.Drawing.Point(669, 71);
-            this.tCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tCari.Name = "tCari";
-            this.tCari.Size = new System.Drawing.Size(262, 26);
-            this.tCari.TabIndex = 3;
+            this.tUsername.Location = new System.Drawing.Point(446, 46);
+            this.tUsername.Name = "tUsername";
+            this.tUsername.Size = new System.Drawing.Size(176, 20);
+            this.tUsername.TabIndex = 3;
             // 
             // Label7
             // 
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(20, 106);
-            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label7.Location = new System.Drawing.Point(13, 69);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(161, 25);
+            this.Label7.Size = new System.Drawing.Size(118, 17);
             this.Label7.TabIndex = 17;
             this.Label7.Text = "Jenis Kelamin :";
             // 
@@ -195,10 +185,9 @@
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnTambah.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(1127, 40);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTambah.Location = new System.Drawing.Point(751, 26);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(135, 51);
+            this.btnTambah.Size = new System.Drawing.Size(90, 33);
             this.btnTambah.TabIndex = 5;
             this.btnTambah.Text = "TAMBAH";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -207,10 +196,9 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(16, 14);
-            this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label3.Location = new System.Drawing.Point(11, 9);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(81, 25);
+            this.Label3.Size = new System.Drawing.Size(59, 17);
             this.Label3.TabIndex = 3;
             this.Label3.Text = "Nama :";
             // 
@@ -218,102 +206,97 @@
             // 
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(664, 106);
-            this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label5.Location = new System.Drawing.Point(443, 69);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(119, 25);
+            this.Label5.Size = new System.Drawing.Size(87, 17);
             this.Label5.TabIndex = 15;
             this.Label5.Text = "Password :";
             // 
-            // tUsername
+            // cari_txt
             // 
-            this.tUsername.Location = new System.Drawing.Point(1400, 155);
-            this.tUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tUsername.Name = "tUsername";
-            this.tUsername.Size = new System.Drawing.Size(262, 26);
-            this.tUsername.TabIndex = 13;
+            this.cari_txt.Location = new System.Drawing.Point(933, 101);
+            this.cari_txt.Name = "cari_txt";
+            this.cari_txt.Size = new System.Drawing.Size(176, 20);
+            this.cari_txt.TabIndex = 13;
+            this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 
             // tNama
             // 
-            this.tNama.Location = new System.Drawing.Point(21, 55);
-            this.tNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tNama.Location = new System.Drawing.Point(14, 36);
             this.tNama.Name = "tNama";
-            this.tNama.Size = new System.Drawing.Size(265, 26);
+            this.tNama.Size = new System.Drawing.Size(178, 20);
             this.tNama.TabIndex = 0;
             // 
             // Label4
             // 
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(664, 40);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label4.Location = new System.Drawing.Point(443, 26);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(123, 25);
+            this.Label4.Size = new System.Drawing.Size(91, 17);
             this.Label4.TabIndex = 16;
             this.Label4.Text = "Username :";
             // 
             // tPassword
             // 
-            this.tPassword.Location = new System.Drawing.Point(669, 137);
-            this.tPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tPassword.Location = new System.Drawing.Point(446, 89);
             this.tPassword.Name = "tPassword";
-            this.tPassword.Size = new System.Drawing.Size(262, 26);
+            this.tPassword.Size = new System.Drawing.Size(176, 20);
             this.tPassword.TabIndex = 14;
             // 
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(90, 180);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label6.Location = new System.Drawing.Point(60, 117);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(109, 20);
+            this.Label6.Size = new System.Drawing.Size(74, 13);
             this.Label6.TabIndex = 31;
             this.Label6.Text = "> Data Dokter";
             // 
-            // LinkLabel1
+            // Homelb
             // 
-            this.LinkLabel1.AutoSize = true;
-            this.LinkLabel1.Location = new System.Drawing.Point(28, 180);
-            this.LinkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LinkLabel1.Name = "LinkLabel1";
-            this.LinkLabel1.Size = new System.Drawing.Size(52, 20);
-            this.LinkLabel1.TabIndex = 30;
-            this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "Home";
+            this.Homelb.AutoSize = true;
+            this.Homelb.Location = new System.Drawing.Point(19, 117);
+            this.Homelb.Name = "Homelb";
+            this.Homelb.Size = new System.Drawing.Size(35, 13);
+            this.Homelb.TabIndex = 30;
+            this.Homelb.TabStop = true;
+            this.Homelb.Text = "Home";
+            this.Homelb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Homelb_LinkClicked);
             // 
-            // DataGridView1
+            // dokter_dgv
             // 
-            this.DataGridView1.AllowUserToAddRows = false;
-            this.DataGridView1.AllowUserToDeleteRows = false;
-            this.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(13, 443);
-            this.DataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.ReadOnly = true;
-            this.DataGridView1.RowHeadersWidth = 62;
-            this.DataGridView1.Size = new System.Drawing.Size(1898, 492);
-            this.DataGridView1.TabIndex = 32;
+            this.dokter_dgv.AllowUserToAddRows = false;
+            this.dokter_dgv.AllowUserToDeleteRows = false;
+            this.dokter_dgv.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dokter_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dokter_dgv.Location = new System.Drawing.Point(9, 288);
+            this.dokter_dgv.Name = "dokter_dgv";
+            this.dokter_dgv.ReadOnly = true;
+            this.dokter_dgv.RowHeadersWidth = 62;
+            this.dokter_dgv.Size = new System.Drawing.Size(1265, 320);
+            this.dokter_dgv.TabIndex = 32;
+            this.dokter_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dokter_dgv_CellClick);
+            this.dokter_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dokter_dgv_CellContentClick);
             // 
             // DataDokter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 949);
-            this.Controls.Add(this.DataGridView1);
+            this.ClientSize = new System.Drawing.Size(1283, 617);
+            this.Controls.Add(this.dokter_dgv);
             this.Controls.Add(this.Label6);
-            this.Controls.Add(this.LinkLabel1);
+            this.Controls.Add(this.Homelb);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "DataDokter";
             this.Text = "DataDokter";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.DataDokter_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dokter_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,21 +309,21 @@
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Button btnHapus;
         internal System.Windows.Forms.Button btnCari;
-        internal System.Windows.Forms.Button btnPerbarui;
-        internal System.Windows.Forms.TextBox tCari;
+        internal System.Windows.Forms.Button btnEdit;
+        internal System.Windows.Forms.TextBox tUsername;
         internal System.Windows.Forms.Button btnTambah;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.TextBox tNama;
         internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.LinkLabel LinkLabel1;
+        internal System.Windows.Forms.LinkLabel Homelb;
         internal System.Windows.Forms.ComboBox cbGender;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox tSpesialis;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.TextBox tUsername;
+        internal System.Windows.Forms.TextBox cari_txt;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.TextBox tPassword;
-        internal System.Windows.Forms.DataGridView DataGridView1;
+        internal System.Windows.Forms.DataGridView dokter_dgv;
     }
 }
