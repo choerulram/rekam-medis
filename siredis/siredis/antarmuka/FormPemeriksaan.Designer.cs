@@ -257,8 +257,8 @@
             this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnPerbarui.Location = new System.Drawing.Point(870, 12);
             this.btnPerbarui.Name = "btnPerbarui";
-            this.btnPerbarui.Size = new System.Drawing.Size(110, 33);
-            this.btnPerbarui.TabIndex = 40;
+            this.btnPerbarui.Size = new System.Drawing.Size(110, 32);
+            this.btnPerbarui.TabIndex = 39;
             this.btnPerbarui.Text = "EDIT";
             this.btnPerbarui.UseVisualStyleBackColor = false;
             this.btnPerbarui.Click += new System.EventHandler(this.btnPerbarui_Click);

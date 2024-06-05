@@ -140,6 +140,7 @@
     <Compile Include="layanan\Pengguna_Cls.cs" />
     <Compile Include="layanan\Pemeriksaan_Cls.cs" />
     <Compile Include="layanan\Resep_Cls.cs" />
+    <Compile Include="layanan\Selesai_Cls.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="antarmuka\DataAdmin.resx">
