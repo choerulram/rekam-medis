@@ -171,5 +171,5 @@ namespace siredis.layanan
 
             return server.eksekusiQuery(cmd);
         }
-    }     
+    }
 }

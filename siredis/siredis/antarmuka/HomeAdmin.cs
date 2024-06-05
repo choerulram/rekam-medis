@@ -72,5 +72,10 @@ namespace siredis.antarmuka
         {
 
         }
+
+        private void user_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

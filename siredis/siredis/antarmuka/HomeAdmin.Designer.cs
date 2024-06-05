@@ -42,7 +42,10 @@
             this.btn_logout = new System.Windows.Forms.Button();
             this.lHello = new System.Windows.Forms.Label();
             this.user_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuStrip1
@@ -55,7 +58,7 @@
             this.MenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip1.Name = "MenuStrip1";
             this.MenuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.MenuStrip1.Size = new System.Drawing.Size(653, 24);
+            this.MenuStrip1.Size = new System.Drawing.Size(1283, 24);
             this.MenuStrip1.TabIndex = 6;
             this.MenuStrip1.Text = "MenuStrip1";
             // 
@@ -137,11 +140,12 @@
             // 
             // btn_logout
             // 
-            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_logout.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_logout.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(554, 35);
+            this.btn_logout.Location = new System.Drawing.Point(317, 366);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(82, 28);
+            this.btn_logout.Size = new System.Drawing.Size(89, 28);
             this.btn_logout.TabIndex = 8;
             this.btn_logout.Text = "LOGOUT";
             this.btn_logout.UseVisualStyleBackColor = false;
@@ -150,40 +154,69 @@
             // lHello
             // 
             this.lHello.AutoSize = true;
-            this.lHello.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHello.ForeColor = System.Drawing.Color.Olive;
-            this.lHello.Location = new System.Drawing.Point(161, 115);
+            this.lHello.BackColor = System.Drawing.Color.White;
+            this.lHello.Font = new System.Drawing.Font("Bookman Old Style", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lHello.ForeColor = System.Drawing.Color.Navy;
+            this.lHello.Location = new System.Drawing.Point(313, 201);
             this.lHello.Name = "lHello";
-            this.lHello.Size = new System.Drawing.Size(188, 63);
+            this.lHello.Size = new System.Drawing.Size(367, 78);
             this.lHello.TabIndex = 7;
-            this.lHello.Text = "Hello,";
+            this.lHello.Text = "Welcome,";
             // 
             // user_lbl
             // 
             this.user_lbl.AutoSize = true;
-            this.user_lbl.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_lbl.ForeColor = System.Drawing.Color.Olive;
-            this.user_lbl.Location = new System.Drawing.Point(346, 115);
+            this.user_lbl.BackColor = System.Drawing.Color.White;
+            this.user_lbl.Font = new System.Drawing.Font("Bookman Old Style", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_lbl.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.user_lbl.Location = new System.Drawing.Point(671, 201);
             this.user_lbl.Name = "user_lbl";
-            this.user_lbl.Size = new System.Drawing.Size(168, 63);
+            this.user_lbl.Size = new System.Drawing.Size(212, 78);
             this.user_lbl.TabIndex = 9;
             this.user_lbl.Text = "User!";
+            this.user_lbl.Click += new System.EventHandler(this.user_lbl_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(312, 298);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(474, 25);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Solusi Canggih Untuk Manajemen Rumah sakit ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::siredis.Properties.Resources.a;
+            this.pictureBox1.Location = new System.Drawing.Point(-9, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1300, 683);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // HomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 366);
+            this.ClientSize = new System.Drawing.Size(1283, 682);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.user_lbl);
             this.Controls.Add(this.MenuStrip1);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.lHello);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeAdmin";
             this.Text = "  ";
             this.Load += new System.EventHandler(this.HomeAdmin_Load);
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +238,7 @@
         internal System.Windows.Forms.Button btn_logout;
         internal System.Windows.Forms.Label lHello;
         internal System.Windows.Forms.Label user_lbl;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -29,29 +29,30 @@ namespace siredis.antarmuka
         {
             if (user.apakahAdaUser(username_txt.Text, password_txt.Text))
             {
+                string welcomeMessage = $"Selamat datang, {username_txt.Text}!";
+                string welcomeTitle = "LOGIN BERHASIL";
+
                 switch (user.UserType)
                 {
                     case "Admin":
-                        MessageBox.Show($"Selamat datang, Admin {username_txt.Text}!", "LOGIN BERHASIL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"{welcomeMessage}\nAnda berhasil masuk sebagai Admin.", welcomeTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         HomeAdmin dashboardAdmin = new HomeAdmin(username_txt.Text);
                         dashboardAdmin.Show();
                         break;
                     case "Dokter":
-                        MessageBox.Show($"Selamat datang, Dokter {username_txt.Text}!", "LOGIN BERHASIL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"{welcomeMessage}\nAnda berhasil masuk sebagai Dokter.", welcomeTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         HomeDokter dashboardDokter = new HomeDokter(username_txt.Text);
                         dashboardDokter.Show();
                         break;
                     default:
-                        MessageBox.Show("Tipe pengguna tidak dikenal.", "KESALAHAN",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Tipe pengguna tidak dikenal.", "KESALAHAN", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Maaf username atau password Anda salah.", "KESALAHAN",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Maaf username atau password Anda salah.", "KESALAHAN", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 username_txt.SelectAll();
                 username_txt.Focus();
             }

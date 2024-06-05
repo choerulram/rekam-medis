@@ -7,7 +7,6 @@ using System.Windows.Forms;
 
 namespace siredis
 {
-    using antarmuka;
     internal static class Program
     {
         /// <summary>
@@ -18,7 +17,7 @@ namespace siredis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeAdmin(""));
+            Application.Run(new FormLogin());
         }
     }
 }

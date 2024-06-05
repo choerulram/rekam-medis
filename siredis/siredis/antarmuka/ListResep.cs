@@ -16,5 +16,10 @@ namespace siredis.antarmuka
         {
             InitializeComponent();
         }
+
+        private void tKeluhan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

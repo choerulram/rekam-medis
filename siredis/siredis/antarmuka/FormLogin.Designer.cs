@@ -33,11 +33,11 @@
             this.password_txt = new System.Windows.Forms.TextBox();
             this.username_txt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -48,7 +48,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DarkRed;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(490, 394);
+            this.btnCancel.Location = new System.Drawing.Point(681, 482);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(78, 29);
             this.btnCancel.TabIndex = 15;
@@ -60,7 +60,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(369, 394);
+            this.btnLogin.Location = new System.Drawing.Point(561, 482);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(77, 29);
             this.btnLogin.TabIndex = 13;
@@ -70,7 +70,7 @@
             // 
             // password_txt
             // 
-            this.password_txt.Location = new System.Drawing.Point(395, 347);
+            this.password_txt.Location = new System.Drawing.Point(586, 435);
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '*';
             this.password_txt.Size = new System.Drawing.Size(173, 20);
@@ -79,7 +79,7 @@
             // 
             // username_txt
             // 
-            this.username_txt.Location = new System.Drawing.Point(395, 307);
+            this.username_txt.Location = new System.Drawing.Point(586, 395);
             this.username_txt.Name = "username_txt";
             this.username_txt.Size = new System.Drawing.Size(173, 20);
             this.username_txt.TabIndex = 9;
@@ -88,18 +88,30 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button1.Location = new System.Drawing.Point(320, 111);
+            this.button1.Location = new System.Drawing.Point(511, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(304, 350);
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(443, 98);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(458, 48);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "SISTEM INFORMASI RUMAH SAKIT";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox4.Image = global::siredis.Properties.Resources.icons8_lock_30;
-            this.pictureBox4.Location = new System.Drawing.Point(369, 347);
+            this.pictureBox4.Location = new System.Drawing.Point(561, 435);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(27, 20);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,7 +122,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox3.Image = global::siredis.Properties.Resources.icons8_user_30;
-            this.pictureBox3.Location = new System.Drawing.Point(369, 307);
+            this.pictureBox3.Location = new System.Drawing.Point(561, 395);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +132,7 @@
             // PictureBox1
             // 
             this.PictureBox1.Image = global::siredis.Properties.Resources.istockphoto_1218689594_170667a_removebg_preview;
-            this.PictureBox1.Location = new System.Drawing.Point(395, 124);
+            this.PictureBox1.Location = new System.Drawing.Point(586, 214);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(158, 155);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,31 +143,20 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::siredis.Properties.Resources.sodapdf_converted__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(-3, -2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(937, 492);
+            this.pictureBox2.Size = new System.Drawing.Size(1290, 651);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(243, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(458, 48);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "SISTEM INFORMASI RUMAHSAKIT";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(937, 483);
+            this.ClientSize = new System.Drawing.Size(1283, 646);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);

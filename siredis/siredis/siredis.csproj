@@ -91,9 +91,11 @@
     </Compile>
     <Compile Include="antarmuka\FormPemeriksaanDokter.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="antarmuka\FormPemeriksaanDokter.Designer.cs">
       <DependentUpon>FormPemeriksaanDokter.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="antarmuka\FormPendaftaran.cs">
       <SubType>Form</SubType>
@@ -134,9 +136,9 @@
     <Compile Include="konfigurasi\KoneksiDB_Cls.cs" />
     <Compile Include="konfigurasi\Konfigurasi_Cls.cs" />
     <Compile Include="layanan\PemeriksaanDokter_Cls.cs" />
-    <Compile Include="layanan\Pemeriksaan_Cls.cs" />
-    <Compile Include="layanan\Pengguna_Cls.cs" />
     <Compile Include="layanan\Pendaftaran_Cls.cs" />
+    <Compile Include="layanan\Pengguna_Cls.cs" />
+    <Compile Include="layanan\Pemeriksaan_Cls.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="antarmuka\DataAdmin.resx">
@@ -148,6 +150,9 @@
     <EmbeddedResource Include="antarmuka\DataObat.resx">
       <DependentUpon>DataObat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\DataPasien.resx">
+      <DependentUpon>DataPasien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +161,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\FormPemeriksaanDokter.resx">
       <DependentUpon>FormPemeriksaanDokter.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\FormPendaftaran.resx">
       <DependentUpon>FormPendaftaran.cs</DependentUpon>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="antarmuka\HomeDokter.resx">
       <DependentUpon>HomeDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="antarmuka\ListResep.resx">
+      <DependentUpon>ListResep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -216,6 +225,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-1218689594-170667a-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

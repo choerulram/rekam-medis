@@ -46,7 +46,6 @@
             this.tCari = new System.Windows.Forms.TextBox();
             this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.StatusStrip1.SuspendLayout();
             this.Panel2.SuspendLayout();
@@ -57,6 +56,7 @@
             // 
             // StatusStrip1
             // 
+            this.StatusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.StatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripStatusLabel1});
             this.StatusStrip1.Location = new System.Drawing.Point(0, 659);
@@ -98,8 +98,8 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Green;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRefresh.Location = new System.Drawing.Point(861, 12);
             this.btnRefresh.Name = "btnRefresh";
@@ -151,8 +151,8 @@
             // 
             // btnPeriksa
             // 
-            this.btnPeriksa.BackColor = System.Drawing.Color.Crimson;
-            this.btnPeriksa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPeriksa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnPeriksa.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnPeriksa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnPeriksa.Location = new System.Drawing.Point(711, 12);
             this.btnPeriksa.Name = "btnPeriksa";
@@ -196,17 +196,19 @@
             // 
             this.DataGridView1.AllowUserToAddRows = false;
             this.DataGridView1.AllowUserToDeleteRows = false;
+            this.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView1.Location = new System.Drawing.Point(14, 50);
             this.DataGridView1.Name = "DataGridView1";
             this.DataGridView1.ReadOnly = true;
+            this.DataGridView1.RowHeadersWidth = 62;
             this.DataGridView1.Size = new System.Drawing.Size(1209, 336);
             this.DataGridView1.TabIndex = 9;
             // 
             // btnCari
             // 
-            this.btnCari.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCari.Location = new System.Drawing.Point(1110, 6);
             this.btnCari.Name = "btnCari";
@@ -234,31 +236,19 @@
             // 
             // Panel1
             // 
-            this.Panel1.BackColor = System.Drawing.Color.ForestGreen;
-            this.Panel1.Controls.Add(this.Label2);
+            this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(89)))), ((int)(((byte)(224)))));
             this.Panel1.Controls.Add(this.Label1);
             this.Panel1.Location = new System.Drawing.Point(-1, -1);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1266, 95);
+            this.Panel1.Size = new System.Drawing.Size(1281, 95);
             this.Panel1.TabIndex = 42;
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Label2.Location = new System.Drawing.Point(506, 63);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(202, 16);
-            this.Label2.TabIndex = 1;
-            this.Label2.Text = "By KUHAKU21@hotmail.com";
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.Yellow;
-            this.Label1.Location = new System.Drawing.Point(267, 0);
+            this.Label1.ForeColor = System.Drawing.Color.Snow;
+            this.Label1.Location = new System.Drawing.Point(329, 17);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(721, 63);
             this.Label1.TabIndex = 0;
@@ -311,7 +301,6 @@
         internal System.Windows.Forms.TextBox tCari;
         internal System.Windows.Forms.LinkLabel LinkLabel1;
         internal System.Windows.Forms.Panel Panel1;
-        internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
     }
 }

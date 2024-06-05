@@ -74,19 +74,19 @@
             // 
             // Panel1
             // 
-            this.Panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(89)))), ((int)(((byte)(224)))));
             this.Panel1.Controls.Add(this.Label1);
             this.Panel1.Location = new System.Drawing.Point(-1, -1);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1266, 95);
+            this.Panel1.Size = new System.Drawing.Size(1305, 95);
             this.Panel1.TabIndex = 24;
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Bookman Old Style", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.ForeColor = System.Drawing.Color.Yellow;
-            this.Label1.Location = new System.Drawing.Point(267, 0);
+            this.Label1.ForeColor = System.Drawing.Color.Snow;
+            this.Label1.Location = new System.Drawing.Point(291, 15);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(721, 63);
             this.Label1.TabIndex = 0;
@@ -94,7 +94,7 @@
             // 
             // StatusStrip1
             // 
-            this.StatusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.StatusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.StatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripStatusLabel1});
             this.StatusStrip1.Location = new System.Drawing.Point(0, 659);
@@ -206,7 +206,7 @@
             // btnHapus
             // 
             this.btnHapus.BackColor = System.Drawing.Color.Crimson;
-            this.btnHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnHapus.Location = new System.Drawing.Point(1139, 57);
             this.btnHapus.Name = "btnHapus";
@@ -218,21 +218,21 @@
             // 
             // btnPerbarui
             // 
-            this.btnPerbarui.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPerbarui.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerbarui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
+            this.btnPerbarui.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnPerbarui.Location = new System.Drawing.Point(1139, 12);
             this.btnPerbarui.Name = "btnPerbarui";
             this.btnPerbarui.Size = new System.Drawing.Size(88, 34);
             this.btnPerbarui.TabIndex = 6;
-            this.btnPerbarui.Text = "PERBARUI";
+            this.btnPerbarui.Text = "EDIT";
             this.btnPerbarui.UseVisualStyleBackColor = false;
             this.btnPerbarui.Click += new System.EventHandler(this.btnPerbarui_Click);
             // 
             // btnTambah
             // 
-            this.btnTambah.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnTambah.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnTambah.Location = new System.Drawing.Point(1016, 12);
             this.btnTambah.Name = "btnTambah";
@@ -286,11 +286,12 @@
             // 
             this.pendaftaran_dgv.AllowUserToAddRows = false;
             this.pendaftaran_dgv.AllowUserToDeleteRows = false;
+            this.pendaftaran_dgv.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pendaftaran_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pendaftaran_dgv.Location = new System.Drawing.Point(26, 41);
             this.pendaftaran_dgv.Name = "pendaftaran_dgv";
             this.pendaftaran_dgv.ReadOnly = true;
-            this.pendaftaran_dgv.RowHeadersWidth = 51;
+            this.pendaftaran_dgv.RowHeadersWidth = 62;
             this.pendaftaran_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.pendaftaran_dgv.Size = new System.Drawing.Size(1209, 336);
             this.pendaftaran_dgv.TabIndex = 9;
@@ -298,8 +299,8 @@
             // 
             // btnCari
             // 
-            this.btnCari.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCari.Location = new System.Drawing.Point(1110, 6);
             this.btnCari.Name = "btnCari";
@@ -319,7 +320,7 @@
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
@@ -361,6 +362,7 @@
         internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel1;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.ComboBox cbDokter;
+        internal System.Windows.Forms.ComboBox cbPasien1;
         internal System.Windows.Forms.ComboBox cbStatus;
         internal System.Windows.Forms.DateTimePicker dtTanggal;
         internal System.Windows.Forms.TextBox tKeluhan;
@@ -378,7 +380,5 @@
         internal System.Windows.Forms.Button btnCari;
         internal System.Windows.Forms.TextBox cari_txt;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbPasien;
-        internal System.Windows.Forms.ComboBox cbPasien1;
     }
 }

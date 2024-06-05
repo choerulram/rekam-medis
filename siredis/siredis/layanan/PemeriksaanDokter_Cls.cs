@@ -77,7 +77,7 @@ namespace siredis.layanan
         }
 
         // metode untuk menampilkan data dari database
-        public DataTable tampilkanDataRekam() 
+        public DataTable tampilkanDataRekam()
         {
             Query = $"SELECT rm.*, p.nama AS nama_pasien FROM tb_rekam_medis rm " +
             $"JOIN tb_pasien p ON rm.id_pasien = p.id_pasien " +
