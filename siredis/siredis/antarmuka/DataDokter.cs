@@ -69,6 +69,7 @@ namespace siredis.antarmuka
             if (e.RowIndex > -1)
             {
                 DataGridViewRow baris = this.dokter_dgv.Rows[e.RowIndex];
+                data_dokter.Id_Dokter = baris.Cells[0].Value.ToString();
                 tNama.Text = baris.Cells[1].Value.ToString();
                 cbGender.Text = baris.Cells[2].Value.ToString();
                 tSpesialis.Text = baris.Cells[3].Value.ToString();
@@ -108,7 +109,7 @@ namespace siredis.antarmuka
 
             if (data_dokter.apakahAda())
             {
-                MessageBox.Show("Data sudah ada, silakan gunakan tombol Perbarui.");
+                MessageBox.Show("Data sudah ada, silakan gunakan tombol Edit.");
             }
             else
             {
@@ -121,6 +122,34 @@ namespace siredis.antarmuka
                 {
                     MessageBox.Show("Gagal menyimpan data.");
                 }
+            }
+
+            tampilGrid();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            // Pastikan ID Dokter telah diatur
+            if (string.IsNullOrEmpty(data_dokter.Id_Dokter))
+            {
+                MessageBox.Show("Pilih data dokter yang ingin diubah.");
+                return;
+            }
+
+            data_dokter.Nama = tNama.Text;
+            data_dokter.Jenis_Kelamin = cbGender.Text;
+            data_dokter.Spesialis = tSpesialis.Text;
+            data_dokter.Username = tUsername.Text;
+            data_dokter.Password = tPassword.Text;
+
+            int result = data_dokter.ubahData();
+            if (result >= 0)
+            {
+                MessageBox.Show("Data berhasil diubah.");
+            }
+            else
+            {
+                MessageBox.Show("Gagal mengubah data.");
             }
 
             tampilGrid();

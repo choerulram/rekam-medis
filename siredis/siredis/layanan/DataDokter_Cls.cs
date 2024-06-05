@@ -120,10 +120,17 @@ namespace siredis.layanan
         public int ubahData()
         {
             int result = -1;
+            // Tambahkan logging untuk memeriksa nilai id_dokter sebelum update
+            Console.WriteLine($"ID Dokter: {_id_dokter}");
+
             Query = $"UPDATE tb_dokter " +
                     $"SET nama = '{_nama}', jk = '{_jenis_kelamin}', spesialis = '{_spesialis}'," +
                     $" username = '{_username}', password = '{_password}' " +
-                    $"WHERE id_dokter = @id_dokter";
+                    $"WHERE id_dokter = '{_id_dokter}'";
+
+            // Tambahkan logging untuk memeriksa query yang dijalankan
+            Console.WriteLine($"Query: {Query}");
+
             try
             {
                 result = server.eksekusiBukanQuery(Query);
@@ -132,7 +139,11 @@ namespace siredis.layanan
                     throw new Exception("Gagal diubah.");
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"Query: {Query}");
+            }
 
             return result;
         }

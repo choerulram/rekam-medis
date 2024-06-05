@@ -162,6 +162,7 @@
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // tUsername
             // 
