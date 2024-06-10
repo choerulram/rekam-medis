@@ -136,6 +136,7 @@
     <Compile Include="konfigurasi\KoneksiDB_Cls.cs" />
     <Compile Include="konfigurasi\Konfigurasi_Cls.cs" />
     <Compile Include="layanan\DataDokter_Cls.cs" />
+    <Compile Include="layanan\DataPasien_Cls.cs" />
     <Compile Include="layanan\PemeriksaanDokter_Cls.cs" />
     <Compile Include="layanan\Pendaftaran_Cls.cs" />
     <Compile Include="layanan\Pengguna_Cls.cs" />
