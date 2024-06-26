@@ -17,7 +17,7 @@ namespace siredis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeAdmin(""));
+            Application.Run(new FormLogin());
         }
     }
 }

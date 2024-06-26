@@ -154,5 +154,37 @@ namespace siredis.antarmuka
 
             tampilGrid();
         }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine($"Jumlah baris terpilih: {dokter_dgv.SelectedRows.Count}"); // Debug
+
+            if (dokter_dgv.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dokter_dgv.SelectedRows[0];
+                int idDokter = Convert.ToInt32(selectedRow.Cells["ID Dokter"].Value); // Mengambil nilai ID Dokter
+
+                Console.WriteLine($"ID Dokter yang dipilih: {idDokter}"); // Debug
+
+                if (MessageBox.Show("Yakin data akan dihapus?", "KONFIRMASI",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (data_dokter.hapusData(idDokter) > 0)
+                    {
+                        MessageBox.Show("Data berhasil dihapus.", "INFORMASI",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tampilGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal menghapus data.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus.");
+            }
+        }
     }
 }

@@ -129,6 +129,7 @@
             this.btnHapus.TabIndex = 7;
             this.btnHapus.Text = "HAPUS";
             this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnCari
             // 
@@ -276,6 +277,7 @@
             this.dokter_dgv.Name = "dokter_dgv";
             this.dokter_dgv.ReadOnly = true;
             this.dokter_dgv.RowHeadersWidth = 62;
+            this.dokter_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dokter_dgv.Size = new System.Drawing.Size(1265, 320);
             this.dokter_dgv.TabIndex = 32;
             this.dokter_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dokter_dgv_CellClick);

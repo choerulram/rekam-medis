@@ -148,6 +148,33 @@ namespace siredis.layanan
             return result;
         }
 
+        // Metode untuk menghapus data di database
+        public int hapusData(int idDokter)
+        {
+            int result = -1;
+            Query = $"DELETE FROM tb_dokter WHERE id_dokter = {idDokter}";
+            try
+            {
+                Console.WriteLine($"Executing delete query: {Query}"); // Logging query penghapusan
+                result = server.eksekusiBukanQuery(Query);
+                if (result < 0)
+                {
+                    throw new Exception("Gagal dihapus.");
+                }
+                else
+                {
+                    Console.WriteLine("Data berhasil dihapus."); // Pesan berhasil dihapus
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}"); // Logging pesan kesalahan
+                Console.WriteLine($"Query: {Query}"); // Logging query saat terjadi kesalahan
+            }
+
+            return result;
+        }
+
         // metode untuk menampilkan data dari database
         public DataTable tampikanData()
         {
