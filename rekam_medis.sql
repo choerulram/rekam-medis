@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 11, 2024 at 03:38 PM
+-- Generation Time: Jul 11, 2024 at 05:22 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -145,7 +145,8 @@ INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `t
 (26, 13, 'Sakit Jantung', '', '2021-03-28', 1, 'pemeriksaan'),
 (34, 11, 'Menggigil', 'Demam', '2024-06-01', 3, 'selesai'),
 (35, 12, 'Sakit Kepala', 'Migren', '2024-06-01', 4, 'pemeriksaan'),
-(38, 15, 'Sakit Hati', 'Habis Putus', '2024-07-24', 1, 'selesai');
+(38, 15, 'Sakit Hati', 'Habis Putus', '2024-07-24', 1, 'selesai'),
+(40, 14, 'Sakit Kepala', 'Migren', '2024-07-11', 5, 'selesai');
 
 -- --------------------------------------------------------
 
@@ -157,17 +158,17 @@ CREATE TABLE `tb_resep` (
   `id_resep` int NOT NULL,
   `id_rekam` int NOT NULL,
   `id_obat` int NOT NULL,
-  `keterangan` text NOT NULL,
-  `nama` varchar(150) DEFAULT NULL
+  `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tb_resep`
 --
 
-INSERT INTO `tb_resep` (`id_resep`, `id_rekam`, `id_obat`, `keterangan`, `nama`) VALUES
-(15, 34, 12, 'Resep dokter', 'DefaultNama'),
-(16, 38, 12, 'Resep dokter', 'DefaultNama');
+INSERT INTO `tb_resep` (`id_resep`, `id_rekam`, `id_obat`, `keterangan`) VALUES
+(15, 34, 12, 'Minum 3 kali sehari setelah makan'),
+(16, 38, 12, 'Move on'),
+(17, 40, 12, 'Minum 2 kali sehari setelah makan');
 
 -- --------------------------------------------------------
 
@@ -280,13 +281,13 @@ ALTER TABLE `tb_pasien`
 -- AUTO_INCREMENT for table `tb_rekam_medis`
 --
 ALTER TABLE `tb_rekam_medis`
-  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `tb_resep`
 --
 ALTER TABLE `tb_resep`
-  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables

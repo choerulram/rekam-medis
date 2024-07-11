@@ -35,6 +35,10 @@ namespace siredis.antarmuka
                 lpasien.Text = row["nama_pasien"].ToString();
                 tKeluhan.Text = row["keluhan"].ToString();
             }
+            else
+            {
+                MessageBox.Show("Data rekam medis tidak ditemukan.");
+            }
 
             // Menampilkan data obat ke ListBox1
             DataTable dtObat = rekam_medis.tampilkanDataObat();
@@ -62,10 +66,6 @@ namespace siredis.antarmuka
                 string namaObat = selectedItem["nama"].ToString();
                 string idObat = selectedItem["id_obat"].ToString();
 
-                // Tambahkan nama obat ke ListBox2 (opsi sederhana)
-                // ListBox2.Items.Add(namaObat);
-
-                // Atau, tambahkan objek kelas Obat ke ListBox2 (opsi dengan informasi lebih)
                 Obat obat = new Obat { Nama = namaObat, ID = idObat };
                 ListBox2.Items.Add(obat);
             }
@@ -77,6 +77,12 @@ namespace siredis.antarmuka
             if (string.IsNullOrEmpty(tDiagnosa.Text))
             {
                 MessageBox.Show("Diagnosa harus diisi.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(tKeterangan.Text))
+            {
+                MessageBox.Show("Keterangan harus diisi.");
                 return;
             }
 
@@ -96,7 +102,9 @@ namespace siredis.antarmuka
             {
                 obatList.Add(item.ID);
             }
-            bool isPrescriptionSaved = rekam_medis.SavePrescription(ID, obatList, "Resep dokter");
+
+            string keterangan = tKeterangan.Text; // Tambahkan ini
+            bool isPrescriptionSaved = rekam_medis.SavePrescription(ID, obatList, keterangan); // Ubah ini
 
             if (isDiagnosisUpdated && isPrescriptionSaved)
             {

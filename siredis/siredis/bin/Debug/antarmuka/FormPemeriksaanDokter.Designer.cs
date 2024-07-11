@@ -39,6 +39,8 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.tKeluhan = new System.Windows.Forms.TextBox();
             this.Label8 = new System.Windows.Forms.Label();
+            this.tKeterangan = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSelesai
@@ -79,16 +81,16 @@
             // ListBox2
             // 
             this.ListBox2.FormattingEnabled = true;
-            this.ListBox2.Location = new System.Drawing.Point(22, 306);
+            this.ListBox2.Location = new System.Drawing.Point(22, 397);
             this.ListBox2.Name = "ListBox2";
-            this.ListBox2.Size = new System.Drawing.Size(362, 121);
+            this.ListBox2.Size = new System.Drawing.Size(362, 30);
             this.ListBox2.TabIndex = 35;
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(19, 276);
+            this.Label3.Location = new System.Drawing.Point(19, 377);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(104, 17);
             this.Label3.TabIndex = 34;
@@ -148,11 +150,31 @@
             this.Label8.TabIndex = 28;
             this.Label8.Text = "Keluhan :";
             // 
+            // tKeterangan
+            // 
+            this.tKeterangan.Location = new System.Drawing.Point(22, 293);
+            this.tKeterangan.Multiline = true;
+            this.tKeterangan.Name = "tKeterangan";
+            this.tKeterangan.Size = new System.Drawing.Size(362, 68);
+            this.tKeterangan.TabIndex = 40;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 273);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 17);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Keterangan :";
+            // 
             // FormPemeriksaanDokter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 529);
+            this.Controls.Add(this.tKeterangan);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSelesai);
             this.Controls.Add(this.btnTambahObat);
             this.Controls.Add(this.lpasien);
@@ -186,5 +208,7 @@
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox tKeluhan;
         internal System.Windows.Forms.Label Label8;
+        internal System.Windows.Forms.TextBox tKeterangan;
+        internal System.Windows.Forms.Label label4;
     }
 }

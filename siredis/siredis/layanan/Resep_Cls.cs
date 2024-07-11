@@ -78,7 +78,7 @@ namespace siredis.layanan
         // metode untuk menampilkan data dari database
         public DataTable tampilkanResep()
         {
-            Query = $"SELECT rm.*, p.nama AS nama_pasien, d.nama AS nama_dokter, o.nama AS resep_obat " +
+            Query = $"SELECT rm.*, p.nama AS nama_pasien, d.nama AS nama_dokter, o.nama AS resep_obat, r.keterangan AS keterangan " +
             $"FROM tb_rekam_medis rm " +
             $"JOIN tb_pasien p ON rm.id_pasien = p.id_pasien " +
             $"JOIN tb_dokter d ON rm.id_dokter = d.id_dokter " +

@@ -34,6 +34,7 @@ namespace siredis.antarmuka
                     lpasien.Text = row["nama_pasien"].ToString();
                     tKeluhan.Text = row["keluhan"].ToString();
                     tDiagnosa.Text = row["diagnosa"].ToString();
+                    tKeterangan.Text = row["keterangan"].ToString();
 
                     // Clear existing items in the list box
                     listBoxResep.Items.Clear();

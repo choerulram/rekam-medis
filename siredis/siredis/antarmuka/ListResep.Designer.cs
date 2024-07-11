@@ -37,6 +37,8 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.tKeluhan = new System.Windows.Forms.TextBox();
             this.Label8 = new System.Windows.Forms.Label();
+            this.tKeterangan = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,9 +67,9 @@
             // listBoxResep
             // 
             this.listBoxResep.FormattingEnabled = true;
-            this.listBoxResep.Location = new System.Drawing.Point(527, 178);
+            this.listBoxResep.Location = new System.Drawing.Point(527, 176);
             this.listBoxResep.Name = "listBoxResep";
-            this.listBoxResep.Size = new System.Drawing.Size(362, 173);
+            this.listBoxResep.Size = new System.Drawing.Size(362, 69);
             this.listBoxResep.TabIndex = 43;
             // 
             // Label3
@@ -126,11 +128,31 @@
             this.Label8.TabIndex = 37;
             this.Label8.Text = "Keluhan :";
             // 
+            // tKeterangan
+            // 
+            this.tKeterangan.Location = new System.Drawing.Point(527, 317);
+            this.tKeterangan.Multiline = true;
+            this.tKeterangan.Name = "tKeterangan";
+            this.tKeterangan.Size = new System.Drawing.Size(362, 67);
+            this.tKeterangan.TabIndex = 46;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(524, 270);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 17);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Keterangan :";
+            // 
             // ListResep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 536);
+            this.Controls.Add(this.tKeterangan);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lpasien);
             this.Controls.Add(this.listBoxResep);
             this.Controls.Add(this.Label3);
@@ -161,5 +183,7 @@
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.TextBox tKeluhan;
         internal System.Windows.Forms.Label Label8;
+        internal System.Windows.Forms.TextBox tKeterangan;
+        internal System.Windows.Forms.Label label4;
     }
 }
