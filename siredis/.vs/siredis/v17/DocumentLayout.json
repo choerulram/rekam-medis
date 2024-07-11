@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|c:\\users\\acer\\documents\\semester_4\\praktikum premrograman berorientasi objek\\project\\rekam-medis\\siredis\\siredis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|c:\\users\\acer\\documents\\semester_4\\praktikum premrograman berorientasi objek\\project\\rekam-medis\\siredis\\siredis\\antarmuka\\datadokter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\antarmuka\\datadokter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|c:\\users\\acer\\documents\\semester_4\\praktikum premrograman berorientasi objek\\project\\rekam-medis\\siredis\\siredis\\antarmuka\\dataobat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\dataobat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\antarmuka\\dataobat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|c:\\users\\acer\\documents\\semester_4\\praktikum premrograman berorientasi objek\\project\\rekam-medis\\siredis\\siredis\\antarmuka\\datapasien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\datapasien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\antarmuka\\datapasien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|c:\\users\\acer\\documents\\semester_4\\praktikum premrograman berorientasi objek\\project\\rekam-medis\\siredis\\siredis\\layanan\\datapasien_cls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\layanan\\datapasien_cls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\formpendaftaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\antarmuka\\formpendaftaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|c:\\users\\acer\\documents\\semester_4\\praktikum premrograman berorientasi objek\\project\\rekam-medis\\siredis\\siredis\\antarmuka\\datapasien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\antarmuka\\datapasien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\formselesai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\antarmuka\\formselesai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\formpemeriksaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E6F5AF0-62CC-4733-9AA7-C89DE3900C4C}|siredis\\siredis.csproj|solutionrelative:siredis\\antarmuka\\formpemeriksaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,28 +42,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\Program.cs",
-              "RelativeDocumentMoniker": "siredis\\Program.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\Program.cs",
-              "RelativeToolTip": "siredis\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAApAAAA",
+              "DocumentIndex": 4,
+              "Title": "FormSelesai.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\FormSelesai.cs",
+              "RelativeDocumentMoniker": "siredis\\antarmuka\\FormSelesai.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\rekam-medis\\siredis\\siredis\\antarmuka\\FormSelesai.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\rekam-medis\\siredis\\siredis\\antarmuka\\FormSelesai.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:32:08.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-11T03:20:22.724Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DataObat.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataObat.cs",
-              "RelativeDocumentMoniker": "siredis\\antarmuka\\DataObat.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataObat.cs [Design]",
-              "RelativeToolTip": "siredis\\antarmuka\\DataObat.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "FormPendaftaran.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\FormPendaftaran.cs",
+              "RelativeDocumentMoniker": "siredis\\antarmuka\\FormPendaftaran.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\rekam-medis\\siredis\\siredis\\antarmuka\\FormPendaftaran.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\rekam-medis\\siredis\\siredis\\antarmuka\\FormPendaftaran.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:29:36.225Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-11T03:19:08.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormPemeriksaan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\FormPemeriksaan.cs",
+              "RelativeDocumentMoniker": "siredis\\antarmuka\\FormPemeriksaan.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\rekam-medis\\siredis\\siredis\\antarmuka\\FormPemeriksaan.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\rekam-medis\\siredis\\siredis\\antarmuka\\FormPemeriksaan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T03:14:25.795Z"
             },
             {
               "$type": "Document",
@@ -67,37 +79,33 @@
               "Title": "DataPasien.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataPasien.cs",
               "RelativeDocumentMoniker": "siredis\\antarmuka\\DataPasien.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataPasien.cs [Design]",
-              "RelativeToolTip": "siredis\\antarmuka\\DataPasien.cs [Design]",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\rekam-medis\\siredis\\siredis\\antarmuka\\DataPasien.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\rekam-medis\\siredis\\siredis\\antarmuka\\DataPasien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:04:27.884Z",
+              "WhenOpened": "2024-07-11T03:14:22.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataObat.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataObat.cs",
+              "RelativeDocumentMoniker": "siredis\\antarmuka\\DataObat.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\rekam-medis\\siredis\\siredis\\antarmuka\\DataObat.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\rekam-medis\\siredis\\siredis\\antarmuka\\DataObat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T03:14:13.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataDokter.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataDokter.cs",
+              "RelativeDocumentMoniker": "siredis\\antarmuka\\DataDokter.cs",
+              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataDokter.cs [Design]",
+              "RelativeToolTip": "siredis\\antarmuka\\DataDokter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T03:14:08.075Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataPasien.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataPasien.cs",
-              "RelativeDocumentMoniker": "siredis\\antarmuka\\DataPasien.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\antarmuka\\DataPasien.cs",
-              "RelativeToolTip": "siredis\\antarmuka\\DataPasien.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAtwFkAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:10:04.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataPasien_Cls.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\layanan\\DataPasien_Cls.cs",
-              "RelativeDocumentMoniker": "siredis\\layanan\\DataPasien_Cls.cs",
-              "ToolTip": "C:\\Users\\ACER\\Documents\\Semester_4\\Praktikum Premrograman Berorientasi Objek\\Project\\rekam-medis\\siredis\\siredis\\layanan\\DataPasien_Cls.cs",
-              "RelativeToolTip": "siredis\\layanan\\DataPasien_Cls.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAQwGUAAABuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T15:09:13.893Z",
-              "EditorCaption": ""
             }
           ]
         }

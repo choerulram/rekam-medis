@@ -312,9 +312,10 @@
             // 
             // cari_txt
             // 
-            this.cari_txt.Location = new System.Drawing.Point(928, 11);
+            this.cari_txt.Location = new System.Drawing.Point(775, 6);
+            this.cari_txt.Multiline = true;
             this.cari_txt.Name = "cari_txt";
-            this.cari_txt.Size = new System.Drawing.Size(176, 20);
+            this.cari_txt.Size = new System.Drawing.Size(329, 29);
             this.cari_txt.TabIndex = 3;
             this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 

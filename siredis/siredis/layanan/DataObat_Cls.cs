@@ -53,15 +53,11 @@ namespace siredis.layanan
         public int simpanData()
         {
             int result = -1;
-            Query = "INSERT INTO tb_obat (id_obat, nama) VALUES (@id_obat, @nama)";
+            Query = $"insert into tb_obat (id_obat, nama) " +
+                    $"values ('{_id_obat}', '{_nama}')";
             try
             {
-                MySqlParameter[] parameters = {
-                    new MySqlParameter("@id_obat", _id_obat),
-                    new MySqlParameter("@nama", _nama)
-                };
-                result = server.eksekusiBukanQuery(Query, parameters);
-
+                result = server.eksekusiBukanQuery(Query);
                 if (result < 0)
                 {
                     throw new Exception("Gagal disimpan.");
@@ -69,6 +65,7 @@ namespace siredis.layanan
             }
             catch (Exception ex)
             {
+                // Tambahkan logging untuk kesalahan
                 Console.WriteLine($"Error: {ex.Message}");
                 Console.WriteLine($"Query: {Query}");
             }
@@ -79,19 +76,19 @@ namespace siredis.layanan
         public int ubahData()
         {
             int result = -1;
+            // Tambahkan logging untuk memeriksa nilai id_dokter sebelum update
             Console.WriteLine($"ID Obat: {_id_obat}");
 
-            Query = "UPDATE tb_obat SET nama = @nama WHERE id_obat = @id_obat";
+            Query = $"UPDATE tb_obat " +
+                    $"SET nama = '{_nama}'" +
+                    $"WHERE id_obat = '{_id_obat}'";
+
+            // Tambahkan logging untuk memeriksa query yang dijalankan
             Console.WriteLine($"Query: {Query}");
 
             try
             {
-                MySqlParameter[] parameters = {
-                    new MySqlParameter("@id_obat", _id_obat),
-                    new MySqlParameter("@nama", _nama)
-                };
-                result = server.eksekusiBukanQuery(Query, parameters);
-
+                result = server.eksekusiBukanQuery(Query);
                 if (result < 0)
                 {
                     throw new Exception("Gagal diubah.");
@@ -109,15 +106,11 @@ namespace siredis.layanan
         public int hapusData(int idObat)
         {
             int result = -1;
-            Query = "DELETE FROM tb_obat WHERE id_obat = @id_obat";
+            Query = $"DELETE FROM tb_obat WHERE id_obat = {idObat}";
             try
             {
                 Console.WriteLine($"Executing delete query: {Query}");
-                MySqlParameter[] parameters = {
-                    new MySqlParameter("@id_obat", idObat)
-                };
-                result = server.eksekusiBukanQuery(Query, parameters);
-
+                result = server.eksekusiBukanQuery(Query);
                 if (result < 0)
                 {
                     throw new Exception("Gagal dihapus.");

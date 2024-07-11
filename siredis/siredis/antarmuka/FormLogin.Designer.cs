@@ -75,7 +75,6 @@
             this.password_txt.PasswordChar = '*';
             this.password_txt.Size = new System.Drawing.Size(173, 20);
             this.password_txt.TabIndex = 10;
-            this.password_txt.TextChanged += new System.EventHandler(this.password_txt_TextChanged);
             // 
             // username_txt
             // 
@@ -83,7 +82,6 @@
             this.username_txt.Name = "username_txt";
             this.username_txt.Size = new System.Drawing.Size(173, 20);
             this.username_txt.TabIndex = 9;
-            this.username_txt.TextChanged += new System.EventHandler(this.username_txt_TextChanged);
             // 
             // button1
             // 
@@ -93,7 +91,6 @@
             this.button1.Size = new System.Drawing.Size(304, 350);
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -138,7 +135,6 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 14;
             this.PictureBox1.TabStop = false;
-            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -149,7 +145,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // FormLogin
             // 

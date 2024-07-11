@@ -26,12 +26,6 @@ namespace siredis.antarmuka
             this.Close();
         }
 
-        private void AdminMenu_Click(object sender, EventArgs e)
-        {
-            DataAdmin data = new DataAdmin();
-            data.Show();
-        }
-
         private void DokterMenu_Click(object sender, EventArgs e)
         {
             DataDokter data = new DataDokter();

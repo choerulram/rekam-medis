@@ -143,7 +143,7 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(1105, 95);
+            this.btnCari.Location = new System.Drawing.Point(930, 79);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(117, 29);
             this.btnCari.TabIndex = 8;
@@ -165,9 +165,9 @@
             // 
             // tUmur
             // 
-            this.tUmur.Location = new System.Drawing.Point(238, 105);
+            this.tUmur.Location = new System.Drawing.Point(238, 99);
             this.tUmur.Name = "tUmur";
-            this.tUmur.Size = new System.Drawing.Size(176, 20);
+            this.tUmur.Size = new System.Drawing.Size(178, 20);
             this.tUmur.TabIndex = 3;
             // 
             // Label7
@@ -215,9 +215,10 @@
             // 
             // tCari
             // 
-            this.tCari.Location = new System.Drawing.Point(925, 103);
+            this.tCari.Location = new System.Drawing.Point(729, 80);
+            this.tCari.Multiline = true;
             this.tCari.Name = "tCari";
-            this.tCari.Size = new System.Drawing.Size(176, 20);
+            this.tCari.Size = new System.Drawing.Size(195, 25);
             this.tCari.TabIndex = 13;
             this.tCari.TextChanged += new System.EventHandler(this.tCari_TextChanged);
             // 
@@ -232,7 +233,7 @@
             // 
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(235, 74);
+            this.Label4.Location = new System.Drawing.Point(235, 69);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(56, 17);
             this.Label4.TabIndex = 16;

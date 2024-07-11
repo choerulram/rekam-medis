@@ -36,10 +36,6 @@ namespace siredis.antarmuka
             else
             {
                 DataTable hasilPencarian = pendaftaran.tampilkanDgNama(cari_txt.Text);
-                if (hasilPencarian.Rows.Count == 0)
-                {
-                    MessageBox.Show("Data tidak ditemukan atau kosong");
-                }
                 pendaftaran_dgv.DataSource = hasilPencarian;
             }
             belangBelang(pendaftaran_dgv);

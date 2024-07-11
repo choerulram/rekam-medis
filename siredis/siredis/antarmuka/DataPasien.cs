@@ -42,10 +42,6 @@ namespace siredis.antarmuka
             else
             {
                 DataTable hasilPencarian = data_pasien.tampilkanDataPasienDgNama(tCari.Text);
-                if (hasilPencarian.Rows.Count == 0)
-                {
-                    MessageBox.Show("Data tidak ditemukan atau kosong");
-                }
                 pasien_dgv.DataSource = hasilPencarian;
             }
             belangBelang(pasien_dgv);

@@ -67,40 +67,5 @@ namespace siredis.antarmuka
                 Application.Exit();
             }
         }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void username_txt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void password_txt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

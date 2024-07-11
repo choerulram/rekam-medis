@@ -38,11 +38,6 @@ namespace siredis.antarmuka
             transaksi.Show();
         }
 
-        private void PemeriksaanMenu_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void PendaftaranMenu_Click(object sender, EventArgs e)
         {
             FormPendaftaran formPendaftaran = new FormPendaftaran(userId);

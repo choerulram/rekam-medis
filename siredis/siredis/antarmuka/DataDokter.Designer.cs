@@ -37,15 +37,11 @@
             this.btnCari = new System.Windows.Forms.Button();
             this.tSpesialis = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.tUsername = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.btnTambah = new System.Windows.Forms.Button();
             this.Label3 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
             this.cari_txt = new System.Windows.Forms.TextBox();
             this.tNama = new System.Windows.Forms.TextBox();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.tPassword = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Homelb = new System.Windows.Forms.LinkLabel();
             this.dokter_dgv = new System.Windows.Forms.DataGridView();
@@ -83,15 +79,11 @@
             this.Panel2.Controls.Add(this.btnCari);
             this.Panel2.Controls.Add(this.tSpesialis);
             this.Panel2.Controls.Add(this.btnEdit);
-            this.Panel2.Controls.Add(this.tUsername);
             this.Panel2.Controls.Add(this.Label7);
             this.Panel2.Controls.Add(this.btnTambah);
             this.Panel2.Controls.Add(this.Label3);
-            this.Panel2.Controls.Add(this.Label5);
             this.Panel2.Controls.Add(this.cari_txt);
             this.Panel2.Controls.Add(this.tNama);
-            this.Panel2.Controls.Add(this.Label4);
-            this.Panel2.Controls.Add(this.tPassword);
             this.Panel2.Location = new System.Drawing.Point(9, 145);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1266, 135);
@@ -105,14 +97,14 @@
             "Perempuan"});
             this.cbGender.Location = new System.Drawing.Point(16, 88);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(176, 21);
+            this.cbGender.Size = new System.Drawing.Size(314, 21);
             this.cbGender.TabIndex = 20;
             // 
             // Label8
             // 
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(228, 26);
+            this.Label8.Location = new System.Drawing.Point(369, 9);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(83, 17);
             this.Label8.TabIndex = 19;
@@ -136,7 +128,7 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(1119, 93);
+            this.btnCari.Location = new System.Drawing.Point(960, 82);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(117, 29);
             this.btnCari.TabIndex = 8;
@@ -146,10 +138,10 @@
             // 
             // tSpesialis
             // 
-            this.tSpesialis.Location = new System.Drawing.Point(231, 46);
+            this.tSpesialis.Location = new System.Drawing.Point(372, 36);
             this.tSpesialis.Multiline = true;
             this.tSpesialis.Name = "tSpesialis";
-            this.tSpesialis.Size = new System.Drawing.Size(176, 63);
+            this.tSpesialis.Size = new System.Drawing.Size(287, 73);
             this.tSpesialis.TabIndex = 18;
             // 
             // btnEdit
@@ -164,13 +156,6 @@
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // tUsername
-            // 
-            this.tUsername.Location = new System.Drawing.Point(446, 46);
-            this.tUsername.Name = "tUsername";
-            this.tUsername.Size = new System.Drawing.Size(176, 20);
-            this.tUsername.TabIndex = 3;
             // 
             // Label7
             // 
@@ -205,21 +190,12 @@
             this.Label3.TabIndex = 3;
             this.Label3.Text = "Nama :";
             // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(443, 69);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(87, 17);
-            this.Label5.TabIndex = 15;
-            this.Label5.Text = "Password :";
-            // 
             // cari_txt
             // 
-            this.cari_txt.Location = new System.Drawing.Point(933, 101);
+            this.cari_txt.Location = new System.Drawing.Point(751, 84);
+            this.cari_txt.Multiline = true;
             this.cari_txt.Name = "cari_txt";
-            this.cari_txt.Size = new System.Drawing.Size(176, 20);
+            this.cari_txt.Size = new System.Drawing.Size(203, 25);
             this.cari_txt.TabIndex = 13;
             this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 
@@ -227,25 +203,8 @@
             // 
             this.tNama.Location = new System.Drawing.Point(14, 36);
             this.tNama.Name = "tNama";
-            this.tNama.Size = new System.Drawing.Size(178, 20);
+            this.tNama.Size = new System.Drawing.Size(316, 20);
             this.tNama.TabIndex = 0;
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(443, 26);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(91, 17);
-            this.Label4.TabIndex = 16;
-            this.Label4.Text = "Username :";
-            // 
-            // tPassword
-            // 
-            this.tPassword.Location = new System.Drawing.Point(446, 89);
-            this.tPassword.Name = "tPassword";
-            this.tPassword.Size = new System.Drawing.Size(176, 20);
-            this.tPassword.TabIndex = 14;
             // 
             // Label6
             // 
@@ -314,7 +273,6 @@
         internal System.Windows.Forms.Button btnHapus;
         internal System.Windows.Forms.Button btnCari;
         internal System.Windows.Forms.Button btnEdit;
-        internal System.Windows.Forms.TextBox tUsername;
         internal System.Windows.Forms.Button btnTambah;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.TextBox tNama;
@@ -324,10 +282,7 @@
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox tSpesialis;
         internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.TextBox cari_txt;
-        internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.TextBox tPassword;
         internal System.Windows.Forms.DataGridView dokter_dgv;
     }
 }

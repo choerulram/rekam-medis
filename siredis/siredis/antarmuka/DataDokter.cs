@@ -36,10 +36,10 @@ namespace siredis.antarmuka
             else
             {
                 DataTable hasilPencarian = data_dokter.tampilkanDgNama(cari_txt.Text);
-                if (hasilPencarian.Rows.Count == 0)
-                {
-                    MessageBox.Show("Data tidak ditemukan atau kosong");
-                }
+                //if (hasilPencarian.Rows.Count == 0)
+                //{
+                 //   MessageBox.Show("Data tidak ditemukan atau kosong");
+                //}
                 dokter_dgv.DataSource = hasilPencarian;
             }
             belangBelang(dokter_dgv);
@@ -73,8 +73,6 @@ namespace siredis.antarmuka
                 tNama.Text = baris.Cells[1].Value.ToString();
                 cbGender.Text = baris.Cells[2].Value.ToString();
                 tSpesialis.Text = baris.Cells[3].Value.ToString();
-                tUsername.Text = baris.Cells[4].Value.ToString();
-                tPassword.Text = baris.Cells[5].Value.ToString();
             }
         }
 
@@ -104,8 +102,6 @@ namespace siredis.antarmuka
             data_dokter.Nama = tNama.Text;
             data_dokter.Jenis_Kelamin = cbGender.Text;
             data_dokter.Spesialis = tSpesialis.Text;
-            data_dokter.Username = tUsername.Text;
-            data_dokter.Password = tPassword.Text;
 
             if (data_dokter.apakahAda())
             {
@@ -139,8 +135,6 @@ namespace siredis.antarmuka
             data_dokter.Nama = tNama.Text;
             data_dokter.Jenis_Kelamin = cbGender.Text;
             data_dokter.Spesialis = tSpesialis.Text;
-            data_dokter.Username = tUsername.Text;
-            data_dokter.Password = tPassword.Text;
 
             int result = data_dokter.ubahData();
             if (result >= 0)

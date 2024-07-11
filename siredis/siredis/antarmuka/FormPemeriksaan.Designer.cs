@@ -192,7 +192,7 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(1110, 6);
+            this.btnCari.Location = new System.Drawing.Point(1110, 10);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(117, 29);
             this.btnCari.TabIndex = 8;
@@ -202,9 +202,10 @@
             // 
             // cari_txt
             // 
-            this.cari_txt.Location = new System.Drawing.Point(928, 11);
+            this.cari_txt.Location = new System.Drawing.Point(775, 10);
+            this.cari_txt.Multiline = true;
             this.cari_txt.Name = "cari_txt";
-            this.cari_txt.Size = new System.Drawing.Size(176, 20);
+            this.cari_txt.Size = new System.Drawing.Size(329, 29);
             this.cari_txt.TabIndex = 3;
             this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 

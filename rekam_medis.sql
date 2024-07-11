@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 31, 2024 at 10:30 PM
+-- Generation Time: Jul 11, 2024 at 03:49 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -54,21 +54,19 @@ CREATE TABLE `tb_dokter` (
   `id_dokter` int NOT NULL,
   `nama` varchar(100) NOT NULL,
   `jk` varchar(20) NOT NULL,
-  `spesialis` varchar(100) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `spesialis` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tb_dokter`
 --
 
-INSERT INTO `tb_dokter` (`id_dokter`, `nama`, `jk`, `spesialis`, `username`, `password`) VALUES
-(1, 'Dr. Arifin', 'Laki-Laki', 'Umum', 'Dr. Arifin', '12345'),
-(2, 'Dr. Kamal', 'Laki-laki', 'Mata', 'Dr. Kamal', '12345'),
-(3, 'Dr. Rizal', 'Laki-laki', 'Umum', 'Dr. Rizal', '12345'),
-(4, 'Dr. Safiya', 'Perempuan', 'Kandungan', 'Dr. Safiya', '12345'),
-(5, 'Dr. Nurul', 'Perempuan', 'Umum', 'Dr. Nurul', '12345');
+INSERT INTO `tb_dokter` (`id_dokter`, `nama`, `jk`, `spesialis`) VALUES
+(1, 'Dr. Arifin', 'Laki-Laki', 'Umum'),
+(2, 'Dr. Kamal', 'Laki-laki', 'Mata'),
+(3, 'Dr. Rizal', 'Laki-laki', 'Umum'),
+(4, 'Dr. Safiya', 'Perempuan', 'Kandungan'),
+(5, 'Dr. Nurul', 'Perempuan', 'Umum');
 
 -- --------------------------------------------------------
 
@@ -86,9 +84,13 @@ CREATE TABLE `tb_obat` (
 --
 
 INSERT INTO `tb_obat` (`id_obat`, `nama`) VALUES
-(1, 'PARACETAMOL 500MG'),
-(2, 'PARACETAMOL 250MG'),
-(4, 'PANADOL');
+(7, 'Ibuprofen 200MG'),
+(8, 'Amoxicillin 500MG'),
+(9, 'Nitroglycerin'),
+(10, 'Aspirin 81MG'),
+(11, 'Tetrahydrozoline (Visine)'),
+(12, 'Paracetamol 500MG'),
+(13, 'Ibuprofen 400MG');
 
 -- --------------------------------------------------------
 
@@ -111,7 +113,8 @@ CREATE TABLE `tb_pasien` (
 INSERT INTO `tb_pasien` (`id_pasien`, `no_kartu`, `nama`, `jk`, `umur`) VALUES
 (11, '01', 'Rasyid', 'Laki - laki', 25),
 (12, '02', 'Matrui', 'Laki - laki', 50),
-(13, '03', 'Kholil', 'Laki - laki', 20);
+(13, '03', 'Kholil', 'Laki - laki', 20),
+(14, '04', 'Shasa', 'Perempuan', 35);
 
 -- --------------------------------------------------------
 
@@ -134,20 +137,13 @@ CREATE TABLE `tb_rekam_medis` (
 --
 
 INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `tanggal`, `id_dokter`, `status`) VALUES
-(12, 11, 'sakit gigi', '', '2021-03-28', 1, 'pendaftaran'),
-(13, 11, 'sakit mata', 'kurang vitamin c', '2021-03-28', 1, 'selesai'),
-(14, 11, 'sakit gigi', 'kebayakan makan coklat', '2021-03-28', 1, 'selesai'),
+(12, 11, 'Sakit Gigi', '', '2021-03-28', 1, 'pendaftaran'),
 (15, 12, 'Sakit Jantung', '', '2021-03-28', 1, 'pendaftaran'),
-(19, 13, 'sakit gigi', '', '2021-03-28', 5, 'pendaftaran'),
-(23, 11, 'SAKIT MATA', 'KURANG VITAMIN A', '2021-03-28', 1, 'selesai'),
-(24, 12, 'SAKIt GIGI', '', '2024-05-28', 1, 'pendaftaran'),
-(25, 12, 'Sakit Jantung', 'SALAH MAKAN', '2021-03-28', 1, 'pendaftaran'),
-(26, 13, 'SAKIT PERUT', '', '2021-03-28', 1, 'pendaftaran'),
-(27, 13, 'SAKIT PERUT', 'SALAH MAKAN', '2021-03-28', 1, 'selesai'),
-(29, 11, 'Sakit Mata', NULL, '2024-05-30', 2, 'pendaftaran'),
-(34, 11, 'demam tinggi', 'gejala flu', '2024-06-01', 3, 'pemeriksaan'),
-(35, 12, 'sakit kepala', 'migren', '2024-06-01', 4, 'pemeriksaan'),
-(36, 13, 'nyeri punggung', 'cedera otot', '2024-06-01', 5, 'pemeriksaan');
+(19, 13, 'Sakit Gigi', '', '2021-03-28', 5, 'pendaftaran'),
+(25, 12, 'Sakit Jantung', '', '2021-03-28', 1, 'pendaftaran'),
+(26, 13, 'Sakit Jantung', '', '2021-03-28', 1, 'pemeriksaan'),
+(34, 11, 'Menggigil', 'Demam', '2024-06-01', 3, 'selesai'),
+(35, 12, 'Sakit Kepala', 'Migren', '2024-06-01', 4, 'pemeriksaan');
 
 -- --------------------------------------------------------
 
@@ -160,7 +156,7 @@ CREATE TABLE `tb_resep` (
   `id_rekam` int NOT NULL,
   `id_obat` int NOT NULL,
   `keterangan` text NOT NULL,
-  `nama` varchar(150) NOT NULL
+  `nama` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -170,7 +166,34 @@ CREATE TABLE `tb_resep` (
 INSERT INTO `tb_resep` (`id_resep`, `id_rekam`, `id_obat`, `keterangan`, `nama`) VALUES
 (10, 34, 1, 'Minum 2 kali sehari setelah makan', 'Paracetamol'),
 (11, 35, 2, 'Minum 1 kali sehari sebelum tidur', 'Ibuprofen'),
-(12, 36, 4, 'Minum 3 kali sehari setelah makan', 'Aspirin');
+(15, 34, 12, 'Resep dokter', 'DefaultNama');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user`
+--
+
+CREATE TABLE `tb_user` (
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `level` varchar(15) NOT NULL,
+  `id_admin` int DEFAULT NULL,
+  `id_dokter` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tb_user`
+--
+
+INSERT INTO `tb_user` (`username`, `password`, `level`, `id_admin`, `id_dokter`) VALUES
+('admin', 'admin123', 'Admin', 1, NULL),
+('admin2', 'admin123', 'Admin', 2, NULL),
+('arifin', '12345', 'Dokter', NULL, 1),
+('kamal', '12345', 'Dokter', NULL, 2),
+('nurul', '12345', 'Dokter', NULL, 5),
+('rizal', '12345', 'Dokter', NULL, 3),
+('safiya', '12345', 'Dokter', NULL, 4);
 
 --
 -- Indexes for dumped tables
@@ -217,6 +240,14 @@ ALTER TABLE `tb_resep`
   ADD KEY `fk_tb_rekam_medis_id_rekam` (`id_rekam`);
 
 --
+-- Indexes for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD PRIMARY KEY (`username`),
+  ADD KEY `fk_admin` (`id_admin`),
+  ADD KEY `fk_dokter` (`id_dokter`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -230,31 +261,31 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_dokter`
 --
 ALTER TABLE `tb_dokter`
-  MODIFY `id_dokter` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_dokter` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_obat`
 --
 ALTER TABLE `tb_obat`
-  MODIFY `id_obat` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_obat` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tb_pasien`
 --
 ALTER TABLE `tb_pasien`
-  MODIFY `id_pasien` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_pasien` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tb_rekam_medis`
 --
 ALTER TABLE `tb_rekam_medis`
-  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `tb_resep`
 --
 ALTER TABLE `tb_resep`
-  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
@@ -273,6 +304,13 @@ ALTER TABLE `tb_rekam_medis`
 ALTER TABLE `tb_resep`
   ADD CONSTRAINT `fk_id_obat` FOREIGN KEY (`id_obat`) REFERENCES `tb_obat` (`id_obat`),
   ADD CONSTRAINT `fk_tb_rekam_medis_id_rekam` FOREIGN KEY (`id_rekam`) REFERENCES `tb_rekam_medis` (`id_rekam`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD CONSTRAINT `fk_admin` FOREIGN KEY (`id_admin`) REFERENCES `tb_admin` (`id_admin`),
+  ADD CONSTRAINT `fk_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `tb_dokter` (`id_dokter`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

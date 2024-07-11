@@ -20,8 +20,6 @@ namespace siredis.layanan
         private string _nama;
         private string _jenis_kelamin;
         private string _spesialis;
-        private string _username;
-        private string _password;
 
         KoneksiDB_Cls server;
         DataTable data;
@@ -33,8 +31,6 @@ namespace siredis.layanan
             _nama = "";
             _jenis_kelamin = "";
             _spesialis = "";
-            _username = "";
-            _password = "";
 
             server = new KoneksiDB_Cls();
             data = new DataTable();
@@ -65,26 +61,13 @@ namespace siredis.layanan
             set { _spesialis = value; }
         }
 
-        // property untuk mengatur keluhan rekam_medis
-        public string Username
-        {
-            set { _username = value; }
-        }
-
-        // property untuk mengatur tanggal rekam_medis
-        public string Password
-        {
-            set { _password = value; }
-        }
-
         // metode untuk memeriksa apakah id dokter sudah ada dalam database
         public bool apakahAda()
         {
             bool cek = false;
-            Query = "SELECT * FROM tb_dokter WHERE nama = @nama AND username = @username";
+            Query = "SELECT * FROM tb_dokter WHERE nama = @nama";
             MySqlCommand cmd = new MySqlCommand(Query);
             cmd.Parameters.AddWithValue("@nama", _nama);
-            cmd.Parameters.AddWithValue("@username", _username);
             data = server.eksekusiQuery(cmd);
             if (data.Rows.Count > 0)
             {
@@ -97,8 +80,8 @@ namespace siredis.layanan
         public int simpanData()
         {
             int result = -1;
-            Query = $"insert into tb_dokter (nama, jk, spesialis, username, password) " +
-                    $"values ('{_nama}', '{_jenis_kelamin}', '{_spesialis}', '{_username}', '{_password}')";
+            Query = $"insert into tb_dokter (nama, jk, spesialis) " +
+                    $"values ('{_nama}', '{_jenis_kelamin}', '{_spesialis}')";
             try
             {
                 result = server.eksekusiBukanQuery(Query);
@@ -124,8 +107,7 @@ namespace siredis.layanan
             Console.WriteLine($"ID Dokter: {_id_dokter}");
 
             Query = $"UPDATE tb_dokter " +
-                    $"SET nama = '{_nama}', jk = '{_jenis_kelamin}', spesialis = '{_spesialis}'," +
-                    $" username = '{_username}', password = '{_password}' " +
+                    $"SET nama = '{_nama}', jk = '{_jenis_kelamin}', spesialis = '{_spesialis}'" +
                     $"WHERE id_dokter = '{_id_dokter}'";
 
             // Tambahkan logging untuk memeriksa query yang dijalankan
@@ -183,13 +165,12 @@ namespace siredis.layanan
                     tb_dokter.id_dokter AS 'ID Dokter',
                     tb_dokter.nama AS 'Nama',
                     tb_dokter.jk AS 'Jenis Kelamin',
-                    tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.username AS 'Username',
-                    tb_dokter.password AS 'Password'
+                    tb_dokter.spesialis AS 'Spesialis'
                 FROM 
                     tb_dokter
             ";
 
+            Console.WriteLine("Executing query: " + Query); // Logging query
             return server.eksekusiQuery(Query);
         }
 
@@ -200,9 +181,7 @@ namespace siredis.layanan
                     tb_dokter.id_dokter AS 'ID Dokter',
                     tb_dokter.nama AS 'Nama',
                     tb_dokter.jk AS 'Jenis Kelamin',
-                    tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.username AS 'Username',
-                    tb_dokter.password AS 'Password'
+                    tb_dokter.spesialis AS 'Spesialis'
                 FROM 
                     tb_dokter
                 WHERE 
