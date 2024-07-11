@@ -77,7 +77,6 @@ namespace siredis.antarmuka
         //tampilan tambah
         private void btnTambah_Click(object sender, EventArgs e)
         {
-
             if (!IsInputValid())
             {
                 return;
@@ -88,6 +87,13 @@ namespace siredis.antarmuka
             data_pasien.No_Kartu = tNokartu.Text;
             data_pasien.Jenis_Kelamin = cbGender.Text;
             data_pasien.Umur = tUmur.Text;
+
+            // Cek apakah id pasien sudah ada
+            if (data_pasien.apakahIdAda())
+            {
+                MessageBox.Show("ID pasien sudah ada, silakan gunakan ID yang berbeda.");
+                return;
+            }
 
             // Cek apakah data sudah ada
             if (data_pasien.apakahAda())

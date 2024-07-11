@@ -42,7 +42,6 @@ C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Pro
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.csproj.SuggestedBindingRedirects.cache
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.exe.config
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FormLogin.resources
-C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.FromDokter.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.HomeAdmin.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.HomeDokter.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.Properties.Resources.resources
@@ -200,7 +199,6 @@ C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Pro
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\bin\Debug\antarmuka\FormPemeriksaanDokter.cs
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\bin\Debug\antarmuka\FormPemeriksaanDokter.Designer.cs
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\bin\Debug\Guna.UI2.dll
-C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataAdmin.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataDokter.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataObat.resources
 C:\Users\ACER\Documents\Semester_4\Praktikum Premrograman Berorientasi Objek\Project\rekam-medis\siredis\siredis\obj\Debug\siredis.antarmuka.DataPasien.resources

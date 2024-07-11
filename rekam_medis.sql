@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 11, 2024 at 03:49 AM
+-- Generation Time: Jul 11, 2024 at 03:38 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -114,7 +114,8 @@ INSERT INTO `tb_pasien` (`id_pasien`, `no_kartu`, `nama`, `jk`, `umur`) VALUES
 (11, '01', 'Rasyid', 'Laki - laki', 25),
 (12, '02', 'Matrui', 'Laki - laki', 50),
 (13, '03', 'Kholil', 'Laki - laki', 20),
-(14, '04', 'Shasa', 'Perempuan', 35);
+(14, '04', 'Shasa', 'Perempuan', 35),
+(15, '05', 'Yanti', 'Perempuan', 70);
 
 -- --------------------------------------------------------
 
@@ -143,7 +144,8 @@ INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `t
 (25, 12, 'Sakit Jantung', '', '2021-03-28', 1, 'pendaftaran'),
 (26, 13, 'Sakit Jantung', '', '2021-03-28', 1, 'pemeriksaan'),
 (34, 11, 'Menggigil', 'Demam', '2024-06-01', 3, 'selesai'),
-(35, 12, 'Sakit Kepala', 'Migren', '2024-06-01', 4, 'pemeriksaan');
+(35, 12, 'Sakit Kepala', 'Migren', '2024-06-01', 4, 'pemeriksaan'),
+(38, 15, 'Sakit Hati', 'Habis Putus', '2024-07-24', 1, 'selesai');
 
 -- --------------------------------------------------------
 
@@ -164,9 +166,8 @@ CREATE TABLE `tb_resep` (
 --
 
 INSERT INTO `tb_resep` (`id_resep`, `id_rekam`, `id_obat`, `keterangan`, `nama`) VALUES
-(10, 34, 1, 'Minum 2 kali sehari setelah makan', 'Paracetamol'),
-(11, 35, 2, 'Minum 1 kali sehari sebelum tidur', 'Ibuprofen'),
-(15, 34, 12, 'Resep dokter', 'DefaultNama');
+(15, 34, 12, 'Resep dokter', 'DefaultNama'),
+(16, 38, 12, 'Resep dokter', 'DefaultNama');
 
 -- --------------------------------------------------------
 
@@ -267,7 +268,7 @@ ALTER TABLE `tb_dokter`
 -- AUTO_INCREMENT for table `tb_obat`
 --
 ALTER TABLE `tb_obat`
-  MODIFY `id_obat` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_obat` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_pasien`
@@ -279,13 +280,13 @@ ALTER TABLE `tb_pasien`
 -- AUTO_INCREMENT for table `tb_rekam_medis`
 --
 ALTER TABLE `tb_rekam_medis`
-  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `tb_resep`
 --
 ALTER TABLE `tb_resep`
-  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
@@ -297,20 +298,6 @@ ALTER TABLE `tb_resep`
 ALTER TABLE `tb_rekam_medis`
   ADD CONSTRAINT `fk_id_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `tb_dokter` (`id_dokter`),
   ADD CONSTRAINT `fk_id_pasien` FOREIGN KEY (`id_pasien`) REFERENCES `tb_pasien` (`id_pasien`);
-
---
--- Constraints for table `tb_resep`
---
-ALTER TABLE `tb_resep`
-  ADD CONSTRAINT `fk_id_obat` FOREIGN KEY (`id_obat`) REFERENCES `tb_obat` (`id_obat`),
-  ADD CONSTRAINT `fk_tb_rekam_medis_id_rekam` FOREIGN KEY (`id_rekam`) REFERENCES `tb_rekam_medis` (`id_rekam`) ON DELETE CASCADE;
-
---
--- Constraints for table `tb_user`
---
-ALTER TABLE `tb_user`
-  ADD CONSTRAINT `fk_admin` FOREIGN KEY (`id_admin`) REFERENCES `tb_admin` (`id_admin`),
-  ADD CONSTRAINT `fk_dokter` FOREIGN KEY (`id_dokter`) REFERENCES `tb_dokter` (`id_dokter`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

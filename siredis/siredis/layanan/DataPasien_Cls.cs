@@ -92,13 +92,35 @@ namespace siredis.layanan
             return cek;
         }
 
+        // Metode untuk memeriksa apakah id pasien sudah ada
+        public bool apakahIdAda()
+        {
+            bool cek = false;
+            Query = "SELECT COUNT(*) FROM tb_pasien WHERE id_pasien = @id_pasien";
+            MySqlCommand cmd = new MySqlCommand(Query);
+            cmd.Parameters.AddWithValue("@id_pasien", _id_pasien);
+            Console.WriteLine("Checking for id_pasien: " + _id_pasien); // Debugging
+            data = server.eksekusiQuery(cmd);
 
+            if (data.Rows.Count > 0 && Convert.ToInt32(data.Rows[0][0]) > 0)
+            {
+                cek = true;
+            }
 
+            return cek;
+        }
 
         // Metode untuk menyimpan data pasien baru ke database
         public int simpanData()
         {
             int result = -1;
+
+            // Cek apakah id_pasien sudah ada
+            if (apakahIdAda())
+            {
+                throw new Exception("ID pasien sudah ada, silakan gunakan ID yang berbeda.");
+            }
+
             string query = $"INSERT INTO tb_pasien ( id_pasien, nama, no_kartu, umur, jk) VALUES ('{_id_pasien}', '{_nama}', '{_no_kartu}', '{_umur}', '{_jenis_kelamin}')";
 
             try
@@ -117,7 +139,6 @@ namespace siredis.layanan
 
             return result;
         }
-
 
         // Metode untuk memperbarui data pasien yang ada
         public int updateData()
@@ -148,7 +169,6 @@ namespace siredis.layanan
             return result;
         }
 
-
         // Metode untuk menghapus data pasien
         public int hapusData(int idPasien)
         {
@@ -156,7 +176,6 @@ namespace siredis.layanan
             Query = $"DELETE FROM tb_pasien WHERE id_pasien = {idPasien}";
             try
             {
-
                 result = server.eksekusiBukanQuery(Query);
                 if (result < 0)
                 {
@@ -165,11 +184,8 @@ namespace siredis.layanan
             }
             catch (Exception ex)
             {
-
-
                 Console.WriteLine($"Error: {ex.Message}");
                 Console.WriteLine($"Query: {Query}");
-
             }
             return result;
         }
@@ -181,8 +197,6 @@ namespace siredis.layanan
             return server.eksekusiQuery(query);
         }
 
-
-
         // Metode untuk menampilkan data pasien berdasarkan nama
         public DataTable tampilkanDataPasienDgNama(string nama)
         {
@@ -192,10 +206,5 @@ namespace siredis.layanan
 
             return server.eksekusiQuery(cmd);
         }
-
-
-
-
-
     }
 }

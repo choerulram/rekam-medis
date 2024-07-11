@@ -182,6 +182,7 @@
             this.pemeriksaan_dgv.Name = "pemeriksaan_dgv";
             this.pemeriksaan_dgv.ReadOnly = true;
             this.pemeriksaan_dgv.RowHeadersWidth = 62;
+            this.pemeriksaan_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.pemeriksaan_dgv.Size = new System.Drawing.Size(1209, 336);
             this.pemeriksaan_dgv.TabIndex = 9;
             this.pemeriksaan_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pemeriksaan_dgv_CellClick);

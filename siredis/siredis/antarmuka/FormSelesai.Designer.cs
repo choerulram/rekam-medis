@@ -201,6 +201,7 @@
             this.selesai_dgv.Name = "selesai_dgv";
             this.selesai_dgv.ReadOnly = true;
             this.selesai_dgv.RowHeadersWidth = 62;
+            this.selesai_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.selesai_dgv.Size = new System.Drawing.Size(1209, 336);
             this.selesai_dgv.TabIndex = 9;
             this.selesai_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selesai_dgv_CellClick);
