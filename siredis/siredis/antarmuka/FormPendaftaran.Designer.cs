@@ -54,6 +54,7 @@
             this.btnCari = new System.Windows.Forms.Button();
             this.cari_txt = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnClear = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
             this.Panel2.SuspendLayout();
@@ -112,6 +113,7 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel2.Controls.Add(this.btnClear);
             this.Panel2.Controls.Add(this.cbDokter);
             this.Panel2.Controls.Add(this.cbPasien1);
             this.Panel2.Controls.Add(this.cbStatus);
@@ -135,7 +137,7 @@
             this.cbDokter.FormattingEnabled = true;
             this.cbDokter.Location = new System.Drawing.Point(14, 70);
             this.cbDokter.Name = "cbDokter";
-            this.cbDokter.Size = new System.Drawing.Size(392, 21);
+            this.cbDokter.Size = new System.Drawing.Size(250, 21);
             this.cbDokter.TabIndex = 20;
             // 
             // cbPasien1
@@ -143,7 +145,7 @@
             this.cbPasien1.FormattingEnabled = true;
             this.cbPasien1.Location = new System.Drawing.Point(14, 27);
             this.cbPasien1.Name = "cbPasien1";
-            this.cbPasien1.Size = new System.Drawing.Size(392, 21);
+            this.cbPasien1.Size = new System.Drawing.Size(250, 21);
             this.cbPasien1.TabIndex = 19;
             // 
             // cbStatus
@@ -151,23 +153,22 @@
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "pendaftaran",
-            "pemeriksaan",
-            "selesai"});
-            this.cbStatus.Location = new System.Drawing.Point(775, 66);
+            "pemeriksaan"});
+            this.cbStatus.Location = new System.Drawing.Point(624, 69);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(200, 21);
+            this.cbStatus.Size = new System.Drawing.Size(250, 21);
             this.cbStatus.TabIndex = 18;
             // 
             // dtTanggal
             // 
-            this.dtTanggal.Location = new System.Drawing.Point(775, 24);
+            this.dtTanggal.Location = new System.Drawing.Point(624, 27);
             this.dtTanggal.Name = "dtTanggal";
-            this.dtTanggal.Size = new System.Drawing.Size(200, 20);
+            this.dtTanggal.Size = new System.Drawing.Size(250, 20);
             this.dtTanggal.TabIndex = 17;
             // 
             // tKeluhan
             // 
-            this.tKeluhan.Location = new System.Drawing.Point(449, 24);
+            this.tKeluhan.Location = new System.Drawing.Point(297, 23);
             this.tKeluhan.Multiline = true;
             this.tKeluhan.Name = "tKeluhan";
             this.tKeluhan.Size = new System.Drawing.Size(305, 67);
@@ -177,7 +178,7 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(446, 4);
+            this.Label8.Location = new System.Drawing.Point(294, 3);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(77, 17);
             this.Label8.TabIndex = 15;
@@ -197,7 +198,7 @@
             // 
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(772, 4);
+            this.Label7.Location = new System.Drawing.Point(621, 7);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(77, 17);
             this.Label7.TabIndex = 9;
@@ -208,7 +209,7 @@
             this.btnHapus.BackColor = System.Drawing.Color.Crimson;
             this.btnHapus.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(1139, 57);
+            this.btnHapus.Location = new System.Drawing.Point(1016, 60);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(88, 31);
             this.btnHapus.TabIndex = 7;
@@ -221,7 +222,7 @@
             this.btnPerbarui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
             this.btnPerbarui.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPerbarui.Location = new System.Drawing.Point(1139, 12);
+            this.btnPerbarui.Location = new System.Drawing.Point(1016, 15);
             this.btnPerbarui.Name = "btnPerbarui";
             this.btnPerbarui.Size = new System.Drawing.Size(88, 34);
             this.btnPerbarui.TabIndex = 6;
@@ -234,7 +235,7 @@
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnTambah.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(1016, 12);
+            this.btnTambah.Location = new System.Drawing.Point(893, 15);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(117, 76);
             this.btnTambah.TabIndex = 5;
@@ -246,7 +247,7 @@
             // 
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(772, 47);
+            this.Label5.Location = new System.Drawing.Point(621, 50);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(64, 17);
             this.Label5.TabIndex = 4;
@@ -325,6 +326,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnClear.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClear.Location = new System.Drawing.Point(1110, 14);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(117, 76);
+            this.btnClear.TabIndex = 21;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // FormPendaftaran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,5 +395,6 @@
         internal System.Windows.Forms.Button btnCari;
         internal System.Windows.Forms.TextBox cari_txt;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        internal System.Windows.Forms.Button btnClear;
     }
 }

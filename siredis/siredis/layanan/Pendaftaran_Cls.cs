@@ -169,8 +169,7 @@ namespace siredis.layanan
                     tb_rekam_medis.keluhan AS 'Keluhan',
                     tb_rekam_medis.tanggal AS 'Tanggal',
                     tb_rekam_medis.status AS 'Status',
-                    tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.nama AS 'Dokter'
+                    CONCAT(tb_dokter.nama, ' - ', tb_dokter.spesialis) AS 'Dokter'
                 FROM 
                     tb_rekam_medis
                 INNER JOIN 
@@ -197,8 +196,7 @@ namespace siredis.layanan
                     tb_rekam_medis.keluhan AS 'Keluhan',
                     tb_rekam_medis.tanggal AS 'Tanggal',
                     tb_rekam_medis.status AS 'Status',
-                    tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.nama AS 'Dokter'
+                    CONCAT(tb_dokter.nama, ' - ', tb_dokter.spesialis) AS 'Dokter'
                 FROM 
                     tb_rekam_medis
                 INNER JOIN 
@@ -228,13 +226,13 @@ namespace siredis.layanan
 
             Query = @"
                 SELECT 
+                    tb_rekam_medis.id_rekam AS 'ID Rekam',
                     tb_pasien.no_kartu AS 'No. Kartu',
                     tb_pasien.nama AS 'Pasien',
                     tb_rekam_medis.keluhan AS 'Keluhan',
                     tb_rekam_medis.tanggal AS 'Tanggal',
                     tb_rekam_medis.status AS 'Status',
-                    tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.nama AS 'Dokter'
+                    CONCAT(tb_dokter.nama, ' - ', tb_dokter.spesialis) AS 'Dokter'
                 FROM 
                     tb_rekam_medis
                 INNER JOIN 
@@ -276,7 +274,7 @@ namespace siredis.layanan
         // mengambil data dokter dari database untuk combo box
         public DataTable getComboDokter()
         {
-            Query = "select id_dokter as id_dokter, nama as nama from tb_dokter";
+            Query = "SELECT id_dokter as id_dokter, CONCAT(nama, ' - ', spesialis) as nama_spesialis FROM tb_dokter";
             return server.eksekusiQuery(Query);
         }
     }

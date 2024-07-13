@@ -132,8 +132,8 @@ namespace siredis.antarmuka
             {
                 DataGridViewRow baris = this.selesai_dgv.Rows[e.RowIndex];
                 lpasien.Text = baris.Cells[2].Value.ToString();
-                ldokter.Text = baris.Cells[7].Value.ToString();
-                cbStatus.Text = baris.Cells[5].Value.ToString();
+                ldokter.Text = baris.Cells[6].Value.ToString();
+                lstatus.Text = baris.Cells[5].Value.ToString();
             }
         }
     }

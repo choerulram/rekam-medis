@@ -92,8 +92,7 @@ namespace siredis.layanan
                     tb_rekam_medis.keluhan AS 'Keluhan',
                     tb_rekam_medis.tanggal AS 'Tanggal',
                     tb_rekam_medis.status AS 'Status',
-                    tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.nama AS 'Dokter'
+                    CONCAT(tb_dokter.nama, ' - ', tb_dokter.spesialis) AS 'Dokter'
                 FROM 
                     tb_rekam_medis
                 INNER JOIN 
@@ -132,8 +131,7 @@ namespace siredis.layanan
                     tb_rekam_medis.keluhan AS 'Keluhan',
                     tb_rekam_medis.tanggal AS 'Tanggal',
                     tb_rekam_medis.status AS 'Status',
-                    tb_dokter.spesialis AS 'Spesialis',
-                    tb_dokter.nama AS 'Dokter'
+                    CONCAT(tb_dokter.nama, ' - ', tb_dokter.spesialis) AS 'Dokter'
                 FROM 
                     tb_rekam_medis
                 INNER JOIN 

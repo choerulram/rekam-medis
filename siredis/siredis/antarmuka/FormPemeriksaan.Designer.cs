@@ -35,7 +35,6 @@
             this.Homelb = new System.Windows.Forms.LinkLabel();
             this.ldokter = new System.Windows.Forms.Label();
             this.lpasien = new System.Windows.Forms.Label();
-            this.cbStatus = new System.Windows.Forms.ComboBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
@@ -45,9 +44,9 @@
             this.cari_txt = new System.Windows.Forms.TextBox();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.btnPerbarui = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnPeriksa = new System.Windows.Forms.Button();
+            this.lstatus = new System.Windows.Forms.Label();
             this.StatusStrip1.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pemeriksaan_dgv)).BeginInit();
@@ -120,17 +119,6 @@
             this.lpasien.Size = new System.Drawing.Size(64, 13);
             this.lpasien.TabIndex = 19;
             this.lpasien.Text = "namapasien";
-            // 
-            // cbStatus
-            // 
-            this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Items.AddRange(new object[] {
-            "pemeriksaan",
-            "selesai"});
-            this.cbStatus.Location = new System.Drawing.Point(305, 31);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(200, 21);
-            this.cbStatus.TabIndex = 18;
             // 
             // Label4
             // 
@@ -223,12 +211,11 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel2.Controls.Add(this.btnPerbarui);
+            this.Panel2.Controls.Add(this.lstatus);
             this.Panel2.Controls.Add(this.btnRefresh);
             this.Panel2.Controls.Add(this.btnPeriksa);
             this.Panel2.Controls.Add(this.ldokter);
             this.Panel2.Controls.Add(this.lpasien);
-            this.Panel2.Controls.Add(this.cbStatus);
             this.Panel2.Controls.Add(this.Label4);
             this.Panel2.Controls.Add(this.Label5);
             this.Panel2.Controls.Add(this.Label3);
@@ -237,27 +224,14 @@
             this.Panel2.Size = new System.Drawing.Size(1259, 99);
             this.Panel2.TabIndex = 31;
             // 
-            // btnPerbarui
-            // 
-            this.btnPerbarui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
-            this.btnPerbarui.Font = new System.Drawing.Font("Leelawadee UI", 9F);
-            this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPerbarui.Location = new System.Drawing.Point(903, 7);
-            this.btnPerbarui.Name = "btnPerbarui";
-            this.btnPerbarui.Size = new System.Drawing.Size(137, 76);
-            this.btnPerbarui.TabIndex = 39;
-            this.btnPerbarui.Text = "EDIT";
-            this.btnPerbarui.UseVisualStyleBackColor = false;
-            this.btnPerbarui.Click += new System.EventHandler(this.btnPerbarui_Click);
-            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnRefresh.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefresh.Location = new System.Drawing.Point(744, 7);
+            this.btnRefresh.Location = new System.Drawing.Point(859, 12);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(137, 76);
+            this.btnRefresh.Size = new System.Drawing.Size(103, 67);
             this.btnRefresh.TabIndex = 39;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -268,13 +242,22 @@
             this.btnPeriksa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnPeriksa.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.btnPeriksa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPeriksa.Location = new System.Drawing.Point(587, 7);
+            this.btnPeriksa.Location = new System.Drawing.Point(710, 12);
             this.btnPeriksa.Name = "btnPeriksa";
-            this.btnPeriksa.Size = new System.Drawing.Size(137, 76);
+            this.btnPeriksa.Size = new System.Drawing.Size(103, 67);
             this.btnPeriksa.TabIndex = 23;
             this.btnPeriksa.Text = "PERIKSA";
             this.btnPeriksa.UseVisualStyleBackColor = false;
             this.btnPeriksa.Click += new System.EventHandler(this.btnPeriksa_Click);
+            // 
+            // lstatus
+            // 
+            this.lstatus.AutoSize = true;
+            this.lstatus.Location = new System.Drawing.Point(302, 31);
+            this.lstatus.Name = "lstatus";
+            this.lstatus.Size = new System.Drawing.Size(35, 13);
+            this.lstatus.TabIndex = 41;
+            this.lstatus.Text = "status";
             // 
             // FormPemeriksaan
             // 
@@ -313,7 +296,6 @@
         internal System.Windows.Forms.LinkLabel Homelb;
         internal System.Windows.Forms.Label ldokter;
         internal System.Windows.Forms.Label lpasien;
-        internal System.Windows.Forms.ComboBox cbStatus;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label3;
@@ -325,6 +307,6 @@
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.Button btnPeriksa;
         internal System.Windows.Forms.Button btnRefresh;
-        internal System.Windows.Forms.Button btnPerbarui;
+        internal System.Windows.Forms.Label lstatus;
     }
 }

@@ -35,7 +35,6 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.ldokter = new System.Windows.Forms.Label();
             this.lpasien = new System.Windows.Forms.Label();
-            this.cbStatus = new System.Windows.Forms.ComboBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.btnResep = new System.Windows.Forms.Button();
             this.Label5 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.Homelb = new System.Windows.Forms.LinkLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Label1 = new System.Windows.Forms.Label();
+            this.lstatus = new System.Windows.Forms.Label();
             this.StatusStrip1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
@@ -83,10 +83,10 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel2.Controls.Add(this.lstatus);
             this.Panel2.Controls.Add(this.btnRefresh);
             this.Panel2.Controls.Add(this.ldokter);
             this.Panel2.Controls.Add(this.lpasien);
-            this.Panel2.Controls.Add(this.cbStatus);
             this.Panel2.Controls.Add(this.Label4);
             this.Panel2.Controls.Add(this.btnResep);
             this.Panel2.Controls.Add(this.Label5);
@@ -126,16 +126,6 @@
             this.lpasien.Size = new System.Drawing.Size(64, 13);
             this.lpasien.TabIndex = 19;
             this.lpasien.Text = "namapasien";
-            // 
-            // cbStatus
-            // 
-            this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Items.AddRange(new object[] {
-            "selesai"});
-            this.cbStatus.Location = new System.Drawing.Point(305, 31);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(200, 21);
-            this.cbStatus.TabIndex = 18;
             // 
             // Label4
             // 
@@ -260,6 +250,15 @@
             this.Label1.TabIndex = 0;
             this.Label1.Text = "APLIKASI REKAM MEDIS";
             // 
+            // lstatus
+            // 
+            this.lstatus.AutoSize = true;
+            this.lstatus.Location = new System.Drawing.Point(302, 31);
+            this.lstatus.Name = "lstatus";
+            this.lstatus.Size = new System.Drawing.Size(35, 13);
+            this.lstatus.TabIndex = 42;
+            this.lstatus.Text = "status";
+            // 
             // FormSelesai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,7 +296,6 @@
         internal System.Windows.Forms.Button btnRefresh;
         internal System.Windows.Forms.Label ldokter;
         internal System.Windows.Forms.Label lpasien;
-        internal System.Windows.Forms.ComboBox cbStatus;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Button btnResep;
         internal System.Windows.Forms.Label Label5;
@@ -309,5 +307,6 @@
         internal System.Windows.Forms.LinkLabel Homelb;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.Label lstatus;
     }
 }

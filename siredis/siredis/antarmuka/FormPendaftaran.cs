@@ -86,7 +86,7 @@ namespace siredis.antarmuka
         {
             DataTable dokter = pendaftaran.getComboDokter();
             cbDokter.DataSource = dokter;
-            cbDokter.DisplayMember = "nama";
+            cbDokter.DisplayMember = "nama_spesialis";
             cbDokter.ValueMember = "id_dokter";
             cbDokter.SelectedIndex = -1;
         }
@@ -94,28 +94,38 @@ namespace siredis.antarmuka
         // menangani klik pada sel DataGridView untuk mengisi form dengan data terkait
         private void pendaftaran_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
+            try
             {
-                DataGridViewRow baris = this.pendaftaran_dgv.Rows[e.RowIndex];
-                pendaftaran.Id_Rekam = baris.Cells[0].Value.ToString();
-                cbPasien1.Text = baris.Cells[2].Value.ToString();
-                cbDokter.Text = baris.Cells[7].Value.ToString();
-                tKeluhan.Text = baris.Cells[3].Value.ToString();
-                string dateValue = baris.Cells[4].Value.ToString().Trim();
-
-                string dateFormat = "dd/MM/yyyy HH.mm.ss"; // format waktu
-
-                // Parsing dateValue menggunakan format dari tabel
-                if (DateTime.TryParseExact(dateValue, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime tanggal))
+                if (e.RowIndex > -1)
                 {
-                    // Set nilai ke DateTimePicker dalam format yang diinginkan
-                    dtTanggal.Value = tanggal;
+                    DataGridViewRow baris = this.pendaftaran_dgv.Rows[e.RowIndex];
+
+                    // Pastikan nama kolom yang Anda akses benar dan sesuai dengan nama kolom di DataGridView
+                    pendaftaran.Id_Rekam = baris.Cells["ID Rekam"].Value.ToString();
+                    cbPasien1.Text = baris.Cells["Pasien"].Value.ToString();
+                    cbDokter.Text = baris.Cells["Dokter"].Value.ToString();
+                    tKeluhan.Text = baris.Cells["Keluhan"].Value.ToString();
+
+                    string dateValue = baris.Cells["Tanggal"].Value.ToString().Trim();
+                    string dateFormat = "dd/MM/yyyy HH.mm.ss";
+
+                    // Parsing dateValue menggunakan format dari tabel
+                    if (DateTime.TryParseExact(dateValue, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime tanggal))
+                    {
+                        // Set nilai ke DateTimePicker dalam format yang diinginkan
+                        dtTanggal.Value = tanggal;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tanggal tidak valid. Format yang diharapkan: dd/MM/yyyy HH.mm.ss", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    cbStatus.Text = baris.Cells["Status"].Value.ToString();
                 }
-                else
-                {
-                    MessageBox.Show("Tanggal tidak valid. Format yang diharapkan: dd/MM/yyyy HH.mm.ss", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                cbStatus.Text = baris.Cells[5].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -226,6 +236,20 @@ namespace siredis.antarmuka
         private void Homelb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            kosongkanField();
+        }
+
+        void kosongkanField()
+        {
+            cbPasien1.SelectedIndex = -1;
+            cbDokter.SelectedIndex = -1;
+            tKeluhan.Clear();
+            dtTanggal.Value = DateTime.Now;
+            cbStatus.SelectedIndex = -1;
         }
     }
 }
