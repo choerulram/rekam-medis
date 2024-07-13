@@ -180,5 +180,17 @@ namespace siredis.antarmuka
                 MessageBox.Show("Pilih baris data yang ingin dihapus.");
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            kosongkanField();
+        }
+
+        void kosongkanField()
+        {
+            cbGender.SelectedIndex = -1;
+            tNama.Clear();
+            tSpesialis.Clear();
+        }
     }
 }

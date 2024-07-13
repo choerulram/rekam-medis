@@ -1,4 +1,5 @@
-﻿using System;
+﻿using siredis.layanan;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,17 @@ namespace siredis.antarmuka
     public partial class HomeAdmin : Form
     {
         private string userId;
-        public HomeAdmin(string user)
+        private string idAdmin;
+        private Pengguna_Cls user;
+        public HomeAdmin(string user, string idAdmin)
         {
             InitializeComponent();
-            user_lbl.Text = user;
+            this.userId = user;
+            this.idAdmin = idAdmin;
+            this.user = new Pengguna_Cls();
+
+            string namaDokter = this.user.GetNamaAdmin(idAdmin);
+            user_lbl.Text = $"{namaDokter}!";
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

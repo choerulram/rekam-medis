@@ -45,6 +45,7 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Homelb = new System.Windows.Forms.LinkLabel();
             this.dokter_dgv = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dokter_dgv)).BeginInit();
@@ -73,6 +74,7 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel2.Controls.Add(this.btnClear);
             this.Panel2.Controls.Add(this.cbGender);
             this.Panel2.Controls.Add(this.Label8);
             this.Panel2.Controls.Add(this.btnHapus);
@@ -115,7 +117,7 @@
             this.btnHapus.BackColor = System.Drawing.Color.Crimson;
             this.btnHapus.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(985, 26);
+            this.btnHapus.Location = new System.Drawing.Point(854, 49);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(92, 33);
             this.btnHapus.TabIndex = 7;
@@ -128,7 +130,7 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(960, 82);
+            this.btnCari.Location = new System.Drawing.Point(958, 88);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(117, 29);
             this.btnCari.TabIndex = 8;
@@ -149,7 +151,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
             this.btnEdit.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Location = new System.Drawing.Point(869, 26);
+            this.btnEdit.Location = new System.Drawing.Point(855, 6);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(91, 33);
             this.btnEdit.TabIndex = 6;
@@ -172,9 +174,9 @@
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnTambah.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(751, 26);
+            this.btnTambah.Location = new System.Drawing.Point(719, 6);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(90, 33);
+            this.btnTambah.Size = new System.Drawing.Size(117, 76);
             this.btnTambah.TabIndex = 5;
             this.btnTambah.Text = "TAMBAH";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -192,10 +194,10 @@
             // 
             // cari_txt
             // 
-            this.cari_txt.Location = new System.Drawing.Point(751, 84);
+            this.cari_txt.Location = new System.Drawing.Point(719, 90);
             this.cari_txt.Multiline = true;
             this.cari_txt.Name = "cari_txt";
-            this.cari_txt.Size = new System.Drawing.Size(203, 25);
+            this.cari_txt.Size = new System.Drawing.Size(233, 25);
             this.cari_txt.TabIndex = 13;
             this.cari_txt.TextChanged += new System.EventHandler(this.cari_txt_TextChanged);
             // 
@@ -242,6 +244,19 @@
             this.dokter_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dokter_dgv_CellClick);
             this.dokter_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dokter_dgv_CellContentClick);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnClear.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClear.Location = new System.Drawing.Point(958, 6);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(117, 76);
+            this.btnClear.TabIndex = 23;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // DataDokter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,5 +299,6 @@
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.TextBox cari_txt;
         internal System.Windows.Forms.DataGridView dokter_dgv;
+        internal System.Windows.Forms.Button btnClear;
     }
 }

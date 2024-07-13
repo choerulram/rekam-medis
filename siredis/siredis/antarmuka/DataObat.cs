@@ -191,5 +191,16 @@ namespace siredis.antarmuka
 
             return true;
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            kosongkanField();
+        }
+
+        void kosongkanField()
+        {
+            tIdObat.Clear();
+            tNama.Clear();
+        }
     }
 }

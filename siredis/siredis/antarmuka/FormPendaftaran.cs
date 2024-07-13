@@ -25,6 +25,12 @@ namespace siredis.antarmuka
         public FormPendaftaran(string adminId)
         {
             InitializeComponent();
+
+            // Set DateTimePicker to current time
+            dtTanggal.Value = DateTime.Now;
+
+            // Disable DateTimePicker
+            dtTanggal.Enabled = false;
         }
 
         // menampilkan data pada DataGridView

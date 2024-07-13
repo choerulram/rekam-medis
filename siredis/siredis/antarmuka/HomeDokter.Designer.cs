@@ -98,14 +98,14 @@
             // PemeriksaanMenu
             // 
             this.PemeriksaanMenu.Name = "PemeriksaanMenu";
-            this.PemeriksaanMenu.Size = new System.Drawing.Size(180, 22);
+            this.PemeriksaanMenu.Size = new System.Drawing.Size(141, 22);
             this.PemeriksaanMenu.Text = "Pemeriksaan";
             this.PemeriksaanMenu.Click += new System.EventHandler(this.PemeriksaanMenu_Click);
             // 
             // SelesaiMenu
             // 
             this.SelesaiMenu.Name = "SelesaiMenu";
-            this.SelesaiMenu.Size = new System.Drawing.Size(180, 22);
+            this.SelesaiMenu.Size = new System.Drawing.Size(141, 22);
             this.SelesaiMenu.Text = "Selesai";
             this.SelesaiMenu.Click += new System.EventHandler(this.SelesaiMenu_Click);
             // 
@@ -131,7 +131,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 11, 2024 at 05:22 PM
+-- Generation Time: Jul 13, 2024 at 02:26 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -29,20 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_admin` (
   `id_admin` int NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `nama` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tb_admin`
 --
 
-INSERT INTO `tb_admin` (`id_admin`, `nama`, `username`, `password`) VALUES
-(1, 'Irul', 'Irul', '12345'),
-(2, 'Amal', 'Amal', '12345'),
-(3, 'Nira', 'Nira', '12345'),
-(4, 'Putri', 'Putri', '12345');
+INSERT INTO `tb_admin` (`id_admin`, `nama`) VALUES
+(1, 'Admin - Irul'),
+(2, 'Admin - Amal'),
+(3, 'Admin - Nira'),
+(4, 'Admin - Putri');
 
 -- --------------------------------------------------------
 
@@ -84,8 +82,6 @@ CREATE TABLE `tb_obat` (
 --
 
 INSERT INTO `tb_obat` (`id_obat`, `nama`) VALUES
-(7, 'Ibuprofen 200MG'),
-(8, 'Amoxicillin 500MG'),
 (9, 'Nitroglycerin'),
 (10, 'Aspirin 81MG'),
 (11, 'Tetrahydrozoline (Visine)'),
@@ -111,8 +107,8 @@ CREATE TABLE `tb_pasien` (
 --
 
 INSERT INTO `tb_pasien` (`id_pasien`, `no_kartu`, `nama`, `jk`, `umur`) VALUES
-(11, '01', 'Rasyid', 'Laki - laki', 25),
-(12, '02', 'Matrui', 'Laki - laki', 50),
+(11, '01', 'Rasyid', 'Laki - laki', 30),
+(12, '02', 'Matrui', 'Laki - laki', 58),
 (13, '03', 'Kholil', 'Laki - laki', 20),
 (14, '04', 'Shasa', 'Perempuan', 35),
 (15, '05', 'Yanti', 'Perempuan', 70);
@@ -138,7 +134,6 @@ CREATE TABLE `tb_rekam_medis` (
 --
 
 INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `tanggal`, `id_dokter`, `status`) VALUES
-(12, 11, 'Sakit Gigi', '', '2021-03-28', 1, 'pendaftaran'),
 (15, 12, 'Sakit Jantung', '', '2021-03-28', 1, 'pendaftaran'),
 (19, 13, 'Sakit Gigi', '', '2021-03-28', 5, 'pendaftaran'),
 (25, 12, 'Sakit Jantung', '', '2021-03-28', 1, 'pendaftaran'),
@@ -146,7 +141,20 @@ INSERT INTO `tb_rekam_medis` (`id_rekam`, `id_pasien`, `keluhan`, `diagnosa`, `t
 (34, 11, 'Menggigil', 'Demam', '2024-06-01', 3, 'selesai'),
 (35, 12, 'Sakit Kepala', 'Migren', '2024-06-01', 4, 'pemeriksaan'),
 (38, 15, 'Sakit Hati', 'Habis Putus', '2024-07-24', 1, 'selesai'),
-(40, 14, 'Sakit Kepala', 'Migren', '2024-07-11', 5, 'selesai');
+(40, 14, 'Sakit Kepala', 'Migren', '2024-07-11', 5, 'selesai'),
+(44, 15, 'Sakit Mata', 'Mata Iritasi', '2024-07-12', 4, 'selesai'),
+(45, 12, 'Sakit Mata', 'Iritasi Mata', '2024-07-16', 2, 'selesai'),
+(47, 13, 'Sakit Gigi', 'Gigi Berlubang', '2024-07-12', 5, 'selesai'),
+(48, 13, 'Sakit Kepala', 'Migren', '2024-07-13', 1, 'selesai'),
+(49, 11, 'Sakit Gigi', NULL, '2024-07-13', 1, 'pendaftaran'),
+(50, 14, 'Sakit Mata', 'Iritasi', '2024-07-13', 1, 'selesai'),
+(52, 11, 'Sakit Mata', NULL, '2024-07-13', 2, 'pemeriksaan'),
+(53, 13, 'Sakit Mata', NULL, '2024-07-13', 2, 'pemeriksaan'),
+(54, 13, 'Pusing', NULL, '2024-07-13', 3, 'pemeriksaan'),
+(55, 15, 'Sakit Perut', NULL, '2024-07-13', 3, 'pemeriksaan'),
+(56, 14, 'Sakit Perut', NULL, '2024-07-13', 4, 'pemeriksaan'),
+(57, 15, 'Nyeri Perut', NULL, '2024-07-13', 4, 'pemeriksaan'),
+(58, 14, 'Demam', NULL, '2024-07-13', 5, 'pemeriksaan');
 
 -- --------------------------------------------------------
 
@@ -168,7 +176,14 @@ CREATE TABLE `tb_resep` (
 INSERT INTO `tb_resep` (`id_resep`, `id_rekam`, `id_obat`, `keterangan`) VALUES
 (15, 34, 12, 'Minum 3 kali sehari setelah makan'),
 (16, 38, 12, 'Move on'),
-(17, 40, 12, 'Minum 2 kali sehari setelah makan');
+(17, 40, 12, 'Minum 2 kali sehari setelah makan'),
+(20, 44, 11, 'Teteskan 1-2 tetes di mata 3-4x kali sehari'),
+(21, 45, 11, 'Teteskan 2-3 kali sehari'),
+(22, 47, 9, 'Minum 2x sehari setelah makan'),
+(23, 47, 12, 'Minum 2x sehari'),
+(24, 47, 9, 'Minum 2x sehari'),
+(25, 48, 12, 'Minum 1 tablet 2x sehari setelah makan'),
+(26, 50, 11, 'Teteskan 2-3 tetes 3-4 kali sehari ');
 
 -- --------------------------------------------------------
 
@@ -263,7 +278,7 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_dokter`
 --
 ALTER TABLE `tb_dokter`
-  MODIFY `id_dokter` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_dokter` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tb_obat`
@@ -281,13 +296,13 @@ ALTER TABLE `tb_pasien`
 -- AUTO_INCREMENT for table `tb_rekam_medis`
 --
 ALTER TABLE `tb_rekam_medis`
-  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_rekam` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `tb_resep`
 --
 ALTER TABLE `tb_resep`
-  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_resep` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables

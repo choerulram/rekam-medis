@@ -28,22 +28,24 @@ namespace siredis.antarmuka
         {
             if (user.apakahAdaUser(username_txt.Text, password_txt.Text))
             {
-                string welcomeMessage = $"Selamat datang, {username_txt.Text}!";
-                string welcomeTitle = "LOGIN BERHASIL";
+                string userId = user.GetUserId(username_txt.Text);
+                string idAdmin = user.GetIdAdmin(username_txt.Text);
+                string idDokter = user.GetIdDokter(username_txt.Text);
 
-                string userId = user.GetUserId(username_txt.Text); // Misalnya, Anda punya metode untuk mendapatkan UserID
-                string idDokter = user.GetIdDokter(username_txt.Text); // Misalnya, Anda punya metode untuk mendapatkan idDokter
+                string welcomeMessage = $"Selamat datang, {user.GetNamaAdmin(idAdmin)}!";
+                string welcomeMessage2 = $"Selamat datang, {user.GetNamaDokter(idDokter)}!";
+                string welcomeTitle = "LOGIN BERHASIL";
 
                 switch (user.UserType)
                 {
                     case "Admin":
                         MessageBox.Show($"{welcomeMessage}\nAnda berhasil masuk sebagai Admin.", welcomeTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        HomeAdmin dashboardAdmin = new HomeAdmin(username_txt.Text);
+                        HomeAdmin dashboardAdmin = new HomeAdmin(username_txt.Text, idAdmin);
                         dashboardAdmin.Show();
                         break;
                     case "Dokter":
-                        MessageBox.Show($"{welcomeMessage}\nAnda berhasil masuk sebagai Dokter.", welcomeTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        HomeDokter dashboardDokter = new HomeDokter(username_txt.Text, idDokter); // Pastikan dua parameter diberikan
+                        MessageBox.Show($"{welcomeMessage2}\nAnda berhasil masuk sebagai Dokter.", welcomeTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HomeDokter dashboardDokter = new HomeDokter(username_txt.Text, idDokter);
                         dashboardDokter.Show();
                         break;
                     default:

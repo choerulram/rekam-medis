@@ -222,6 +222,20 @@ namespace siredis.antarmuka
             // Tampilkan Id_Pasien di kontrol yang sesuai di form, misalnya TextBox atau Label
             tId.Text = data_pasien.Id_Pasien;
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            kosongkanField();
+        }
+
+        void kosongkanField()
+        {
+            tId.Clear();
+            tNama.Clear();
+            tNokartu.Clear();
+            cbGender.SelectedIndex = -1;
+            tUmur.Clear();
+        }
     }
 }
 

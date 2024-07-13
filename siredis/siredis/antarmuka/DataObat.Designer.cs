@@ -47,6 +47,7 @@
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Label6 = new System.Windows.Forms.Label();
             this.Homelb = new System.Windows.Forms.LinkLabel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.obat_dgv)).BeginInit();
             this.Panel2.SuspendLayout();
@@ -83,7 +84,7 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(875, 90);
+            this.btnCari.Location = new System.Drawing.Point(1131, 90);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(117, 29);
             this.btnCari.TabIndex = 8;
@@ -93,7 +94,7 @@
             // 
             // cari_txt
             // 
-            this.cari_txt.Location = new System.Drawing.Point(680, 91);
+            this.cari_txt.Location = new System.Drawing.Point(936, 91);
             this.cari_txt.Multiline = true;
             this.cari_txt.Name = "cari_txt";
             this.cari_txt.Size = new System.Drawing.Size(189, 25);
@@ -103,6 +104,7 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel2.Controls.Add(this.btnClear);
             this.Panel2.Controls.Add(this.label2);
             this.Panel2.Controls.Add(this.tNama);
             this.Panel2.Controls.Add(this.btnHapus);
@@ -131,7 +133,7 @@
             // 
             this.tNama.Location = new System.Drawing.Point(20, 96);
             this.tNama.Name = "tNama";
-            this.tNama.Size = new System.Drawing.Size(488, 20);
+            this.tNama.Size = new System.Drawing.Size(261, 20);
             this.tNama.TabIndex = 9;
             // 
             // btnHapus
@@ -139,9 +141,9 @@
             this.btnHapus.BackColor = System.Drawing.Color.Crimson;
             this.btnHapus.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(900, 41);
+            this.btnHapus.Location = new System.Drawing.Point(635, 23);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(92, 33);
+            this.btnHapus.Size = new System.Drawing.Size(117, 76);
             this.btnHapus.TabIndex = 7;
             this.btnHapus.Text = "HAPUS";
             this.btnHapus.UseVisualStyleBackColor = false;
@@ -152,9 +154,9 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
             this.btnEdit.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEdit.Location = new System.Drawing.Point(789, 41);
+            this.btnEdit.Location = new System.Drawing.Point(496, 23);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(91, 33);
+            this.btnEdit.Size = new System.Drawing.Size(117, 76);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -165,9 +167,9 @@
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnTambah.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(680, 41);
+            this.btnTambah.Location = new System.Drawing.Point(353, 23);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(90, 33);
+            this.btnTambah.Size = new System.Drawing.Size(117, 76);
             this.btnTambah.TabIndex = 5;
             this.btnTambah.Text = "TAMBAH";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -187,7 +189,7 @@
             // 
             this.tIdObat.Location = new System.Drawing.Point(20, 42);
             this.tIdObat.Name = "tIdObat";
-            this.tIdObat.Size = new System.Drawing.Size(488, 20);
+            this.tIdObat.Size = new System.Drawing.Size(261, 20);
             this.tIdObat.TabIndex = 0;
             // 
             // Label1
@@ -257,6 +259,19 @@
             this.Homelb.Text = "Home";
             this.Homelb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Homelb_LinkClicked);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnClear.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClear.Location = new System.Drawing.Point(774, 23);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(117, 76);
+            this.btnClear.TabIndex = 22;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // DataObat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +321,6 @@
         internal System.Windows.Forms.LinkLabel Homelb;
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox tNama;
+        internal System.Windows.Forms.Button btnClear;
     }
 }

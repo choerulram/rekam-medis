@@ -49,6 +49,7 @@
             this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Label6 = new System.Windows.Forms.Label();
             this.pasien_dgv = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pasien_dgv)).BeginInit();
@@ -95,6 +96,7 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel2.Controls.Add(this.btnClear);
             this.Panel2.Controls.Add(this.cbGender);
             this.Panel2.Controls.Add(this.tId);
             this.Panel2.Controls.Add(this.Label8);
@@ -130,7 +132,7 @@
             this.btnHapus.BackColor = System.Drawing.Color.Crimson;
             this.btnHapus.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.Location = new System.Drawing.Point(955, 29);
+            this.btnHapus.Location = new System.Drawing.Point(852, 53);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(92, 33);
             this.btnHapus.TabIndex = 7;
@@ -143,7 +145,7 @@
             this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnCari.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnCari.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCari.Location = new System.Drawing.Point(930, 79);
+            this.btnCari.Location = new System.Drawing.Point(959, 93);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(117, 29);
             this.btnCari.TabIndex = 8;
@@ -155,7 +157,7 @@
             this.btnPerbarui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
             this.btnPerbarui.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPerbarui.Location = new System.Drawing.Point(839, 29);
+            this.btnPerbarui.Location = new System.Drawing.Point(852, 10);
             this.btnPerbarui.Name = "btnPerbarui";
             this.btnPerbarui.Size = new System.Drawing.Size(91, 33);
             this.btnPerbarui.TabIndex = 6;
@@ -185,9 +187,9 @@
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnTambah.Font = new System.Drawing.Font("Leelawadee UI", 10F);
             this.btnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTambah.Location = new System.Drawing.Point(727, 29);
+            this.btnTambah.Location = new System.Drawing.Point(720, 10);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(90, 33);
+            this.btnTambah.Size = new System.Drawing.Size(117, 76);
             this.btnTambah.TabIndex = 5;
             this.btnTambah.Text = "TAMBAH";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -215,10 +217,10 @@
             // 
             // tCari
             // 
-            this.tCari.Location = new System.Drawing.Point(729, 80);
+            this.tCari.Location = new System.Drawing.Point(720, 94);
             this.tCari.Multiline = true;
             this.tCari.Name = "tCari";
-            this.tCari.Size = new System.Drawing.Size(195, 25);
+            this.tCari.Size = new System.Drawing.Size(233, 25);
             this.tCari.TabIndex = 13;
             this.tCari.TextChanged += new System.EventHandler(this.tCari_TextChanged);
             // 
@@ -282,6 +284,19 @@
             this.pasien_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pasien_dgv_CellClick);
             this.pasien_dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pasien_dgv_CellContentClick);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
+            this.btnClear.Font = new System.Drawing.Font("Leelawadee UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClear.Location = new System.Drawing.Point(959, 9);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(117, 76);
+            this.btnClear.TabIndex = 23;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // DataPasien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,5 +344,6 @@
         internal System.Windows.Forms.LinkLabel LinkLabel1;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.DataGridView pasien_dgv;
+        internal System.Windows.Forms.Button btnClear;
     }
 }

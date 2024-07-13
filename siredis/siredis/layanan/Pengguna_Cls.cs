@@ -61,5 +61,44 @@ namespace siredis.layanan
             }
             return idDokter;
         }
+
+        // Metode untuk mendapatkan Nama Dokter
+        public string GetNamaDokter(string idDokter)
+        {
+            string namaDokter = "";
+            Query = "SELECT nama FROM tb_dokter WHERE id_dokter='" + idDokter + "'";
+            DataTable dt = server.eksekusiQuery(Query);
+            if (dt.Rows.Count > 0)
+            {
+                namaDokter = dt.Rows[0]["nama"].ToString();
+            }
+            return namaDokter;
+        }
+
+        // Metode untuk mendapatkan IdDokter
+        public string GetIdAdmin(string username)
+        {
+            string idDokter = "";
+            Query = "SELECT id_admin FROM tb_user WHERE username='" + username + "'";
+            DataTable dt = server.eksekusiQuery(Query);
+            if (dt.Rows.Count > 0)
+            {
+                idDokter = dt.Rows[0]["id_admin"].ToString();
+            }
+            return idDokter;
+        }
+
+        // Metode untuk mendapatkan Nama Dokter
+        public string GetNamaAdmin(string idAdmin)
+        {
+            string namaDokter = "";
+            Query = "SELECT nama FROM tb_admin WHERE id_admin='" + idAdmin + "'";
+            DataTable dt = server.eksekusiQuery(Query);
+            if (dt.Rows.Count > 0)
+            {
+                namaDokter = dt.Rows[0]["nama"].ToString();
+            }
+            return namaDokter;
+        }
     }
 }
