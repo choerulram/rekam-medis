@@ -50,18 +50,6 @@ namespace siredis.antarmuka
             formPendaftaran.Show();
         }
 
-        private void PemeriksaanMenu_Click(object sender, EventArgs e)
-        {
-            FormPemeriksaan transaksi = new FormPemeriksaan();
-            transaksi.Show();
-        }
-           
-        private void SelesaiMenu_Click(object sender, EventArgs e)
-        {
-            FormSelesai transaksi = new FormSelesai();
-            transaksi.Show();
-        }
-
         private void HomeAdmin_Load(object sender, EventArgs e)
         {
 

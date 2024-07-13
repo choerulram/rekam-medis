@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace siredis.layanan
 {
-    using konfigurasi;
+    using konfigurasi; // import konfigurasi namespace
     using MySql.Data.MySqlClient;
     using MySqlX.XDevAPI.Common;
     using siredis.antarmuka;
@@ -14,6 +14,7 @@ namespace siredis.layanan
 
     internal class Pendaftaran_Cls
     {
+        // deklarasi variabel
         private string _id_rekam;
         private string _id_pasien;
         private string _id_dokter;
@@ -21,10 +22,12 @@ namespace siredis.layanan
         private string _tanggal;
         private string _status;
 
+        // deklarasi objek koneksiDB_cls
         KoneksiDB_Cls server;
         DataTable data;
         string Query;
 
+        // konstruktor untuk inisialisasi variabel
         public Pendaftaran_Cls()
         {
             _id_rekam = "";
@@ -39,39 +42,33 @@ namespace siredis.layanan
             Query = "";
         }
 
-        // property untuk mengatur id dokter
+        // properti untuk mengatur id rekam
         public string Id_Rekam
         {
             get { return _id_rekam; }
             set { _id_rekam = value; }
         }
 
-        // property untuk mengatur id pasien
         public string Id_Pasien
         {
-            set { _id_pasien = value; } //mutator method
-            //get { return _id; } //asesor method
+            set { _id_pasien = value; } 
         }
 
-        // property untuk mengatur id dokter
         public string Id_Dokter
         {
             set { _id_dokter = value; }
         }
 
-        // property untuk mengatur keluhan rekam_medis
         public string Keluhan_RekamMedis
         {
             set { _keluhan = value; }
         }
 
-        // property untuk mengatur tanggal rekam_medis
         public string Tanggal_RekamMedis
         {
             set { _tanggal = value; }
         }
 
-        // property untuk mengatur status rekam_medis
         public string Status_RekamMedis
         {
             set { _status = value; }
@@ -106,7 +103,7 @@ namespace siredis.layanan
             }
             catch (Exception ex)
             {
-                // Tambahkan logging untuk kesalahan
+                // logging untuk kesalahan
                 Console.WriteLine($"Error: {ex.Message}");
                 Console.WriteLine($"Query: {Query}");
             }
@@ -114,6 +111,7 @@ namespace siredis.layanan
             return result;
         }
 
+        // metode untuk mengubah data di database
         public int ubahData()
         {
             int result = -1;
@@ -140,7 +138,7 @@ namespace siredis.layanan
             Query = $"DELETE FROM tb_rekam_medis WHERE id_rekam = {idRekam}";
             try
             {
-                Console.WriteLine($"Executing delete query: {Query}"); // Logging query penghapusan
+                Console.WriteLine($"Executing delete query: {Query}"); // logging query penghapusan
                 result = server.eksekusiBukanQuery(Query);
                 if (result < 0)
                 {
@@ -148,13 +146,13 @@ namespace siredis.layanan
                 }
                 else
                 {
-                    Console.WriteLine("Data berhasil dihapus."); // Pesan berhasil dihapus
+                    Console.WriteLine("Data berhasil dihapus.");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}"); // Logging pesan kesalahan
-                Console.WriteLine($"Query: {Query}"); // Logging query saat terjadi kesalahan
+                Console.WriteLine($"Error: {ex.Message}"); // logging pesan kesalahan
+                Console.WriteLine($"Query: {Query}"); 
             }
 
             return result;
@@ -188,6 +186,7 @@ namespace siredis.layanan
             return server.eksekusiQuery(Query);
         }
 
+        // metode untuk menampilkan data dengan nama
         public DataTable tampilkanDgNama(string nama)
         {
             Query = @"
@@ -214,12 +213,14 @@ namespace siredis.layanan
                     tb_rekam_medis.id_rekam ASC;
             ";
 
+            // membuat objek mysqlcommand untuk eksekusi query
             MySqlCommand cmd = new MySqlCommand(Query);
             cmd.Parameters.AddWithValue("@namaPasien", "%" + nama + "%");
 
             return server.eksekusiQuery(cmd);
         }
 
+        // metode untuk mengambil kode berdasarkan nama
         public string ambilKodeDgNama(string nama)
         {
             string kode = "";
@@ -248,9 +249,11 @@ namespace siredis.layanan
                     tb_rekam_medis.id_rekam ASC;
             ";
 
+            // membuat objek mysqlcommand untuk eksekusi query
             MySqlCommand cmd = new MySqlCommand(Query);
             cmd.Parameters.AddWithValue("@namaPasien", "%" + nama + "%");
 
+            // memeriksa apakah ada data
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow data in dt.Rows)
@@ -263,14 +266,14 @@ namespace siredis.layanan
             return kode;
         }
 
-        // Mengambil data pasien dari database
+        // mengambil data pasien dari database untuk combo box
         public DataTable getComboPasien()
         {
             Query = "select id_pasien as id_pasien, nama as nama from tb_pasien";
             return server.eksekusiQuery(Query);
         }
 
-        // Mengambil data jurusan dari database
+        // mengambil data dokter dari database untuk combo box
         public DataTable getComboDokter()
         {
             Query = "select id_dokter as id_dokter, nama as nama from tb_dokter";

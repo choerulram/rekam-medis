@@ -26,6 +26,7 @@ namespace siredis.antarmuka
         {
             tampilGrid(); // Panggil method untuk menampilkan data
         }
+
         //tampilan home
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

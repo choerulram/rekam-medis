@@ -27,6 +27,7 @@ namespace siredis.antarmuka
             InitializeComponent();
         }
 
+        // menampilkan data pada DataGridView
         void tampilGrid()
         {
             if (cari_txt.Text.Length == 0)
@@ -41,6 +42,7 @@ namespace siredis.antarmuka
             belangBelang(pendaftaran_dgv);
         }
 
+        // mengatur warna latar belakang baris ganjil dan genap pada DataGridView
         void belangBelang(DataGridView grid)
         {
             foreach (DataGridViewRow row in grid.Rows)
@@ -59,6 +61,7 @@ namespace siredis.antarmuka
             }
         }
 
+        // method yang dipanggil saat form dimuat
         private void FormPendaftaran_Load(object sender, EventArgs e)
         {
             // Menampilkan data terkait di DataGridView
@@ -68,6 +71,7 @@ namespace siredis.antarmuka
             tampilkanComboDokter();
         }
 
+        // mengisi combobox pasien dengan data dari database
         private void tampilkanComboPasien()
         {
             DataTable pasien = pendaftaran.getComboPasien();
@@ -77,6 +81,7 @@ namespace siredis.antarmuka
             cbPasien1.SelectedIndex = -1;
         }
 
+        // mengisi combobox dokter dengan data dari database
         private void tampilkanComboDokter()
         {
             DataTable dokter = pendaftaran.getComboDokter();
@@ -86,6 +91,7 @@ namespace siredis.antarmuka
             cbDokter.SelectedIndex = -1;
         }
 
+        // menangani klik pada sel DataGridView untuk mengisi form dengan data terkait
         private void pendaftaran_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
@@ -97,8 +103,7 @@ namespace siredis.antarmuka
                 tKeluhan.Text = baris.Cells[3].Value.ToString();
                 string dateValue = baris.Cells[4].Value.ToString().Trim();
 
-                // Format yang digunakan di tabel termasuk waktu
-                string dateFormat = "dd/MM/yyyy HH.mm.ss"; // Contoh: "28/03/2021 00.00.00"
+                string dateFormat = "dd/MM/yyyy HH.mm.ss"; // format waktu
 
                 // Parsing dateValue menggunakan format dari tabel
                 if (DateTime.TryParseExact(dateValue, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime tanggal))
@@ -114,16 +119,19 @@ namespace siredis.antarmuka
             }
         }
 
+        // memfilter data saat teks pencarian diubah
         private void cari_txt_TextChanged(object sender, EventArgs e)
         {
             tampilGrid();
         }
 
+        // menampilkan dialog konfirmasi untuk pencarian data
         private void btnCari_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(rekam_medis.ambilKodeDgNama(nama_txt.Text));
         }
 
+        // menambahkan data baru ke database
         private void btnTambah_Click(object sender, EventArgs e)
         {
             pendaftaran.Id_Pasien = cbPasien1.SelectedValue.ToString();
@@ -152,6 +160,7 @@ namespace siredis.antarmuka
             tampilGrid();
         }
 
+        // mengubah data yang sudah ada di database
         private void btnPerbarui_Click(object sender, EventArgs e)
         {
             pendaftaran.Id_Pasien = cbPasien1.SelectedValue.ToString();
@@ -180,6 +189,7 @@ namespace siredis.antarmuka
             tampilGrid();
         }
 
+        // menghapus data yang dipilih dari database
         private void btnHapus_Click(object sender, EventArgs e)
         {
             Console.WriteLine($"Jumlah baris terpilih: {pendaftaran_dgv.SelectedRows.Count}"); // Debug
@@ -212,6 +222,7 @@ namespace siredis.antarmuka
             }
         }
 
+        // menutup form saat link Homelb diklik
         private void Homelb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();

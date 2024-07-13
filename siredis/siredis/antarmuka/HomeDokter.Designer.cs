@@ -33,7 +33,6 @@
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.HomeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PendaftaranMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.PemeriksaanMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.SelesaiMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.lHello = new System.Windows.Forms.Label();
@@ -90,19 +89,11 @@
             // TransaksiToolStripMenuItem
             // 
             this.TransaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PendaftaranMenu,
             this.PemeriksaanMenu,
             this.SelesaiMenu});
             this.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem";
             this.TransaksiToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.TransaksiToolStripMenuItem.Text = "Transaksi";
-            // 
-            // PendaftaranMenu
-            // 
-            this.PendaftaranMenu.Name = "PendaftaranMenu";
-            this.PendaftaranMenu.Size = new System.Drawing.Size(180, 22);
-            this.PendaftaranMenu.Text = "Pendaftaran";
-            this.PendaftaranMenu.Click += new System.EventHandler(this.PendaftaranMenu_Click);
             // 
             // PemeriksaanMenu
             // 
@@ -134,7 +125,7 @@
             // 
             this.pictureBox1.Image = global::siredis.Properties.Resources.a;
             this.pictureBox1.Location = new System.Drawing.Point(-44, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1327, 661);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +156,7 @@
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.lHello);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeDokter";
             this.Text = "HomeDokter";
             this.MenuStrip1.ResumeLayout(false);
@@ -182,7 +173,6 @@
         internal System.Windows.Forms.MenuStrip MenuStrip1;
         internal System.Windows.Forms.ToolStripMenuItem HomeMenu;
         internal System.Windows.Forms.ToolStripMenuItem TransaksiToolStripMenuItem;
-        internal System.Windows.Forms.ToolStripMenuItem PendaftaranMenu;
         internal System.Windows.Forms.ToolStripMenuItem PemeriksaanMenu;
         internal System.Windows.Forms.ToolStripMenuItem SelesaiMenu;
         internal System.Windows.Forms.Label lHello;

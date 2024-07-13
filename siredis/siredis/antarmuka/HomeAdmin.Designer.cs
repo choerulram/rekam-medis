@@ -32,8 +32,6 @@
             this.HomeMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PendaftaranMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.PemeriksaanMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.SelesaiMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.DataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DokterMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.PasienMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,9 +68,7 @@
             // TransaksiToolStripMenuItem
             // 
             this.TransaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PendaftaranMenu,
-            this.PemeriksaanMenu,
-            this.SelesaiMenu});
+            this.PendaftaranMenu});
             this.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem";
             this.TransaksiToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.TransaksiToolStripMenuItem.Text = "Transaksi";
@@ -83,20 +79,6 @@
             this.PendaftaranMenu.Size = new System.Drawing.Size(180, 22);
             this.PendaftaranMenu.Text = "Pendaftaran";
             this.PendaftaranMenu.Click += new System.EventHandler(this.PendaftaranMenu_Click);
-            // 
-            // PemeriksaanMenu
-            // 
-            this.PemeriksaanMenu.Name = "PemeriksaanMenu";
-            this.PemeriksaanMenu.Size = new System.Drawing.Size(180, 22);
-            this.PemeriksaanMenu.Text = "Pemeriksaan";
-            this.PemeriksaanMenu.Click += new System.EventHandler(this.PemeriksaanMenu_Click);
-            // 
-            // SelesaiMenu
-            // 
-            this.SelesaiMenu.Name = "SelesaiMenu";
-            this.SelesaiMenu.Size = new System.Drawing.Size(180, 22);
-            this.SelesaiMenu.Text = "Selesai";
-            this.SelesaiMenu.Click += new System.EventHandler(this.SelesaiMenu_Click);
             // 
             // DataToolStripMenuItem
             // 
@@ -111,21 +93,21 @@
             // DokterMenu
             // 
             this.DokterMenu.Name = "DokterMenu";
-            this.DokterMenu.Size = new System.Drawing.Size(180, 22);
+            this.DokterMenu.Size = new System.Drawing.Size(109, 22);
             this.DokterMenu.Text = "Dokter";
             this.DokterMenu.Click += new System.EventHandler(this.DokterMenu_Click);
             // 
             // PasienMenu
             // 
             this.PasienMenu.Name = "PasienMenu";
-            this.PasienMenu.Size = new System.Drawing.Size(180, 22);
+            this.PasienMenu.Size = new System.Drawing.Size(109, 22);
             this.PasienMenu.Text = "Pasien";
             this.PasienMenu.Click += new System.EventHandler(this.PasienMenu_Click);
             // 
             // ObatMenu
             // 
             this.ObatMenu.Name = "ObatMenu";
-            this.ObatMenu.Size = new System.Drawing.Size(180, 22);
+            this.ObatMenu.Size = new System.Drawing.Size(109, 22);
             this.ObatMenu.Text = "Obat";
             this.ObatMenu.Click += new System.EventHandler(this.ObatMenu_Click);
             // 
@@ -219,8 +201,6 @@
         internal System.Windows.Forms.ToolStripMenuItem HomeMenu;
         internal System.Windows.Forms.ToolStripMenuItem TransaksiToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem PendaftaranMenu;
-        internal System.Windows.Forms.ToolStripMenuItem PemeriksaanMenu;
-        internal System.Windows.Forms.ToolStripMenuItem SelesaiMenu;
         internal System.Windows.Forms.ToolStripMenuItem DataToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem DokterMenu;
         internal System.Windows.Forms.ToolStripMenuItem PasienMenu;
