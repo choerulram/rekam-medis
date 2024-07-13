@@ -64,7 +64,7 @@ namespace siredis.antarmuka
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Yakin akan keluar dari aplikasi?", "KONFIRMASI",
+            if (MessageBox.Show("Yakin akan menutup aplikasi?", "KONFIRMASI",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {

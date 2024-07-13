@@ -24,9 +24,14 @@ namespace siredis.antarmuka
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            FormLogin login = new FormLogin();
-            login.Show();
-            this.Close();
+            if (MessageBox.Show("Yakin akan keluar dari aplikasi?", "KONFIRMASI",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FormLogin login = new FormLogin();
+                login.Show();
+                this.Close();
+            }
         }
 
         private void PemeriksaanMenu_Click(object sender, EventArgs e)
