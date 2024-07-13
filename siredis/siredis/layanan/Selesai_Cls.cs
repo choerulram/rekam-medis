@@ -14,6 +14,8 @@ namespace siredis.layanan
     using MySqlX.XDevAPI.Common;
     using siredis.antarmuka;
     using System.Data;
+    using System.Windows.Forms;
+
     internal class Selesai_Cls
     {
         private string _id_rekam;
@@ -80,7 +82,7 @@ namespace siredis.layanan
         }
 
         // metode untuk menampilkan data dari database
-        public DataTable tampikanData()
+        public DataTable tampikanData(string idDokter)
         {
             Query = @"
                 SELECT 
@@ -100,14 +102,27 @@ namespace siredis.layanan
                     tb_dokter ON tb_dokter.id_dokter = tb_rekam_medis.id_dokter
                 WHERE 
                     tb_rekam_medis.status = 'selesai'
+                    AND tb_rekam_medis.id_dokter = @idDokter
                 ORDER BY 
                     tb_rekam_medis.id_rekam ASC;
             ";
 
-            return server.eksekusiQuery(Query);
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand(Query))
+                {
+                    cmd.Parameters.AddWithValue("@idDokter", idDokter);
+                    return server.eksekusiQuery(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error executing query: {ex.Message}");
+                return new DataTable();
+            }
         }
 
-        public DataTable tampilkanDgNama(string nama)
+        public DataTable tampilkanDgNama(string nama, string idDokter)
         {
             Query = @"
                 SELECT 
@@ -127,14 +142,15 @@ namespace siredis.layanan
                     tb_dokter ON tb_dokter.id_dokter = tb_rekam_medis.id_dokter
                 WHERE 
                     tb_rekam_medis.status = 'selesai'
-                AND
-                    tb_pasien.nama LIKE @namaPasien
+                    AND tb_pasien.nama LIKE @namaPasien
+                    AND tb_rekam_medis.id_dokter = @idDokter
                 ORDER BY 
                     tb_rekam_medis.id_rekam ASC;
             ";
 
             MySqlCommand cmd = new MySqlCommand(Query);
             cmd.Parameters.AddWithValue("@namaPasien", "%" + nama + "%");
+            cmd.Parameters.AddWithValue("@idDokter", idDokter);
 
             return server.eksekusiQuery(cmd);
         }

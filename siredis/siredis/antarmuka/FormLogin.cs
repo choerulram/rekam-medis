@@ -11,7 +11,6 @@ using siredis.layanan;
 
 namespace siredis.antarmuka
 {
-
     public partial class FormLogin : Form
     {
         Pengguna_Cls user = new Pengguna_Cls();
@@ -32,6 +31,9 @@ namespace siredis.antarmuka
                 string welcomeMessage = $"Selamat datang, {username_txt.Text}!";
                 string welcomeTitle = "LOGIN BERHASIL";
 
+                string userId = user.GetUserId(username_txt.Text); // Misalnya, Anda punya metode untuk mendapatkan UserID
+                string idDokter = user.GetIdDokter(username_txt.Text); // Misalnya, Anda punya metode untuk mendapatkan idDokter
+
                 switch (user.UserType)
                 {
                     case "Admin":
@@ -41,7 +43,7 @@ namespace siredis.antarmuka
                         break;
                     case "Dokter":
                         MessageBox.Show($"{welcomeMessage}\nAnda berhasil masuk sebagai Dokter.", welcomeTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        HomeDokter dashboardDokter = new HomeDokter(username_txt.Text);
+                        HomeDokter dashboardDokter = new HomeDokter(username_txt.Text, idDokter); // Pastikan dua parameter diberikan
                         dashboardDokter.Show();
                         break;
                     default:

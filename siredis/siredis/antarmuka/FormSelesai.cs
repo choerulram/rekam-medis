@@ -17,20 +17,30 @@ namespace siredis.antarmuka
     public partial class FormSelesai : Form
     {
         Selesai_Cls selesai = new Selesai_Cls();
-        public FormSelesai()
+        string idDokter;
+        public FormSelesai(string idDokter)
         {
             InitializeComponent();
+            this.idDokter = idDokter;
         }
 
         void tampilGrid()
         {
             if (cari_txt.Text.Length == 0)
             {
-                selesai_dgv.DataSource = selesai.tampikanData();
+                DataTable data = selesai.tampikanData(idDokter);
+                if (data.Rows.Count > 0)
+                {
+                    selesai_dgv.DataSource = data;
+                }
+                else
+                {
+                    MessageBox.Show("Tidak ada data yang ditemukan.");
+                }
             }
             else
             {
-                DataTable hasilPencarian = selesai.tampilkanDgNama(cari_txt.Text);
+                DataTable hasilPencarian = selesai.tampilkanDgNama(cari_txt.Text, idDokter);
                 selesai_dgv.DataSource = hasilPencarian;
             }
             belangBelang(selesai_dgv);

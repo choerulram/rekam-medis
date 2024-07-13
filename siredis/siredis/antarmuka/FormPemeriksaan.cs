@@ -14,23 +14,27 @@ namespace siredis.antarmuka
     using System.Globalization;
     using siredis.antarmuka;
     using System.Windows.Forms.VisualStyles;
+
     public partial class FormPemeriksaan : Form
     {
         Pemeriksaan_Cls pemeriksaan = new Pemeriksaan_Cls();
-        public FormPemeriksaan()
+        string idDokter;
+
+        public FormPemeriksaan(string idDokter)
         {
             InitializeComponent();
+            this.idDokter = idDokter;
         }
 
         void tampilGrid()
         {
             if (cari_txt.Text.Length == 0)
             {
-                pemeriksaan_dgv.DataSource = pemeriksaan.tampikanData();
+                pemeriksaan_dgv.DataSource = pemeriksaan.tampikanData(idDokter);
             }
             else
             {
-                DataTable hasilPencarian = pemeriksaan.tampilkanDgNama(cari_txt.Text);
+                DataTable hasilPencarian = pemeriksaan.tampilkanDgNama(cari_txt.Text, idDokter);
                 pemeriksaan_dgv.DataSource = hasilPencarian;
             }
             belangBelang(pemeriksaan_dgv);
@@ -57,7 +61,6 @@ namespace siredis.antarmuka
 
         private void FormPemeriksaan_Load(object sender, EventArgs e)
         {
-            // Menampilkan data terkait di DataGridView
             tampilGrid();
         }
 
@@ -73,7 +76,6 @@ namespace siredis.antarmuka
 
         private void btnCari_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(rekam_medis.ambilKodeDgNama(nama_txt.Text));
         }
 
         private void pemeriksaan_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -89,15 +91,11 @@ namespace siredis.antarmuka
 
         private void btnPerbarui_Click(object sender, EventArgs e)
         {
-            // Pastikan ada baris yang dipilih
             if (pemeriksaan_dgv.SelectedCells.Count > 0)
             {
-                // Ambil sel yang dipilih
                 DataGridViewCell selectedCell = pemeriksaan_dgv.SelectedCells[0];
-                // Dapatkan baris yang terkait dengan sel yang dipilih
                 DataGridViewRow selectedRow = selectedCell.OwningRow;
 
-                // Ambil ID Rekam dari baris yang dipilih
                 if (selectedRow.Cells["ID Rekam"] != null && selectedRow.Cells["ID Rekam"].Value != null)
                 {
                     string idRekam = selectedRow.Cells["ID Rekam"].Value.ToString();
@@ -105,7 +103,6 @@ namespace siredis.antarmuka
 
                     if (!string.IsNullOrEmpty(status))
                     {
-                        // Ubah status rekam medis
                         int result = pemeriksaan.ubahData(idRekam, status);
                         if (result >= 0)
                         {
@@ -137,9 +134,7 @@ namespace siredis.antarmuka
         {
             if (pemeriksaan_dgv.SelectedCells.Count > 0)
             {
-                // Ambil sel yang dipilih
                 DataGridViewCell selectedCell = pemeriksaan_dgv.SelectedCells[0];
-                // Dapatkan baris yang terkait dengan sel yang dipilih
                 DataGridViewRow selectedRow = selectedCell.OwningRow;
 
                 if (selectedRow.Cells["ID Rekam"] != null && selectedRow.Cells["ID Rekam"].Value != null)
@@ -196,10 +191,7 @@ namespace siredis.antarmuka
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            // Refresh data pada DataGridView
             tampilGrid();
-
-            // Tampilkan pesan bahwa berhasil refresh
             MessageBox.Show("Data berhasil diperbarui.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

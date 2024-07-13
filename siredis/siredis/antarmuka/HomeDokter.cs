@@ -1,4 +1,5 @@
-﻿using System;
+﻿using siredis.layanan;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,13 @@ namespace siredis.antarmuka
     public partial class HomeDokter : Form
     {
         private string userId;
-        public HomeDokter(string user)
+        private string idDokter;
+
+        public HomeDokter(string user, string idDokter)
         {
             InitializeComponent();
             user_lbl.Text = user;
+            this.idDokter = idDokter;
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -28,13 +32,13 @@ namespace siredis.antarmuka
 
         private void PemeriksaanMenu_Click(object sender, EventArgs e)
         {
-            FormPemeriksaan transaksi = new FormPemeriksaan();
-            transaksi.Show();
+            FormPemeriksaan formPemeriksaan = new FormPemeriksaan(idDokter);
+            formPemeriksaan.ShowDialog();
         }
 
         private void SelesaiMenu_Click(object sender, EventArgs e)
         {
-            FormSelesai transaksi = new FormSelesai();
+            FormSelesai transaksi = new FormSelesai(idDokter);
             transaksi.Show();
         }
 

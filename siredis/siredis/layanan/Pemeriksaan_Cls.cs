@@ -111,7 +111,7 @@ namespace siredis.layanan
         }
 
         // metode untuk menampilkan data dari database
-        public DataTable tampikanData()
+        public DataTable tampikanData(string idDokter)
         {
             Query = @"
                 SELECT 
@@ -131,14 +131,18 @@ namespace siredis.layanan
                     tb_dokter ON tb_dokter.id_dokter = tb_rekam_medis.id_dokter
                 WHERE 
                     tb_rekam_medis.status = 'pemeriksaan'
+                    AND tb_rekam_medis.id_dokter = @idDokter
                 ORDER BY 
                     tb_rekam_medis.id_rekam ASC;
             ";
 
-            return server.eksekusiQuery(Query);
+            MySqlCommand cmd = new MySqlCommand(Query);
+            cmd.Parameters.AddWithValue("@idDokter", idDokter);
+
+            return server.eksekusiQuery(cmd);
         }
 
-        public DataTable tampilkanDgNama(string nama)
+        public DataTable tampilkanDgNama(string nama, string idDokter)
         {
             Query = @"
                 SELECT 
@@ -158,14 +162,15 @@ namespace siredis.layanan
                     tb_dokter ON tb_dokter.id_dokter = tb_rekam_medis.id_dokter
                 WHERE 
                     tb_rekam_medis.status = 'pemeriksaan'
-                AND
-                    tb_pasien.nama LIKE @namaPasien
+                    AND tb_pasien.nama LIKE @namaPasien
+                    AND tb_rekam_medis.id_dokter = @idDokter
                 ORDER BY 
                     tb_rekam_medis.id_rekam ASC;
             ";
 
             MySqlCommand cmd = new MySqlCommand(Query);
             cmd.Parameters.AddWithValue("@namaPasien", "%" + nama + "%");
+            cmd.Parameters.AddWithValue("@idDokter", idDokter);
 
             return server.eksekusiQuery(cmd);
         }
