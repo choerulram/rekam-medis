@@ -113,6 +113,25 @@ namespace siredis.layanan
             }
         }
 
+        public bool UpdateStatus(string id_rekam, string status)
+        {
+            try
+            {
+                string query = "UPDATE tb_rekam_medis SET status = @status WHERE id_rekam = @id_rekam";
+                MySqlParameter[] parameters = {
+            new MySqlParameter("@status", status),
+            new MySqlParameter("@id_rekam", id_rekam)
+        };
+                int result = server.eksekusiBukanQuery(query, parameters);
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"UpdateStatus Error: {ex.Message}");
+                return false;
+            }
+        }
+
         public bool SavePrescription(string id_rekam, List<string> obatList, string keterangan = "")
         {
             bool isSuccess = true;
@@ -120,10 +139,10 @@ namespace siredis.layanan
             {
                 string query = "INSERT INTO tb_resep (id_rekam, id_obat, keterangan) VALUES (@id_rekam, @id_obat, @keterangan)";
                 MySqlParameter[] parameters = {
-            new MySqlParameter("@id_rekam", id_rekam),
-            new MySqlParameter("@id_obat", id_obat),
-            new MySqlParameter("@keterangan", keterangan)
-        };
+                    new MySqlParameter("@id_rekam", id_rekam),
+                    new MySqlParameter("@id_obat", id_obat),
+                    new MySqlParameter("@keterangan", keterangan)
+                };
 
                 try
                 {

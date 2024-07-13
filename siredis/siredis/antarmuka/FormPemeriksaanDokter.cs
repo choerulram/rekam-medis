@@ -103,10 +103,13 @@ namespace siredis.antarmuka
                 obatList.Add(item.ID);
             }
 
-            string keterangan = tKeterangan.Text; // Tambahkan ini
-            bool isPrescriptionSaved = rekam_medis.SavePrescription(ID, obatList, keterangan); // Ubah ini
+            string keterangan = tKeterangan.Text;
+            bool isPrescriptionSaved = rekam_medis.SavePrescription(ID, obatList, keterangan);
 
-            if (isDiagnosisUpdated && isPrescriptionSaved)
+            // Perbarui status rekam medis menjadi 'selesai'
+            bool isStatusUpdated = rekam_medis.UpdateStatus(ID, "selesai");
+
+            if (isDiagnosisUpdated && isPrescriptionSaved && isStatusUpdated)
             {
                 MessageBox.Show("Data berhasil disimpan");
                 this.Close();

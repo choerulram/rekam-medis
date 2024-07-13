@@ -45,7 +45,6 @@
             this.cari_txt = new System.Windows.Forms.TextBox();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.btnResep = new System.Windows.Forms.Button();
             this.btnPerbarui = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnPeriksa = new System.Windows.Forms.Button();
@@ -224,7 +223,6 @@
             // Panel2
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel2.Controls.Add(this.btnResep);
             this.Panel2.Controls.Add(this.btnPerbarui);
             this.Panel2.Controls.Add(this.btnRefresh);
             this.Panel2.Controls.Add(this.btnPeriksa);
@@ -239,27 +237,14 @@
             this.Panel2.Size = new System.Drawing.Size(1259, 99);
             this.Panel2.TabIndex = 31;
             // 
-            // btnResep
-            // 
-            this.btnResep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
-            this.btnResep.Font = new System.Drawing.Font("Leelawadee UI", 9F);
-            this.btnResep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnResep.Location = new System.Drawing.Point(746, 51);
-            this.btnResep.Name = "btnResep";
-            this.btnResep.Size = new System.Drawing.Size(234, 29);
-            this.btnResep.TabIndex = 41;
-            this.btnResep.Text = "LIHAT RESEP";
-            this.btnResep.UseVisualStyleBackColor = false;
-            this.btnResep.Click += new System.EventHandler(this.btnResep_Click);
-            // 
             // btnPerbarui
             // 
             this.btnPerbarui.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
             this.btnPerbarui.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.btnPerbarui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPerbarui.Location = new System.Drawing.Point(870, 12);
+            this.btnPerbarui.Location = new System.Drawing.Point(903, 7);
             this.btnPerbarui.Name = "btnPerbarui";
-            this.btnPerbarui.Size = new System.Drawing.Size(110, 32);
+            this.btnPerbarui.Size = new System.Drawing.Size(137, 76);
             this.btnPerbarui.TabIndex = 39;
             this.btnPerbarui.Text = "EDIT";
             this.btnPerbarui.UseVisualStyleBackColor = false;
@@ -270,9 +255,9 @@
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(167)))), ((int)(((byte)(255)))));
             this.btnRefresh.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefresh.Location = new System.Drawing.Point(746, 12);
+            this.btnRefresh.Location = new System.Drawing.Point(744, 7);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(110, 32);
+            this.btnRefresh.Size = new System.Drawing.Size(137, 76);
             this.btnRefresh.TabIndex = 39;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -341,6 +326,5 @@
         internal System.Windows.Forms.Button btnPeriksa;
         internal System.Windows.Forms.Button btnRefresh;
         internal System.Windows.Forms.Button btnPerbarui;
-        internal System.Windows.Forms.Button btnResep;
     }
 }
